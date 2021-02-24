@@ -1,9 +1,42 @@
+// Document elements
+@background_color: #fafafa;
+// Link Elements
+@link_size: 40px;
+@link_font_size: 20px;
+@link_color: #919191;
+@link_margin: 10px;
+// Line Elements
 @line_width: 65vw;
 @line_color: #aeaeae;
 
-div#nav-bar {
-    display: flex;
+// STYLING
+html {
+    background-color: @background_color;
 }
+
+// Top Nav Bar
+div#nav-bar {
+}
+// Links
+div#links-container {
+
+}
+a.link {
+    // Dimension
+    width: @link_size;
+    height: @link_size;
+    // Layout
+    border-radius: 50%;
+    margin-left: @link_margin;
+    // Style
+    font-size: @link_font_size;
+    text-align: center;
+    line-height: @link_size;
+    background-color: @link_color;
+    text-decoration: none;
+    color: @background_color;
+}
+
 
 // Design Elements
 .line {
@@ -13,4 +46,18 @@ div#nav-bar {
     margin-bottom: 20px;
     // Style
     border-bottom: 1px solid @line_color;
+}
+
+.flex {
+    display: flex;
+}
+.center {
+    justify-content: center;
+    align-items: center;
+}
+.center-h {
+    justify-content: center;
+}
+.center-v {
+    align-items: center;
 }
