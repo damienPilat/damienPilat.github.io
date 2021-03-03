@@ -1,5 +1,30 @@
-// Document elements
-@background_color: #fafafa;
+// Logo
+@logo_size: 32px;
+@logo_color: gray;
+// Dimensions
+@padding: 10px;
+// Font
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300&display=swap');
+@font: 'Josefin Sans', sans-serif;
+// Font Size
+@fontSize_normal: 22px;
+@fontSize_medium: 28px;
+@fontSize_large: 34px;
+// Font Weight
+@weight_small: 100;
+@weight_medium: 200;
+@weight_large: 300;
+// Font Color
+@fontColor_light: rgba(173, 173, 173, 0.96);
+@fontColor_medium: rgba(119, 119, 119, 0.96);
+@fontColor_dark: rgba(52, 52, 52, 0.96);
+// Colors
+@bg_color: #F7F8F6;
+@primary_color: #CFEEFB;
+@secondary_color: #F29F96;
+@tertiary_color: #C4C4C4;
+
+// -- v1 Elements
 // Link Elements
 @link_size: 40px;
 @link_font_size: 20px;
@@ -11,61 +36,53 @@
 
 // STYLING
 html {
-    background-color: @background_color;
+    background-color: @bg_color;
+    // Font
+    font-family: @font;
+    font-size: @fontSize_normal;
+    font-weight: @weight_small;
+    color: @fontColor_light;
 }
 
-// Top Nav Bar
 div#nav-bar {
+    justify-content: space-between;
 }
-// Links
-div#links-container {
-
+// LINKS
+div#link-container {
 }
-a.link {
+div#link-container:nth-child(1) {
+    float: left
+}
+// Link element container
+div.link-elements {
     // Dimension
-    width: @link_size;
-    height: @link_size;
+    height: @logo_size + @padding;
+    width: @logo_size + @padding;
     // Layout
-    border-radius: 50%;
-    margin-left: @link_margin;
+    border-radius: calc(@padding * 2);
+    margin: @padding;
     // Style
-    font-size: @link_font_size;
-    text-align: center;
-    line-height: @link_size;
-    background-color: @link_color;
-    text-decoration: none;
-    color: @background_color;
+    background-color: @tertiary_color;
+}
+// Links svg logos
+svg.logo-vector {
+    background-color: @tertiary_color;
+    border-radius: calc(@logo_size / 2);
 }
 
 
 // CONTENTS
 div#content {
-    margin-left: 20vw;
+
 }
 
-
-// Design Elements
-.line {
-    // Dimension
-    width: @line_width;
-    // Layout
-    margin-bottom: 20px;
-    // Style
-    border-bottom: 1px solid @line_color;
-}
 
 
 // Helper Classes
+// HELPER CLASSES
+// Full flex
 .flex {
     display: flex;
-}
-.center {
     justify-content: center;
-    align-items: center;
-}
-.center-h {
-    justify-content: center;
-}
-.center-v {
     align-items: center;
 }
