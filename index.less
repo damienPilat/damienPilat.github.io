@@ -1,71 +1,32 @@
-// Document elements
-@background_color: #fafafa;
-// Link Elements
-@link_size: 40px;
-@link_font_size: 20px;
-@link_color: #919191;
-@link_margin: 10px;
-// Line Elements
-@line_width: 65vw;
-@line_color: #aeaeae;
+// Logo
+@logo_size: 32px;
+@logo_color: gray;
+// Dimensions
+@padding: 4px;
 
-// STYLING
-html {
-    background-color: @background_color;
-}
-
-// Top Nav Bar
-div#nav-bar {
-}
-// Links
+/* Logo Div */
 div#links-container {
-
 }
-a.link {
+div.link-elements {
     // Dimension
-    width: @link_size;
-    height: @link_size;
+    height: @logo_size + @padding;
+    width: @logo_size + @padding;
     // Layout
-    border-radius: 50%;
-    margin-left: @link_margin;
+    border-radius: @padding;
+    margin: 0 calc(@padding * 2);
     // Style
-    font-size: @link_font_size;
-    text-align: center;
-    line-height: @link_size;
-    background-color: @link_color;
-    text-decoration: none;
-    color: @background_color;
+    background-color: @logo_color;
+}
+/* Vector Styling */
+svg.logo-vector {
+    background-color: @logo_color;
+    border-radius: calc(@logo_size / 2);
 }
 
-
-// CONTENTS
-div#content {
-    margin-left: 20vw;
-}
-
-
-// Design Elements
-.line {
-    // Dimension
-    width: @line_width;
-    // Layout
-    margin-bottom: 20px;
-    // Style
-    border-bottom: 1px solid @line_color;
-}
-
-
-// Helper Classes
+// HELPER CLASSES
+// Full flex
 .flex {
     display: flex;
-}
-.center {
     justify-content: center;
-    align-items: center;
-}
-.center-h {
-    justify-content: center;
-}
-.center-v {
     align-items: center;
 }
