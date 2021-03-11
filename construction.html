@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Damien Pilat's Portfolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!--  Custom CSS  -->
     <link rel="stylesheet/less" type="text/css" href="construction.less">
+    <!--  LESS  -->
     <script src="less.js"></script>
 </head>
 <body>
@@ -29,8 +34,27 @@
     </div>
 
     <div id="content">
-        <h2>Movie Dashboard</h2>
+        <div id="md-container" class="flex">
+            <div class="desc col-2">
+                <h2 class="subtitle">Movie Dashboard</h2>
+                <p class="desc-text">Interactive dashboard of the all-time highest grossing movies, automatically updated through API calls, and made responsive for all devices.
+                    Built in pure HTML/CSS, made interactive with JavaScript, and created custom artwork with Adobe XD.</p>
+            </div>
+            <div class="device tablet col-4" id="md-tablet-hp">
+                <img class="tablet" id="md-tablet" src="media/Tablet.svg" alt="Tablet Mockup">
+
+            </div>
+            <div class="device col-2" id="md-phone-tech">
+                <div class="phone" id="md-phone-award"></div>
+                <div class="phone" id="md-phone-watchProviders"></div>
+                <div class="tech" id="md-tech"></div>
+            </div>
+        </div>
     </div>
 
 </body>
+<foot>
+    <!-- Bootstrap: JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</foot>
 </html>
