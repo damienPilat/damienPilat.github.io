@@ -3,6 +3,7 @@
 @logo_color: gray;
 // Dimensions
 @padding: 4px;
+@max_size: 1700px;
 // Font
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300&display=swap');
 @font: 'Josefin Sans', sans-serif;
@@ -24,6 +25,8 @@ html, body {
     font-size: @fontSize_normal;
     font-weight: @weight_small;
     color: @fontColor_light;
+    margin: 0 auto;
+    max-width: @max_size;
 }
 
 // MAIN Content Containre
@@ -70,6 +73,7 @@ svg.logo-vector {
 img#portfolio-img {
     // Dimensions
     width: 70vw;
+    max-width: @max_size * .7;
     height: auto;
     // Layout
     //margin-top: 20vh;
