@@ -1,8 +1,6 @@
 // Logo
 @logo_size: 32px;
 @logo_color: gray;
-// Dimensions
-@padding: 10px;
 // Font
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300&display=swap');
 @font: 'Josefin Sans', sans-serif;
@@ -34,18 +32,50 @@
 @line_width: 65vw;
 @line_color: #aeaeae;
 
+// Padding
+@small_padding: 10px;
+@medium_padding: 20px;
+@large_padding: 40px;
+@extraLarge_padding: 80px;
+
+
 // STYLING
-html {
+// RESET for page
+* {
+    // Layout
+    margin: 0;
+    padding: 0;
+    // Styling
     background-color: @bg_color;
+}
+
+// HTML content
+html {
     // Font
     font-family: @font;
     font-size: @fontSize_normal;
     font-weight: @weight_small;
     color: @fontColor_light;
+    // Layout
+    //padding: 0 @large_padding;
 }
+
+h1 {
+    font-weight: @weight_large;
+}
+h2 {
+    font-weight: @weight_medium;
+    margin-bottom: @medium_padding;
+}
+p {
+    font-weight: @weight_small;
+}
+
+
 
 div#nav-bar {
     justify-content: space-between;
+    padding: 0 @medium_padding;
 }
 // LINKS
 div#link-container {
@@ -56,11 +86,11 @@ div#link-container:nth-child(1) {
 // Link element container
 div.link-elements {
     // Dimension
-    height: @logo_size + @padding;
-    width: @logo_size + @padding;
+    height: @logo_size + @small_padding;
+    width: @logo_size + @small_padding;
     // Layout
-    border-radius: calc(@padding * 2);
-    margin: @padding;
+    border-radius: calc(@small_padding * 2);
+    margin: @small_padding;
     // Style
     background-color: @tertiary_color;
 }
@@ -73,13 +103,17 @@ svg.logo-vector {
 
 // CONTENTS
 div#content {
-
 }
 
 // Movie Dashboard
-div#md-desc {
-
+div#md-container {
+    padding: @small_padding @large_padding;
+    box-shadow: inset 0 0 0 @large_padding @bg_color;
 }
+div#md-container * {
+    background-color: @bg_color;
+}
+
 div#md-tablet-hp {
 
     img#md-tablet {
@@ -87,9 +121,28 @@ div#md-tablet-hp {
     }
 }
 div#md-phone-tech {
+    padding: 0 55px;        // CHANGE TO RESPONSIVE UNIT
+
+    img#md-iphone-watchproviders {
+        display: block;
+        margin-left: auto;
+    }
+    img#md-iphone-awards {
+        position: relative;
+        top: -140px;         // CHANGE TO RESPONSIVE UNIT
+    }
 }
 
+// Diligent Eye
+div#de-container {
+    background-color: @primary_color;
+    height: 100px;
+}
 
+// Media elements
+img.phone {
+    border-radius: 20px;
+}
 
 // Helper Classes
 // HELPER CLASSES
