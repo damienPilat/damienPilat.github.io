@@ -1,22 +1,45 @@
-deviceList = {
+let deviceList = {
     "md": {
         "tablet": {
             "homepage": {
-                path: "media/device/tablet/md-tablet-homepage.png",
+                path: "md-tablet-homepage.png",
                 alt: "Movie Dashboard Homepage Tablet Mockup"
             }
         },
         "phone": {
             "watchProviders": {
-                path: "media/device/phone/md-phone-watchProviders.png",
+                path: "md-phone-watchProviders.png",
                 alt: "Movie Dashboard Watch Providers Phone Mockup"
             },
             "awards": {
-                path: "media/device/phone/md-phone-awards.png",
+                path: "md-phone-awards.png",
                 alt: "Movie Dashboard Awards & Nominations Phone Mockup"
             }
         }
     },
+    "de": {
+        "laptop": {
+            "reportPurchase": {
+                path: "de-laptop-reportPurchase.png",
+                alt: "Diligent Eyey - Report Purchase Page"
+            }
+        },
+        "desktop": {
+            "homepage": {
+
+            }
+        },
+        "phone": {
+
+        }
+    }
+};
+
+let mediaPaths = {
+    "phone": "media/device/phone/",
+    "tablet": "media/device/tablet/",
+    "laptop": "media/device/laptop/",
+    "desktop": "media/device/desktop/"
 };
 
 // Populate devices in dom
@@ -36,7 +59,7 @@ function populateDevice() {
                     let deviceElement = document.createElement('img');      // Creat img tag
                     deviceElement.className = deviceType;                   // Add attributes
                     deviceElement.id = deviceID + '-' + deviceType + '-' + elName;
-                    deviceElement.src = elData.path;
+                    deviceElement.src = mediaPaths[deviceType] + deviceID + '-' + deviceType + '-' + elName + '.png';
                     deviceElement.alt = elData.alt;
                     container.appendChild(deviceElement);                   // Append to container
                 }
