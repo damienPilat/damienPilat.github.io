@@ -2,17 +2,14 @@ let deviceList = {
     "md": {
         "tablet": {
             "homepage": {
-                path: "md-tablet-homepage.png",
                 alt: "Movie Dashboard Homepage Tablet Mockup"
             }
         },
         "phone": {
             "watchProviders": {
-                path: "md-phone-watchProviders.png",
                 alt: "Movie Dashboard Watch Providers Phone Mockup"
             },
             "awards": {
-                path: "md-phone-awards.png",
                 alt: "Movie Dashboard Awards & Nominations Phone Mockup"
             }
         }
@@ -20,17 +17,18 @@ let deviceList = {
     "de": {
         "laptop": {
             "reportPurchase": {
-                path: "de-laptop-reportPurchase.png",
-                alt: "Diligent Eyey - Report Purchase Page"
+                alt: "Diligent Eye - Report Purchase Page"
             }
         },
         "desktop": {
             "homepage": {
-
+                alt: "Diligent Eye - Homepage"
             }
         },
         "phone": {
-
+            "checkout": {
+                alt: "Diligent Eye - Checkout"
+            }
         }
     }
 };
