@@ -10,6 +10,8 @@
     <link rel="stylesheet/less" type="text/css" href="construction.less">
     <!--  LESS  -->
     <script src="less.js"></script>
+    <!--  Populate Tech Logos  -->
+    <script src="scripts/populateLogos.js"></script>
 </head>
 <body>
     <div id="nav-bar" class="flex">
@@ -42,8 +44,8 @@
             </div>
             <div class="device tablet col-6" id="md-tablet-hp">
                 <img class="tablet" id="md-tablet" src="media/Tablet.svg" alt="Tablet Mockup">
-
             </div>
+
             <div class="device col-3" id="md-phone-tech">
                 <div class="phone" id="md-phone-watchProviders">
                     <img class="phone" id="md-iphone-watchproviders" src="media/Iphone.svg" alt="Iphone Mockup">
@@ -51,23 +53,25 @@
                 <div class="phone" id="md-phone-award">
                     <img class="phone" id="md-iphone-awards" src="media/Iphone.svg" alt="Iphone Mockup">
                 </div>
-                <div class="tech" id="md-tech">
-                    <img src="media/tech/js-logo.png" alt="JavaScript Logo">
-                    <img src="media/tech/html-logo.png" alt="HTML Logo">
-                    <img src="media/tech/css-logo.png" alt="CSS Logo">
-                    <img src="media/tech/adobe-logo.png" alt="Adobe XD Logo">
-                </div>
+                <div class="tech" id="md-tech"></div>
             </div>
         </div>
         
-        <div id="`de-container`">
+        <div id="de-container">
+            <div class="tech" id="de-tech"></div>
 
         </div>
     </div>
 
 </body>
-<foot>
+<footer>
+    <!--  Scripts for when page loads  -->
+    <script>
+        // Populate tech for each section
+        populateTech();
+    </script>
+
     <!-- Bootstrap: JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-</foot>
+</footer>
 </html>
