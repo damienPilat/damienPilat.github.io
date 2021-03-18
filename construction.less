@@ -104,10 +104,12 @@ img.logo-vector {
 // CONTENTS
 div#content {
 }
+div.sections {
+    padding: @small_padding @large_padding;
+}
 
 // Movie Dashboard
 div#md-container {
-    padding: @small_padding @large_padding;
     box-shadow: inset 0 0 0 @large_padding @bg_color;
 }
 div#md-container * {
@@ -131,6 +133,14 @@ div#md-phone-container {
         position: relative;
         top: -140px;         // CHANGE TO RESPONSIVE UNIT
     }
+}
+
+// Movie Dashboard
+div#de-container {
+    box-shadow: inset 0 0 0 @large_padding @primary_color;
+}
+div#de-container * {
+    background-color: @primary_color;
 }
 
 // Diligent Eye
