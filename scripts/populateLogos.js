@@ -42,26 +42,26 @@ let techData = {
 
 function populateTech() {
     // Get all containers with 'tech' classname
-        let techContainers = document.getElementsByClassName('tech');
+    let techContainers = document.getElementsByClassName('tech');
 
     // Loop through all containers
-        Array.from(techContainers).forEach(container => {
-            // Get container id
-            let techID = container.id.substring(0,2);
-            // Check if id in list
-            if (techID in techList) {
-                // Get individual container
-                let techDomElement = container;
-                // Loop through tech for this element
-                techList[techID].forEach(entry => {
-                    let techElement = document.createElement('img');    // Creat img tag
-                    techElement.className = "tech-logo";                // Add attributes
-                    techElement.id = entry + '-logo';
-                    techElement.src = techData[entry].path;
-                    techElement.alt = techData[entry].alt;
-                    techDomElement.appendChild(techElement);            // Append to container
-                });
-            }
-        });
-} // END: populateTech(
+    Array.from(techContainers).forEach(container => {
+        // Get container id
+        let techID = container.id.substring(0,2);
+        // Check if id in list
+        if (techID in techList) {
+            // Get individual container
+            let techDomElement = container;
+            // Loop through tech for this element
+            techList[techID].forEach(entry => {
+                let techElement = document.createElement('img');    // Creat img tag
+                techElement.className = "tech-logo";                // Add attributes
+                techElement.id = entry + '-logo';
+                techElement.src = techData[entry].path;
+                techElement.alt = techData[entry].alt;
+                techDomElement.appendChild(techElement);            // Append to container
+            });
+        }
+    });
+} // END: populateTech
 
