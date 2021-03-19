@@ -17,9 +17,9 @@
 
     <!--  Custom Scripts  -->
     <!--  Populate Tech Logos  -->
-    <script src="scripts/populateLogos.js"></script>
-    <script src="scripts/dynamicDevice.js"></script>
-
+    <script src="scripts/custom/populateLogos.js"></script>
+    <script src="scripts/custom/dynamicDevice.js"></script>
+    <script src="scripts/custom/dynamicSections.js"></script>
 </head>
 <body>
 <div id="nav-bar" class="flex">
@@ -42,7 +42,7 @@
         <!--  TEXT  -->
         <div class="desc col-3">
             <!--  Section Title  -->
-            <h2 class="subtitle">Movie Dashboard</h2>
+            <h2 class="sectionTitle">Movie Dashboard</h2>
             <!--  Section Description-->
             <p class="desc-text">Interactive dashboard of the all-time highest grossing movies, automatically updated
                 through API calls, and made responsive for all devices.
@@ -88,6 +88,8 @@
 <footer>
     <!--  Scripts for when page loads  -->
     <script>
+        // Create sections
+        populateSections();
         // Populate devices
         populateDevice();
         // Populate tech for each section
