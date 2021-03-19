@@ -217,57 +217,57 @@ let sectionDetails = {
                                 children: null
                             }
                         }
-                    }
-                }
-            },
-            1: {
-                type: 'div',
-                className: 'row',
-                id: null,
-                content: null,
-                children: {
-                    0: {
+                    },
+                    1: {
                         type: 'div',
-                        className: 'col-3',
+                        className: 'row',
                         id: null,
                         content: null,
                         children: {
                             0: {
                                 type: 'div',
+                                className: 'col-3',
+                                id: null,
+                                content: null,
+                                children: {
+                                    0: {
+                                        type: 'div',
+                                        className: 'device',
+                                        id: 'dne-phone-welcome',
+                                        content: null,
+                                        children: null
+                                    }
+                                }
+                            },
+                            1: {
+                                type: 'div',
                                 className: 'device',
-                                id: 'dne-phone-welcome',
+                                id: 'dne-phone-search',
+                                content: null,
+                                children: null
+                            },
+                            2: {
+                                type: 'div',
+                                className: 'device',
+                                id: 'dne-phone-restaurant',
+                                content: null,
+                                children: null
+                            },
+                            3: {
+                                type: 'div',
+                                className: 'device',
+                                id: 'dne-phone-menu',
+                                content: null,
+                                children: null
+                            },
+                            4: {
+                                type: 'div',
+                                className: 'device',
+                                id: 'dne-phone-paymentConfirmation',
                                 content: null,
                                 children: null
                             }
                         }
-                    },
-                    1: {
-                        type: 'div',
-                        className: 'device',
-                        id: 'dne-phone-search',
-                        content: null,
-                        children: null
-                    },
-                    2: {
-                        type: 'div',
-                        className: 'device',
-                        id: 'dne-phone-restaurant',
-                        content: null,
-                        children: null
-                    },
-                    3: {
-                        type: 'div',
-                        className: 'device',
-                        id: 'dne-phone-menu',
-                        content: null,
-                        children: null
-                    },
-                    4: {
-                        type: 'div',
-                        className: 'device',
-                        id: 'dne-phone-paymentConfirmation',
-                        content: null,
-                        children: null
                     }
                 }
             }
