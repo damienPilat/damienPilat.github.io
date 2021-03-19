@@ -2,19 +2,8 @@
 let sectionDetails = {
     "md": {
         device: {
-            "tablet": {
-                "homepage": {
-                    alt: "Movie Dashboard Homepage Tablet Mockup"
-                }
-            },
-            "phone": {
-                "watchProviders": {
-                    alt: "Movie Dashboard Watch Providers Phone Mockup"
-                },
-                "awards": {
-                    alt: "Movie Dashboard Awards & Nominations Phone Mockup"
-                }
-            }
+            "tablet": ["homepage"],
+            "phone": ["watchProviders", "awards"]
         },
         tech: ["JS", "HTML", "CSS", "AdobeXD"],
         structure: {
@@ -81,21 +70,9 @@ let sectionDetails = {
     },
     "de": {
         device: {
-            "laptop": {
-                "reportPurchase": {
-                    alt: "Diligent Eye - Report Purchase Page"
-                }
-            },
-            "desktop": {
-                "homepage": {
-                    alt: "Diligent Eye - Homepage"
-                }
-            },
-            "phone": {
-                "checkout": {
-                    alt: "Diligent Eye - Checkout"
-                }
-            }
+            "laptop": ["reportPurchase"],
+            "desktop": ["homepage"],
+            "phone": ["checkout"]
         },
         tech: ["JS", "WordPress", "Shopify"],
         structure: {
@@ -119,7 +96,7 @@ let sectionDetails = {
                                 children: {
                                     0: {
                                         type: 'h2',
-                                        className: 'subtitle',
+                                        className: 'sectionTitle',
                                         id: '',
                                         content: 'Member space & E-commerce - Diligent Eye',
                                         children: null
@@ -202,6 +179,95 @@ let sectionDetails = {
                                 }
                             }
                         }
+                    }
+                }
+            }
+        }
+    },
+    "dne": {
+        device: {
+            "phone": ["welcome", "search", "restaurant", "menu", "paymentConfirmation"]
+        },
+        tech: ["Figma"],
+        structure: {
+            0: {
+                type: 'div',
+                className: 'sections',
+                id: 'dne-container',
+                content: null,
+                children: {
+                    0: {
+                        type: 'div',
+                        className: 'desc col-12',
+                        id: null,
+                        content: null,
+                        children: {
+                            0: {
+                                type: 'h2',
+                                className: 'sectionTitle col-6',
+                                id: null,
+                                content: 'Dining Experience - Mobile App',
+                                children: null
+                            },
+                            1: {
+                                type: 'p',
+                                className: 'col-6',
+                                id: 'p',
+                                content: 'Re-imagined covid and post-pandemic dining experience through an in-depth User Experience Research strategy, resulting into an interactive prototype crafted in Figma.',
+                                children: null
+                            }
+                        }
+                    }
+                }
+            },
+            1: {
+                type: 'div',
+                className: 'row',
+                id: null,
+                content: null,
+                children: {
+                    0: {
+                        type: 'div',
+                        className: 'col-3',
+                        id: null,
+                        content: null,
+                        children: {
+                            0: {
+                                type: 'div',
+                                className: 'device',
+                                id: 'dne-phone-welcome',
+                                content: null,
+                                children: null
+                            }
+                        }
+                    },
+                    1: {
+                        type: 'div',
+                        className: 'device',
+                        id: 'dne-phone-search',
+                        content: null,
+                        children: null
+                    },
+                    2: {
+                        type: 'div',
+                        className: 'device',
+                        id: 'dne-phone-restaurant',
+                        content: null,
+                        children: null
+                    },
+                    3: {
+                        type: 'div',
+                        className: 'device',
+                        id: 'dne-phone-menu',
+                        content: null,
+                        children: null
+                    },
+                    4: {
+                        type: 'div',
+                        className: 'device',
+                        id: 'dne-phone-paymentConfirmation',
+                        content: null,
+                        children: null
                     }
                 }
             }
