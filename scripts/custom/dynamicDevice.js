@@ -18,7 +18,7 @@ function populateDevice() {
         if (deviceID in sectionDetails) {
             // Get individual container
             // Loop through all entries of device type, creating img w/ attributes
-            for (const [elName, elData] of Object.entries(sectionDetails[deviceID]['device'][deviceType])) {
+            for (const elData of Object.values(sectionDetails[deviceID]['device'][deviceType])) {
                 let deviceElement = document.createElement('img');      // Creat img tag
                 deviceElement.className = deviceType;                   // Add attributes
                 deviceElement.id = deviceID + '-' + deviceType + '-' + elData;
