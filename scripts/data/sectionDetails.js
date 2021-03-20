@@ -230,6 +230,13 @@ let sectionDetails = {
                                 id: 'dne-phone-container',
                                 content: null,
                                 children: null
+                            },
+                            1: {
+                                type: 'div',
+                                className: 'tech',
+                                id: 'dne-tech',
+                                content: null,
+                                children: null
                             }
                         }
                     }
