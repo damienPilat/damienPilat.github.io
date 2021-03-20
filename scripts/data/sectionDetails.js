@@ -5,7 +5,7 @@ let sectionDetails = {
             "tablet": ["homepage"],
             "phone": ["watchProviders", "awards"]
         },
-        tech: ["JS", "HTML", "CSS", "AdobeXD"],
+        tech: ["JavaScript", "HTML", "CSS", "AdobeXD"],
         structure: {
             0: {
                 type: 'div',
@@ -74,7 +74,7 @@ let sectionDetails = {
             "desktop": ["homepage"],
             "phone": ["checkout"]
         },
-        tech: ["JS", "WordPress", "Shopify"],
+        tech: ["JavaScript", "WordPress", "Shopify"],
         structure: {
             0: {
                 type: 'div',
