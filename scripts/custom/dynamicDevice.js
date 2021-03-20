@@ -12,7 +12,6 @@ function populateDevice() {
 
     // Loop through all devices the current container
     Array.from(deviceContainers).forEach(container => {
-        console.log("containreID:", container.id);
         let deviceID = container.id.split('-')[0];
         let deviceType = container.id.split('-')[1];
 
