@@ -226,18 +226,10 @@ let sectionDetails = {
                         children: {
                             0: {
                                 type: 'div',
-                                className: 'col-3',
-                                id: null,
+                                className: 'device flex',
+                                id: 'dne-phone-container',
                                 content: null,
-                                children: {
-                                    0: {
-                                        type: 'div',
-                                        className: 'device',
-                                        id: 'dne-phone-container',
-                                        content: null,
-                                        children: null
-                                    }
-                                }
+                                children: null
                             }
                         }
                     }
