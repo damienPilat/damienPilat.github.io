@@ -210,11 +210,26 @@ let sectionDetails = {
                                 children: null
                             },
                             1: {
-                                type: 'p',
-                                className: 'col-6',
-                                id: 'p',
-                                content: 'Re-imagined covid and post-pandemic dining experience through an in-depth User Experience Research strategy, resulting into an interactive prototype crafted in Figma.',
-                                children: null
+                                type: 'div',
+                                className: 'row',
+                                id: null,
+                                content: null,
+                                children: {
+                                    0: {
+                                        type: 'p',
+                                        className: 'desc-text col-6',
+                                        id: null,
+                                        content: 'Re-imagined covid and post-pandemic dining experience through an in-depth User Experience Research strategy, resulting into an interactive prototype crafted in Figma.',
+                                        children: null
+                                    },
+                                    1: {
+                                        type: 'div',
+                                        className: 'tech col-6',
+                                        id: 'dne-tech',
+                                        content: null,
+                                        children: null
+                                    }
+                                }
                             }
                         }
                     },
@@ -230,11 +245,68 @@ let sectionDetails = {
                                 id: 'dne-phone-container',
                                 content: null,
                                 children: null
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "wp": {
+        device: {
+            "tablet": ["spaceX", "Twitter"]
+        },
+        tech: ["WordPress", "Python"],
+        structure: {
+            0: {
+                type: 'div',
+                className: 'sections',
+                id: 'wp-container',
+                content: null,
+                children: {
+                    0: {
+                        type: 'div',
+                        className: 'desc col-12',
+                        id: null,
+                        content: null,
+                        children: {
+                            0: {
+                                type: 'h2',
+                                className: 'sectionTitle',
+                                id: null,
+                                content: 'WordPress',
+                                children: null
                             },
                             1: {
+                                type: 'p',
+                                className: 'desc-text col-10',
+                                id: null,
+                                content: "Undertook several standalone and joint WordPress projects exploring its feasibility as a quick launch platform. Supercharged with python knowledge to carry out deep analysis, making use of the twitter API.",
+                                children: null
+                            }
+                        }
+                    },
+                    1: {
+                        0: {
+                            type: 'div',
+                            className: 'media col-10',
+                            id: null,
+                            content: null,
+                            children: {
+                                0: {
+                                    type: 'div',
+                                    className: 'device tablet',
+                                    id: 'wp-tablet-container',
+                                    content: null,
+                                    children: null
+                                }
+                            }
+                        },
+                        1: {
+                            0: {
                                 type: 'div',
-                                className: 'tech',
-                                id: 'dne-tech',
+                                className: 'tech flex',
+                                id: 'wp-tech',
                                 content: null,
                                 children: null
                             }
