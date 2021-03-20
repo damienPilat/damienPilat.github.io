@@ -1,9 +1,3 @@
-// Technology List for eachsection
-let techList = {
-    "md": ["JS", "HTML", "CSS", "AdobeXD"],
-    "de": ["JS", "WordPress", "Shopify"]
-};
-
 // Technology data (path and alt text)
 let techData = {
     "JS": {
@@ -47,19 +41,19 @@ function populateTech() {
     // Loop through all containers
     Array.from(techContainers).forEach(container => {
         // Get container id
-        let techID = container.id.substring(0,2);
+        let techID = container.id.split('-')[0];
+        console.log("techID:", techID);
         // Check if id in list
-        if (techID in techList) {
-            // Get individual container
-            let techDomElement = container;
+        if (techID in sectionDetails) {
+
             // Loop through tech for this element
-            techList[techID].forEach(entry => {
+            sectionDetails[techID]['tech'].forEach(entry => {
                 let techElement = document.createElement('img');    // Creat img tag
                 techElement.className = "tech-logo";                // Add attributes
                 techElement.id = entry + '-logo';
                 techElement.src = techData[entry].path;
                 techElement.alt = techData[entry].alt;
-                techDomElement.appendChild(techElement);            // Append to container
+                container.appendChild(techElement);            // Append to container
             });
         }
     });
