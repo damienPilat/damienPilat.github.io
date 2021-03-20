@@ -159,6 +159,15 @@ div#de-tech {
 
 
 // Dining Experience
+div#dne-container {
+    box-shadow: inset 0 0 0 @large_padding @secondary_color;
+}
+div#dne-container * {
+    background-color: @secondary_color;
+}
+div#dne-phone-container {
+    height: 26em;
+}
 // Images padding
 div#dne-phone-container img {
     padding: 0 @medium_padding;
@@ -180,6 +189,11 @@ div#dne-phone-container img:last-child {
     top: calc(-@extraLarge_padding*1.25);
 }
 
+// Technology Logos
+img.tech-logo {
+    padding: 0 calc(@small_padding/2);
+    background-color: #F7F8F6;
+}
 
 // Helper Classes
 // HELPER CLASSES
