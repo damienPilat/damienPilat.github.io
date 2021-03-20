@@ -1,37 +1,13 @@
-// Technology data (path and alt text)
-let techData = {
-    "JS": {
-        path: "media/tech/js-logo.png",
-        alt: "JavaScript Logo"
-    },
-    "HTML": {
-        path: "media/tech/html-logo.png",
-        alt: "HTML Logo"
-    },
-    "CSS": {
-        path: "media/tech/css-logo.png",
-        alt: "CSS Logo"
-    },
-    "AdobeXD": {
-        path: "media/tech/adobe-logo.png",
-        alt: "Adobe XD Logo"
-    },
-    "WordPress": {
-        path: "media/tech/wordpress-logo.png",
-        alt: "WordPress Logo"
-    },
-    "Shopify": {
-        path: "media/tech/shopify-logo.png",
-        alt: "Shopify Logo"
-    },
-    "Figma": {
-        path: "media/tech/figma-logo.png",
-        alt: "Figma Logo"
-    },
-    "Python": {
-        path: "media/tech/python-logo.png",
-        alt: "Python Logo"
-    },
+// Technology paths
+let techPaths = {
+    "JavaScript": "media/tech/js-logo.png",
+    "HTML": "media/tech/html-logo.png",
+    "CSS": "media/tech/css-logo.png",
+    "AdobeXD": "media/tech/adobe-logo.png",
+    "WordPress": "media/tech/wordpress-logo.png",
+    "Shopify": "media/tech/shopify-logo.png",
+    "Figma": "media/tech/figma-logo.png",
+    "Python": "media/tech/python-logo.png"
 };
 
 function populateTech() {
@@ -51,11 +27,10 @@ function populateTech() {
                 let techElement = document.createElement('img');    // Creat img tag
                 techElement.className = "tech-logo";                // Add attributes
                 techElement.id = entry + '-logo';
-                techElement.src = techData[entry].path;
-                techElement.alt = techData[entry].alt;
+                techElement.src = techPaths[entry];
+                techElement.alt = entry + ' Logo';
                 container.appendChild(techElement);            // Append to container
             });
         }
     });
 } // END: populateTech
-
