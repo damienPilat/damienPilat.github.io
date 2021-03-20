@@ -97,14 +97,14 @@ let sectionDetails = {
                                     0: {
                                         type: 'h2',
                                         className: 'sectionTitle',
-                                        id: '',
+                                        id: null,
                                         content: 'Member space & E-commerce - Diligent Eye',
                                         children: null
                                     },
                                     1: {
                                         type: 'p',
                                         className: 'desc-text',
-                                        id: '',
+                                        id: null,
                                         content: 'Design and Implementation of Diligent Eye’s Member space, including product management and e-commerce integration. Built on WordPress platform, with custom JavaScript.',
                                         children: null
                                     }
@@ -233,39 +233,11 @@ let sectionDetails = {
                                     0: {
                                         type: 'div',
                                         className: 'device',
-                                        id: 'dne-phone-welcome',
+                                        id: 'dne-phone-container',
                                         content: null,
                                         children: null
                                     }
                                 }
-                            },
-                            1: {
-                                type: 'div',
-                                className: 'device',
-                                id: 'dne-phone-search',
-                                content: null,
-                                children: null
-                            },
-                            2: {
-                                type: 'div',
-                                className: 'device',
-                                id: 'dne-phone-restaurant',
-                                content: null,
-                                children: null
-                            },
-                            3: {
-                                type: 'div',
-                                className: 'device',
-                                id: 'dne-phone-menu',
-                                content: null,
-                                children: null
-                            },
-                            4: {
-                                type: 'div',
-                                className: 'device',
-                                id: 'dne-phone-paymentConfirmation',
-                                content: null,
-                                children: null
                             }
                         }
                     }
