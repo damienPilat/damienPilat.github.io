@@ -34,7 +34,7 @@ function createElement(elementDetails) {
     }
 
     if (elementDetails.content !== null) {
-        element.innerText = elementDetails.content;
+        element.innerText = elementDetails.content.en;
     }
 
     if (elementDetails.children !== null) {
