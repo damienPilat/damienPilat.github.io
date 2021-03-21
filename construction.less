@@ -134,16 +134,14 @@ div#md-phone-container {
 }
 
 // Diligent Eye
+// BG Color
 div#de-container {
     box-shadow: inset 0 0 0 @large_padding @primary_color;
 }
 div#de-container * {
     background-color: @primary_color;
 }
-
-img#de-laptop-reportPurchase {
-
-}
+// Devices
 img#de-desktop-homepage {
     float: right;
     padding-right: @extraLarge_padding;
@@ -151,6 +149,7 @@ img#de-desktop-homepage {
 img#de-phone-checkout {
     padding-top: @extraLarge_padding;
 }
+// Tech
 div#de-tech {
     align-items: flex-end;
     height: 100%;
@@ -159,12 +158,14 @@ div#de-tech {
 
 
 // Dining Experience
+// BG Color
 div#dne-container {
     box-shadow: inset 0 0 0 @large_padding @secondary_color;
 }
 div#dne-container * {
     background-color: @secondary_color;
 }
+// Devices
 div#dne-phone-container {
     height: 26em;
 }
@@ -220,4 +221,34 @@ img.tech-logo {
 // Media elements
 img.phone {
     border-radius: 20px;
+}
+
+.maxWidth > img {
+    max-width: 100%;
+}
+
+@media only screen and (max-width: 800px){
+    // Movie Dashboard
+    // Media - phone
+    div#md-phone-container {
+        padding-top: @medium_padding;
+    }
+    // Media - desktop
+    img#de-desktop-homepage {
+        padding-top: @medium_padding;
+        padding-right: 0;
+        float: none;
+    }
+
+    // Diligent Eye
+    // Media - phone
+    div#de-phone-container {
+        .flex();
+    }
+    img#de-phone-checkout {
+        padding-top: 0;
+    }
+    div#de-tech {
+        padding: @large_padding 0 0 0;
+    }
 }
