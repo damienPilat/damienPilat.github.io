@@ -226,10 +226,6 @@
         _listeners: []
     };
 
-    /**
-     * @todo Document why this abstraction exists, and the relationship between
-     *       environment, file managers, and plugin manager
-     */
     var Environment = /** @class */ (function () {
         function Environment(externalEnvironment, fileManagers) {
             this.fileManagers = fileManagers || [];
@@ -1188,7 +1184,7 @@
      * @prop {string[]} extract
      *
      * @param {Object} e              - An error object to wrap around or just a descriptive object
-     * @param {Object} fileContentMap - An object with file contents in 'contents' property (like importManager) @todo - move to fileManager?
+     * @param {Object} fileContentMap - An object with file contents in 'contents' property (like importManager)
      * @param {string} [currentFilename]
      */
     var LessError = function (e, fileContentMap, currentFilename) {
@@ -1554,7 +1550,7 @@
                     name[0].value : evalName(context, name);
                 variable = false; // never treat expanded interpolation as new variable name
             }
-            // @todo remove when parens-division is default
+
             if (name === 'font' && context.math === MATH.ALWAYS) {
                 mathBypass = true;
                 prevMath = context.math;
@@ -1791,7 +1787,6 @@
     function isPathLocalRelative(path) {
         return path.charAt(0) === '.';
     }
-    // todo - do the same for the toCSS ?
 
     function makeRegistry(base) {
         return {
@@ -3321,7 +3316,6 @@
         eval: function (context) {
             var property;
             var name = this.name;
-            // TODO: shorten this reference
             var mergeRules = context.pluginManager.less.visitors.ToCSSVisitor.prototype._mergeRules;
             if (this.evaluating) {
                 throw { type: 'Name', message: "Recursive property reference for " + name, filename: this.fileInfo().filename,
@@ -3982,7 +3976,6 @@
             for (i = 0; i < selectors.length; i++) {
                 selectorElements = selectors[i].elements;
                 // duplicate the logic in genCSS function inside the selector node.
-                // future TODO - move both logics into the selector joiner visitor
                 if (i > 0 && selectorElements.length && selectorElements[0].combinator.value === '') {
                     selectorElements[0].combinator.value = ' ';
                 }
@@ -4521,7 +4514,6 @@
         AbstractFileManager.prototype.isPathAbsolute = function (filename) {
             return (/^(?:[a-z-]+:|\/|\\|#)/i).test(filename);
         };
-        // TODO: pull out / replace?
         AbstractFileManager.prototype.join = function (basePath, laterPath) {
             if (!basePath) {
                 return laterPath;
@@ -6410,7 +6402,6 @@
             }
         };
         // Specialization of peek()
-        // TODO remove or change some currentChar calls to peekChar
         parserInput.peekChar = function (tok) { return input.charAt(parserInput.i) === tok; };
         parserInput.currentChar = function () { return input.charAt(parserInput.i); };
         parserInput.prevChar = function () { return input.charAt(parserInput.i - 1); };
@@ -8780,10 +8771,7 @@
                 r = val[0];
                 g = val[1];
                 b = val[2];
-                /**
-                 * @todo - should this be normalized in
-                 *   function caller? Or parsed differently?
-                 */
+
                 if (b instanceof Operation) {
                     var op = b;
                     b = op.operands[0];
@@ -9766,8 +9754,6 @@
         var visitorIterator;
         /**
          * first() / get() allows visitors to be added while visiting
-         *
-         * @todo Add scoping for visitors just like functions for @plugin; right now they're global
          */
         if (options.pluginManager) {
             visitorIterator = options.pluginManager.visitor();
@@ -10332,7 +10318,6 @@
                     }
                     else {
                         // import (multiple) parse trees apparently get altered and can't be cached.
-                        // TODO: investigate why this is
                         if (importManager.files[resolvedFilename]
                             && !importManager.files[resolvedFilename].options.multiple
                             && !importOptions.multiple) {
@@ -10441,7 +10426,6 @@
                 }
                 var imports_1 = new ImportManager(this, context_1, rootFileInfo);
                 this.importManager = imports_1;
-                // TODO: allow the plugins to be just a list of paths or names
                 // Do an async plugin queue like lessc
                 if (options.plugins) {
                     options.plugins.forEach(function (plugin) {
@@ -10606,7 +10590,6 @@
     var options;
     var logger$1;
     var fileCache = {};
-    // TODOS - move log somewhere. pathDiff and doing something similar in node. use pathDiff in the other browser file for the initial load
     var FileManager = function () { };
     FileManager.prototype = Object.assign(new AbstractFileManager(), {
         alwaysMakePathsAbsolute: function () {
@@ -10662,7 +10645,6 @@
             fileCache = {};
         },
         loadFile: function (filename, currentDirectory, options, environment) {
-            // TODO: Add prefix support like less-node?
             // What about multiple paths?
             if (currentDirectory && !this.isPathAbsolute(filename)) {
                 filename = currentDirectory + filename;
@@ -10701,7 +10683,6 @@
         return FileManager;
     });
 
-    // TODO: Add tests for browser @plugin
     /**
      * Browser Plugin Loader
      */
@@ -10932,7 +10913,6 @@
                         }
                     }
                     catch (e) {
-                        // TODO - could do with adding more robust error handling
                         logger.error("failed to save \"" + path + "\" to local storage for caching.");
                     }
                 }
@@ -11072,7 +11052,6 @@
                         return;
                     }
                 }
-                // TODO add tests around how this behaves when reloading
                 errors.remove(path);
                 instanceOptions.rootFileInfo = newFileInfo;
                 less.render(data, instanceOptions, function (e, result) {
