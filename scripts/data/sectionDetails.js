@@ -9,13 +9,13 @@ let sectionDetails = {
         structure: {
             0: {
                 type: 'div',
-                className: 'sections flex',
+                className: 'sections row flex',
                 id: 'md-container',
                 content: null,
                 children: {
                     0: {
                         type: 'div',
-                        className: 'desc col-3',
+                        className: 'desc col-sm-3',
                         id: null,
                         content: null,
                         children: {
@@ -37,14 +37,14 @@ let sectionDetails = {
                     },
                     1: {
                         type: 'div',
-                        className: 'device tablet col-6',
+                        className: 'device tablet col-sm-6',
                         id: 'md-tablet-container',
                         content: null,
                         children: null
                     },
                     2: {
                         type: 'div',
-                        className: 'col-3',
+                        className: 'col-sm-3',
                         id: 'media-tech',
                         content: null,
                         children: {
