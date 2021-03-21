@@ -78,7 +78,7 @@ let sectionDetails = {
         structure: {
             0: {
                 type: 'div',
-                className: 'sections',
+                className: 'sections row',
                 id: 'de-container',
                 content: null,
                 children: {
@@ -90,7 +90,7 @@ let sectionDetails = {
                         children: {
                             0: {
                                 type: 'div',
-                                className: 'desc col-6',
+                                className: 'desc col-sm-6',
                                 id: null,
                                 content: null,
                                 children: {
@@ -112,13 +112,13 @@ let sectionDetails = {
                             },
                             1: {
                                 type: 'div',
-                                className: 'col-6',
+                                className: 'col-sm-6',
                                 id: null,
                                 content: null,
                                 children: {
                                     0: {
                                         type: 'div',
-                                        className: 'device',
+                                        className: 'device maxWidth',
                                         id: 'de-laptop-container',
                                         content: null,
                                         children: null
@@ -135,13 +135,13 @@ let sectionDetails = {
                         children: {
                             0: {
                                 type: 'div',
-                                className: 'col-8',
+                                className: 'col-sm-8',
                                 id: null,
                                 content: null,
                                 children: {
                                     0: {
                                         type: 'div',
-                                        className: 'device',
+                                        className: 'device maxWidth',
                                         id: 'de-desktop-container',
                                         content: null,
                                         children: null
@@ -150,7 +150,7 @@ let sectionDetails = {
                             },
                             1: {
                                 type: 'div',
-                                className: 'col-2',
+                                className: 'col-sm-2',
                                 id: null,
                                 content: null,
                                 children: {
@@ -165,7 +165,7 @@ let sectionDetails = {
                             },
                             2: {
                                 type: 'div',
-                                className: 'col-2',
+                                className: 'col-sm-2',
                                 id: null,
                                 content: null,
                                 children: {
