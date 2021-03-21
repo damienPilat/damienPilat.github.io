@@ -167,7 +167,8 @@ div#dne-container * {
 }
 // Devices
 div#dne-phone-container {
-    height: 26em;
+    min-height: 26em;
+    flex-wrap: wrap;
 }
 // Images padding
 div#dne-phone-container img {
@@ -195,6 +196,7 @@ div#dne-phone-container img:last-child {
 div#wp-tablet-container {
     justify-content: space-around;
     padding: 0 20vw;
+    flex-wrap: wrap;
 }
 div#wp-tech {
     display: flex;
@@ -246,9 +248,20 @@ img.phone {
         .flex();
     }
     img#de-phone-checkout {
-        padding-top: 0;
+        padding-top: @small_padding;
     }
     div#de-tech {
         padding: @large_padding 0 0 0;
+    }
+
+    // Dining Experience
+    div#dne-phone-container > img {
+        position: initial !important;
+    }
+
+    // Word Press
+    div#wp-tech {
+        justify-content: center;
+        flex-direction: initial;
     }
 }
