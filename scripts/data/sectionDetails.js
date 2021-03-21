@@ -287,25 +287,30 @@ let sectionDetails = {
                         }
                     },
                     1: {
-                        0: {
-                            type: 'div',
-                            className: 'media col-10',
-                            id: null,
-                            content: null,
-                            children: {
-                                0: {
-                                    type: 'div',
-                                    className: 'device tablet',
-                                    id: 'wp-tablet-container',
-                                    content: null,
-                                    children: null
-                                }
-                            }
-                        },
-                        1: {
+                        type: 'div',
+                        className: 'row',
+                        id: null,
+                        content: null,
+                        children: {
                             0: {
                                 type: 'div',
-                                className: 'tech flex',
+                                className: 'media col-11',
+                                id: null,
+                                content: null,
+                                children: {
+                                    0: {
+                                        type: 'div',
+                                        className: 'device tablet flex',
+                                        id: 'wp-tablet-container',
+                                        content: null,
+                                        children: null
+                                    }
+                                }
+                            },
+                            1: {
+                                // @todo: Incorrect WP bg colour -> look into saving logos as SVG and changing bg color
+                                type: 'div',
+                                className: 'tech col-1',
                                 id: 'wp-tech',
                                 content: null,
                                 children: null
