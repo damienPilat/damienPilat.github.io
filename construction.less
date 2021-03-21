@@ -50,14 +50,12 @@
 }
 
 // HTML content
-html {
+html, body {
     // Font
     font-family: @font;
     font-size: @fontSize_normal;
     font-weight: @weight_small;
-    color: @fontColor_light;
-    // Layout
-    //padding: 0 @large_padding;
+    color: @fontColor_dark;
 }
 
 h1 {
@@ -70,6 +68,19 @@ h2 {
 p {
     font-weight: @weight_small;
 }
+a {
+    text-decoration: none;
+}
+a:hover, a:focus {
+    cursor: pointer;
+    text-decoration: underline solid @fontSize_medium;
+}
+a:visited {
+
+}
+a:active {
+
+}
 
 
 
@@ -78,10 +89,8 @@ div#nav-bar {
     padding: 0 @medium_padding;
 }
 // LINKS
-div#link-container {
-}
-div#link-container:nth-child(1) {
-    float: left
+div#nav-bar-link-container > div:nth-child(1) {
+    float: left;
 }
 // Link element container
 div.link-elements {
@@ -224,11 +233,42 @@ img.tech-logo {
 img.phone {
     border-radius: 20px;
 }
-
 .maxWidth > img {
     max-width: 100%;
 }
 
+
+// FOOTER
+div#footer {
+    flex-direction: column;
+}
+// Language Setting options
+div#language-setting {
+    letter-spacing: .2em;
+}
+a#lang-en {
+    font-weight: @weight_large;
+    color: @fontColor_dark;
+}
+a#lang-fr {
+    color: @fontColor_light;
+}
+span#lang-dash {
+    color: @fontColor_dark;
+}
+// Footer Page Links
+div#footer-page-links > a {
+    padding: 0 @medium_padding;
+    width: 70px;
+}
+
+// Footer meta (personal credits, copyright, etc.)
+div#footer-meta {
+    text-align: center;
+}
+
+
+// Mobile Optimisation
 @media only screen and (max-width: 800px){
     // Movie Dashboard
     // Media - phone
