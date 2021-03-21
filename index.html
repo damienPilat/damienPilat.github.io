@@ -2,48 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Damien Pilat's Portfolio</title>
 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!--  Custom CSS  -->
     <link rel="stylesheet/less" type="text/css" href="index.less">
+    <!--  LESS  -->
     <script src="less.js"></script>
+    <!--  JQuery  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
+    <!--  Custom Scripts  -->
+    <!--  Populate Tech Logos  -->
+    <script src="scripts/data/sectionDetails.js"></script>
+    <script src="scripts/custom/populateLogos.js"></script>
+    <script src="scripts/custom/dynamicDevice.js"></script>
+    <script src="scripts/custom/dynamicSections.js"></script>
 </head>
 <body>
-<div id="content-container" class="flex">
-    <div id="main-text">
-        <p id="welcome-msg">Welcome to <span id="author-name">Damien Pilat's</span> Portfolio</p>
-        <p id="maintenance-msg">This page is getting a <u>fresh</u> new look and will be back up shortly!</p>
-        <p id="links-msg">In the meantime, see what Damien has been up to on:</p>
-    </div>
+<div id="nav-bar" class="flex">
+    <h1>Damien Pilat</h1>
 
-    <div class="flex">
-        <div class="link-elements flex">
-            <svg id="linkedIn-Vector" class="logo-vector" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <a href="https://www.linkedin.com/in/damien-pilat/" class="link">
-                    <path d="M32 2.35294V29.6471C32 30.2711 31.7521 30.8696 31.3108 31.3108C30.8696 31.7521 30.2711 32 29.6471 32H2.35294C1.7289 32 1.13042 31.7521 0.689161 31.3108C0.247898 30.8696 0 30.2711 0 29.6471L0 2.35294C0 1.7289 0.247898 1.13042 0.689161 0.689161C1.13042 0.247898 1.7289 0 2.35294 0L29.6471 0C30.2711 0 30.8696 0.247898 31.3108 0.689161C31.7521 1.13042 32 1.7289 32 2.35294ZM9.41177 12.2353H4.70588V27.2941H9.41177V12.2353ZM9.83529 7.05882C9.83777 6.70286 9.77012 6.3499 9.63618 6.02008C9.50225 5.69027 9.30467 5.39007 9.05471 5.13662C8.80476 4.88316 8.50733 4.68143 8.1794 4.54293C7.85148 4.40443 7.49949 4.33187 7.14353 4.32941H7.05882C6.33494 4.32941 5.6407 4.61697 5.12884 5.12884C4.61697 5.6407 4.32941 6.33494 4.32941 7.05882C4.32941 7.78271 4.61697 8.47694 5.12884 8.98881C5.6407 9.50067 6.33494 9.78823 7.05882 9.78823C7.41481 9.79699 7.76903 9.73552 8.10125 9.60733C8.43348 9.47915 8.73718 9.28675 8.99502 9.04115C9.25286 8.79554 9.45978 8.50154 9.60396 8.17594C9.74814 7.85034 9.82675 7.49952 9.83529 7.14353V7.05882ZM27.2941 18.1459C27.2941 13.6188 24.4141 11.8588 21.5529 11.8588C20.6161 11.8119 19.6834 12.0114 18.8478 12.4375C18.0121 12.8636 17.3028 13.5013 16.7906 14.2871H16.6588V12.2353H12.2353V27.2941H16.9412V19.2847C16.8732 18.4644 17.1315 17.6504 17.6602 17.0195C18.1889 16.3886 18.9452 15.9918 19.7647 15.9153H19.9435C21.44 15.9153 22.5506 16.8565 22.5506 19.2282V27.2941H27.2565L27.2941 18.1459Z" fill="white"/>
-                </a>
-            </svg>
+    <div id="nav-bar-link-container">
+        <div class="link-elements nav-bar-link-elements flex">
+            <img class="nav-bar-logo-vector" src="media/linkLogo/linkedIn-logo.svg" alt="LinkedIn Logo w/ link">
         </div>
-        <div class="link-elements flex">
-            <svg id="github-vector" class="logo-vector" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <a href="https://github.com/damienPilat" class="link">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16 0C7.16 0 0 7.16 0 16C0 23.08 4.58 29.06 10.94 31.18C11.74 31.32 12.04 30.84 12.04 30.42C12.04 30.04 12.02 28.78 12.02 27.44C8 28.18 6.96 26.46 6.64 25.56C6.46 25.1 5.68 23.68 5 23.3C4.44 23 3.64 22.26 4.98 22.24C6.24 22.22 7.14 23.4 7.44 23.88C8.88 26.3 11.18 25.62 12.1 25.2C12.24 24.16 12.66 23.46 13.12 23.06C9.56 22.66 5.84 21.28 5.84 15.16C5.84 13.42 6.46 11.98 7.48 10.86C7.32 10.46 6.76 8.82 7.64 6.62C7.64 6.62 8.98 6.2 12.04 8.26C13.32 7.9 14.68 7.72 16.04 7.72C17.4 7.72 18.76 7.9 20.04 8.26C23.1 6.18 24.44 6.62 24.44 6.62C25.32 8.82 24.76 10.46 24.6 10.86C25.62 11.98 26.24 13.4 26.24 15.16C26.24 21.3 22.5 22.66 18.94 23.06C19.52 23.56 20.02 24.52 20.02 26.02C20.02 28.16 20 29.88 20 30.42C20 30.84 20.3 31.34 21.1 31.18C24.2763 30.1077 27.0363 28.0664 28.9917 25.3432C30.947 22.6201 31.9991 19.3524 32 16C32 7.16 24.84 0 16 0Z" fill="white"/>
-                </a>
-            </svg>
+        <div class="link-elements nav-bar-link-elements flex">
+            <img class="nav-bar-logo-vector" src="media/linkLogo/github-logo.svg" alt="Github Logo w/ Link">
         </div>
-    </div>
-    
-    <div id="portfolio-image-container">
-<!--        <img id="portfolio-img" src="media/DamienPilatPortfolio.png" alt="Damien Pilat's Portfolio" usemap="#portfolio-map">-->
-        <img id="portfolio-img" src="media/DamienPilatPortfolio_Link.svg" alt="Damien Pilat's Portfolio" usemap="#portfolio-map">
-
-<!--        <map name="portfolio-map">-->
-<!--            <area shape="rect" coords="230 110 750 400" href="https://bit.ly/3b98H6V" alt="Movie Dashboard Website">-->
-<!--            <area shape="rect" coords="40 530 520 830" href="https://bit.ly/3uTGadB" alt="Dining Experience Website">-->
-<!--            <area shape="poly" coords="580 400 820 400 820 300 1150 300 1150 680 580 680" href="https://diligenteye.com" alt="Diligent Eye Website">-->
-<!--        </map>-->
-        
     </div>
 </div>
+<hr />
+
+<div id="content"></div>
+
+<div id="footer" class="flex">
+<!--  @todo: activate language settings when completed  -->
+<!--    <div id="language-setting"><p><a id="lang-en" href="#">EN</a><span id="lang-dash">/</span><a id="lang-fr" href="#">FR</a></p></div>-->
+
+    <div id="footer-page-links">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <div id="footer-link-container">
+        <div class="footer-link-elements flex">
+            <img class="footer-logo-vector" src="media/linkLogo/linkedIn-logo-v2.svg" alt="LinkedIn Logo w/ link">
+        </div>
+        <div class="footer-link-elements flex">
+            <img class="footer-logo-vector" src="media/linkLogo/github-logo-v2.svg" alt="Github Logo w/ Link">
+        </div>
+    </div>
+
+    <div id="footer-meta"><p>Website created by Damien Pilat.<br>2021 &#169;</p></div>
+</div>
+
 </body>
+<footer>
+    <!--  Scripts for when page loads  -->
+    <script>
+        // Create sections
+        populateSections();
+        // Populate devices
+        populateDevice();
+        // Populate tech for each section
+        populateTech();
+
+    </script>
+
+    <!-- Bootstrap: JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+            crossorigin="anonymous"></script>
+</footer>
 </html>
