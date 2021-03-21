@@ -192,19 +192,19 @@ let sectionDetails = {
         structure: {
             0: {
                 type: 'div',
-                className: 'sections',
+                className: 'sections row',
                 id: 'dne-container',
                 content: null,
                 children: {
                     0: {
                         type: 'div',
-                        className: 'desc col-12',
+                        className: 'desc col-sm-12',
                         id: null,
                         content: null,
                         children: {
                             0: {
                                 type: 'h2',
-                                className: 'sectionTitle col-6',
+                                className: 'sectionTitle col-sm-6',
                                 id: null,
                                 content: 'Dining Experience - Mobile App',
                                 children: null
@@ -217,7 +217,7 @@ let sectionDetails = {
                                 children: {
                                     0: {
                                         type: 'p',
-                                        className: 'desc-text col-6',
+                                        className: 'desc-text col-sm-6',
                                         id: null,
                                         content: 'Re-imagined covid and post-pandemic dining experience through an in-depth User Experience Research strategy, resulting into an interactive prototype crafted in Figma.',
                                         children: null
@@ -279,7 +279,7 @@ let sectionDetails = {
                             },
                             1: {
                                 type: 'p',
-                                className: 'desc-text col-10',
+                                className: 'desc-text col-sm-10',
                                 id: null,
                                 content: "Undertook several standalone and joint WordPress projects exploring its feasibility as a quick launch platform. Supercharged with python knowledge to carry out deep analysis, making use of the twitter API.",
                                 children: null
