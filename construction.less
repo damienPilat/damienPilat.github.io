@@ -81,14 +81,19 @@ a:visited {
 a:active {
 
 }
+hr {
+    background-color: @bg_color;
+    margin: 0;
+    color: @fontColor_medium;
+}
 
 
-
+// NAV BAR
 div#nav-bar {
     justify-content: space-between;
-    padding: 0 @medium_padding;
+    padding: @small_padding @medium_padding;
 }
-// LINKS
+// Social Links
 div#nav-bar-link-container > div:nth-child(1) {
     float: left;
 }
@@ -98,13 +103,14 @@ div.link-elements {
     height: @logo_size + @small_padding;
     width: @logo_size + @small_padding;
     // Layout
-    border-radius: calc(@small_padding * 2);
     margin: @small_padding;
-    // Style
+}
+div.nav-bar-link-elements {
+    border-radius: calc(@small_padding * 2);
     background-color: @tertiary_color;
 }
 // Links svg logos
-img.logo-vector {
+img.nav-bar-logo-vector {
     background-color: @tertiary_color;
     border-radius: calc(@logo_size / 2);
 }
@@ -146,6 +152,8 @@ div#md-phone-container {
 // BG Color
 div#de-container {
     box-shadow: inset 0 0 0 @large_padding @primary_color;
+    background-color: @primary_color;
+
 }
 div#de-container * {
     background-color: @primary_color;
@@ -170,6 +178,7 @@ div#de-tech {
 // BG Color
 div#dne-container {
     box-shadow: inset 0 0 0 @large_padding @secondary_color;
+    background-color: @secondary_color;
 }
 div#dne-container * {
     background-color: @secondary_color;
@@ -260,6 +269,12 @@ span#lang-dash {
 div#footer-page-links > a {
     padding: 0 @medium_padding;
     width: 70px;
+}
+
+// Footer socialLinks
+div#footer-link-container > div{
+    float: left;
+    padding: @medium_padding @small_padding;
 }
 
 // Footer meta (personal credits, copyright, etc.)
