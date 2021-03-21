@@ -254,7 +254,7 @@ let sectionDetails = {
     },
     "wp": {
         device: {
-            "tablet": ["spaceX", "Twitter"]
+            "tablet": ["spaceX", "twitter"]
         },
         tech: ["WordPress", "Python"],
         structure: {
@@ -281,7 +281,7 @@ let sectionDetails = {
                                 type: 'p',
                                 className: 'desc-text col-sm-10',
                                 id: null,
-                                content: "Undertook several standalone and joint WordPress projects exploring its feasibility as a quick launch platform. Supercharged with python knowledge to carry out deep analysis, making use of the twitter API.",
+                                content: {en: "Undertook several standalone and joint WordPress projects exploring its feasibility as a quick launch platform. Supercharged with python knowledge to carry out deep analysis, making use of the twitter API.", fr: "A Venir"},
                                 children: null
                             }
                         }
