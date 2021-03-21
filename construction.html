@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Damien Pilat's Portfolio</title>
 
     <!-- Bootstrap CSS -->
@@ -26,19 +27,40 @@
 <div id="nav-bar" class="flex">
     <h1>Damien Pilat</h1>
 
-    <div id="link-container">
-        <div class="link-elements flex" style="float: left">
-            <img id="linkedIn-Vector" class="logo-vector" src="media/linkLogo/linkedIn-logo.svg"
-                 alt="LinkedIn Logo w/ link">
+    <div id="nav-bar-link-container">
+        <div class="link-elements flex">
+            <img class="logo-vector" src="media/linkLogo/linkedIn-logo.svg" alt="LinkedIn Logo w/ link">
         </div>
         <div class="link-elements flex">
-            <img id="github-vector" class="logo-vector" src="media/linkLogo/github-logo.svg" alt="Github Logo w/ Link">
+            <img class="logo-vector" src="media/linkLogo/github-logo.svg" alt="Github Logo w/ Link">
         </div>
     </div>
 </div>
 
 <!-- @todo: look into creating <section> to have bg color well supported -->
 <div id="content"></div>
+
+<div id="footer" class="flex">
+    <div id="language-setting"><p><a id="lang-en" href="#">EN</a><span id="lang-dash">/</span><a id="lang-fr" href="#">FR</a></p></div>
+
+    <div id="footer-page-links">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
+
+<!--  @todo: remake vector to allow independent colour adjustments  -->
+    <div id="link-container">
+        <div class="link-elements flex" style="float: left">
+            <img class="logo-vector" src="media/linkLogo/linkedIn-logo.svg" alt="LinkedIn Logo w/ link">
+        </div>
+        <div class="link-elements flex">
+            <img class="logo-vector" src="media/linkLogo/github-logo.svg" alt="Github Logo w/ Link">
+        </div>
+    </div>
+
+    <div id="footer-meta"><p>Website created by Damien Pilat.<br>2021 &#169;</p></div>
+</div>
 
 </body>
 <footer>
