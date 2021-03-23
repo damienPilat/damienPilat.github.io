@@ -1,12 +1,12 @@
 // Dimensions
-@height: 50px;
-@width: 125px;
+@height: 25px;
+@width: 50px;
 @padding: 6px;
 
 // Colors
 @sun: #ffe59c;
 @moon: #dcdcdc;
-@sky_day: #a1dcf9;
+@sky_day: #c2e4f5;
 @sky_night: #202020;
 @small_artefact: #fafafa;
 @dark: #3a3a3a;
@@ -17,7 +17,6 @@
 
 
 body {
-    //background-color: #fafafa;
     transition: @main_transition;
 }
 
@@ -95,8 +94,8 @@ input:checked + .slider {
 // Slider Element on click
 input:checked + .slider:before {
     background-color: @sky_night;
-    box-shadow: inset -10px -18px @moon, inset -10px -18px 1px 2px @moon;
-    -moz-box-shadow: inset -10px -18px @moon, inset -10px -18px 1px 2px @moon;
+    box-shadow: inset -5px -6px @moon, inset -5px -6px 1px 2px @moon;
+    -moz-box-shadow: inset -5px -6px @moon, inset -5px -6px 1px 2px @moon;
 }
 
 input:focus + .body {
