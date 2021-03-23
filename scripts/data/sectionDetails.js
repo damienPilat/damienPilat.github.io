@@ -9,7 +9,7 @@ let sectionDetails = {
         structure: {
             0: {
                 type: 'div',
-                className: 'sections row flex',
+                className: 'sections row flex bgColor_light',
                 id: 'md-container',
                 content: null,
                 children: {
