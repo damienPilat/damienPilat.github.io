@@ -53,12 +53,38 @@
     padding: 0;
 
 }
+
+// Light / Dark Mode
 .bgColor_light {
     background-color: @bg_color;
     color: @fontColor_dark;
 }
 .bgColor_dark {
     background-color:  @bg_dark_color;
+    color: @fontColor_light;
+}
+.primaryColor_light {
+    background-color: @primary_color;
+    color: @fontColor_dark;
+}
+.primaryColor_dark {
+    background-color: @primary_dark_color;
+    color: @fontColor_light;
+}
+.secondaryColor_light {
+    background-color: @secondary_color;
+    color: @fontColor_dark;
+}
+.secondaryColor_dark {
+    background-color: @secondary_dark_color;
+    color: @fontColor_light;
+}
+.tertiaryColor_light {
+    background-color: @tertiary_color;
+    color: @fontColor_dark;
+}
+.tertiaryColor_dark {
+    background-color: @tertiary_dark_color;
     color: @fontColor_light;
 }
 
@@ -134,14 +160,6 @@ div.sections {
 }
 
 // Movie Dashboard
-div#md-container {
-    //box-shadow: inset 0 0 0 @index @bg_color;
-    //background-color: @bg_color;
-}
-div#md-container * {
-    background-color: @bg_color;
-}
-
 div#md-tablet-container {
     img#md-tablet-homepage {
         width: 100%;
@@ -160,14 +178,6 @@ div#md-phone-container {
 }
 
 // Diligent Eye
-// BG Color
-div#de-container {
-    box-shadow: inset 0 0 0 @index @primary_color;
-    background-color: @primary_color;
-}
-div#de-container * {
-    background-color: @primary_color;
-}
 // Devices
 img#de-desktop-homepage {
     float: right;
@@ -185,14 +195,6 @@ div#de-tech {
 
 
 // Dining Experience
-// BG Color
-div#dne-container {
-    box-shadow: inset 0 0 0 @index @secondary_color;
-    background-color: @secondary_color;
-}
-div#dne-container * {
-    background-color: @secondary_color;
-}
 // Devices
 div#dne-phone-container {
     min-height: 26em;
@@ -220,13 +222,6 @@ div#dne-phone-container img:last-child {
 }
 
 // Word Press Content
-div#wp-container {
-    box-shadow: inset 0 0 0 @index @bg_color;
-    background-color: @bg_color;
-}
-div#wp-container * {
-    background-color: @bg_color;
-}
 // Devices
 div#wp-tablet-container {
     justify-content: space-around;
