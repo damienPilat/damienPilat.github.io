@@ -78,7 +78,7 @@ let sectionDetails = {
         structure: {
             0: {
                 type: 'div',
-                className: 'sections row',
+                className: 'sections row primaryColor_light',
                 id: 'de-container',
                 content: null,
                 children: {
@@ -192,7 +192,7 @@ let sectionDetails = {
         structure: {
             0: {
                 type: 'div',
-                className: 'sections row',
+                className: 'sections row secondaryColor_light',
                 id: 'dne-container',
                 content: null,
                 children: {
@@ -260,7 +260,7 @@ let sectionDetails = {
         structure: {
             0: {
                 type: 'div',
-                className: 'sections',
+                className: 'sections tertiaryColor_light',
                 id: 'wp-container',
                 content: null,
                 children: {
