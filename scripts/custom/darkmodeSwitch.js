@@ -7,9 +7,15 @@ function modeSwitch() {
         if (this.checked) {
             // Change all elements with '.bgColor_light' classname
             changeColorMode('bgColor_light');
+            changeColorMode('primaryColor_light');
+            changeColorMode('secondaryColor_light');
+            changeColorMode('tertiaryColor_light');
         } else {
             // Change all element with '.<>_dark' classname
             changeColorMode('bgColor_dark');
+            changeColorMode('primaryColor_dark');
+            changeColorMode('secondaryColor_dark');
+            changeColorMode('tertiaryColor_dark');
         }
     });
 }
