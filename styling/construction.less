@@ -13,7 +13,8 @@
 @weight_medium: 200;
 @weight_large: 300;
 // Font Color
-@fontColor_light: rgba(173, 173, 173, 0.96);
+@fontColor_light: #eeeeee;
+@fontColor_bright: rgba(173, 173, 173, 0.96);
 @fontColor_medium: rgba(119, 119, 119, 0.96);
 @fontColor_dark: rgba(52, 52, 52, 0.96);
 // Colors
@@ -21,6 +22,11 @@
 @primary_color: #CFEEFB;
 @secondary_color: #F29F96;
 @tertiary_color: #C4C4C4;
+// Dark Colors
+@bg_dark_color: #3a3a3a;
+@primary_dark_color: #4d7180;
+@secondary_dark_color: #99615c;
+@tertiary_dark_color: #808080;
 
 // -- v1 Elements
 // Link Elements
@@ -45,8 +51,15 @@
     // Layout
     margin: 0;
     padding: 0;
-    // Styling
+
+}
+.bgColor_light {
     background-color: @bg_color;
+    color: @fontColor_dark;
+}
+.bgColor_dark {
+    background-color:  @bg_dark_color;
+    color: @fontColor_light;
 }
 
 // HTML content
@@ -55,7 +68,6 @@ html, body {
     font-family: @font;
     font-size: @fontSize_normal;
     font-weight: @weight_small;
-    color: @fontColor_dark;
 }
 
 h1 {
@@ -117,15 +129,14 @@ img.nav-bar-logo-vector {
 
 
 // CONTENTS
-div#content {
-}
 div.sections {
     padding: @index @index;
 }
 
 // Movie Dashboard
 div#md-container {
-    box-shadow: inset 0 0 0 @index @bg_color;
+    //box-shadow: inset 0 0 0 @index @bg_color;
+    //background-color: @bg_color;
 }
 div#md-container * {
     background-color: @bg_color;
@@ -153,7 +164,6 @@ div#md-phone-container {
 div#de-container {
     box-shadow: inset 0 0 0 @index @primary_color;
     background-color: @primary_color;
-
 }
 div#de-container * {
     background-color: @primary_color;
@@ -210,6 +220,13 @@ div#dne-phone-container img:last-child {
 }
 
 // Word Press Content
+div#wp-container {
+    box-shadow: inset 0 0 0 @index @bg_color;
+    background-color: @bg_color;
+}
+div#wp-container * {
+    background-color: @bg_color;
+}
 // Devices
 div#wp-tablet-container {
     justify-content: space-around;
@@ -269,7 +286,7 @@ a#lang-en {
     color: @fontColor_dark;
 }
 a#lang-fr {
-    color: @fontColor_light;
+    color: @fontColor_bright;
 }
 span#lang-dash {
     color: @fontColor_dark;
