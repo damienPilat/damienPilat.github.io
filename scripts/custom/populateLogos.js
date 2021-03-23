@@ -18,7 +18,6 @@ function populateTech() {
     Array.from(techContainers).forEach(container => {
         // Get container id
         let techID = container.id.split('-')[0];
-        console.log("techID:", techID);
         // Check if id in list
         if (techID in sectionDetails) {
 
