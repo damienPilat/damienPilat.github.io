@@ -33,6 +33,29 @@ function populateDevice() {
 } // END: populateTech
 
 
+// Looping through all deviceType entries,
+// Create a device link tag & device img tag, append each other and then to container
+function createImageElement (deviceID, deviceType, container) {
+    sectionDetails[deviceID]['device'][deviceType].forEach(elData => {
+        // Create Link and Image element
+        let deviceLink = createDeviceLink(deviceID, deviceType, elData);
+        let deviceImage = createDeviceImage(deviceID, deviceType, elData);
+
+        // Append elements
+        deviceLink.appendChild(deviceImage);
+        container.appendChild(deviceLink);
+    });
+}
+
+
+// Return Device Link element with className/target/href
+function createDeviceLink(deviceID, deviceType, elData) {
+    let deviceLink = document.createElement('a');
+    deviceLink.className = deviceType + '-link';
+    deviceLink.target = "_blank";
+    deviceLink.href = sectionDetails[deviceID].website + '#' + elData;
+    return deviceLink;
+}
 
 /*  Create Alternative Text for Images
     Retrieve current section container,
