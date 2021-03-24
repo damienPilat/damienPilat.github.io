@@ -1,13 +1,13 @@
 // Technology paths
 let techPaths = {
-    "JavaScript": "media/tech/js-logo.png",
-    "HTML": "media/tech/html-logo.png",
-    "CSS": "media/tech/css-logo.png",
-    "AdobeXD": "media/tech/adobe-logo.png",
-    "WordPress": "media/tech/wordpress-logo.png",
-    "Shopify": "media/tech/shopify-logo.png",
-    "Figma": "media/tech/figma-logo.png",
-    "Python": "media/tech/python-logo.png"
+    "JavaScript": "media/tech/js-logo.svg",
+    "HTML": "media/tech/html-logo.svg",
+    "CSS": "media/tech/css-logo.svg",
+    "AdobeXD": "media/tech/adobe-logo.svg",
+    "WordPress": "media/tech/wordpress-logo.svg",
+    "Shopify": "media/tech/shopify-logo.svg",
+    "Figma": "media/tech/figma-logo.svg",
+    "Python": "media/tech/python-logo.svg"
 };
 
 function populateTech() {
