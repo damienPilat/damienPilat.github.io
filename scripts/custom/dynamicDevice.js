@@ -57,10 +57,19 @@ function createDeviceLink(deviceID, deviceType, elData) {
     return deviceLink;
 }
 
-/*  Create Alternative Text for Images
-    Retrieve current section container,
-    look for 'sectionTitle' class within all child, get inner text and use to build alt text phrase.
-*/
+// Return Device Image element with className/id/src/dynamic Alt
+function createDeviceImage(deviceID, deviceType, elData) {
+    let deviceImage = document.createElement('img');
+    deviceImage.className = deviceType;
+    deviceImage.id = deviceID + '-' + deviceType + '-' + elData;
+    deviceImage.src = mediaPaths[deviceType] + deviceID + '-' + deviceType + '-' + elData + '.png';
+    deviceImage.alt = makeAlt(deviceID, elData, deviceType);
+    return deviceImage;
+}
+
+// Create Alternative Text for Images
+// Retrieve current section container,
+// look for 'sectionTitle' class within all child, get inner text and use to build alt text phrase.
 function makeAlt(deviceID, elName, deviceType) {
     let sectionContainer = document.querySelector('#' + deviceID + '-container');
     let sectionTitleNode = sectionContainer.querySelectorAll('.sectionTitle');

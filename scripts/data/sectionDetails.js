@@ -5,6 +5,7 @@ let sectionDetails = {
             "tablet": ["homepage"],
             "phone": ["watchProviders", "awards"]
         },
+        website: "http://doc.gold.ac.uk/~dpila001/idv/cw3-interactivedatavis/version6/index.html",
         tech: ["JavaScript", "HTML", "CSS", "AdobeXD"],
         structure: {
             0: {
@@ -74,6 +75,7 @@ let sectionDetails = {
             "desktop": ["homepage"],
             "phone": ["checkout"]
         },
+        website: "https://diligenteye.com/",
         tech: ["JavaScript", "WordPress", "Shopify"],
         structure: {
             0: {
@@ -188,6 +190,7 @@ let sectionDetails = {
         device: {
             "phone": ["welcome", "search", "restaurant", "menu", "paymentConfirmation"]
         },
+        website: 'http://doc.gold.ac.uk/~dpila001/UXE/UXE_redefiningDiningExperience.html',
         tech: ["Figma"],
         structure: {
             0: {
@@ -256,6 +259,7 @@ let sectionDetails = {
         device: {
             "tablet": ["spaceX", "twitter"]
         },
+        website: 'http://doc.gold.ac.uk/~dpila001/ds/website/ds_homepage_v1.html',
         tech: ["WordPress", "Python"],
         structure: {
             0: {
