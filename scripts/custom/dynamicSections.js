@@ -9,7 +9,7 @@ function populateSections() {
         // Loop through structure, recursively adding sections
         for (let firstDepthElements in sectionStructure) {
             // Append elements to container
-            domContainer.appendChild(createElement(sectionStructure[firstDepthElements]));
+            domContainer.appendChild(customElement(sectionStructure[firstDepthElements]));
         }
     }
 
@@ -18,12 +18,12 @@ function populateSections() {
 // Recursively create all children of an element
 function createChildren(children, container) {
     for (let childrenID in children) {
-        container.append(createElement(children[childrenID]))
+        container.append(customElement(children[childrenID]));
     }
 }
 
 // Create a DOM element based on the json structure
-function createElement(elementDetails) {
+function customElement(elementDetails) {
     // Create Dom Element
     let element = document.createElement(elementDetails.type);
     element.className = elementDetails.className;
