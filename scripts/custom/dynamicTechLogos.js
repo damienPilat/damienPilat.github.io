@@ -31,11 +31,11 @@ function populateTech() {
 // For each element in 'Tech' section of dict, append to container custom element
 function createTechLogo(techID, container) {
     sectionDetails[techID]['tech'].forEach(entry => {
-        let techContainer = customElement_Global({
+        let techContainer = customElement({
             type: 'div',
             className: 'tech-logo-container ' + techID + '-tech-logo-item'
         });
-        let techIcon = customElement_Global({
+        let techIcon = customElement({
             type: 'img',
             className: 'tech-logo',
             id: entry + '-logo',
@@ -45,35 +45,4 @@ function createTechLogo(techID, container) {
         techContainer.appendChild(techIcon);
         container.appendChild(techContainer);
     });
-}
-
-
-// Function to create a custom element with any possible value used in project
-function customElement_Global(config) {
-    let elementDetails = Object.assign({
-            type: null,
-            className: null,
-            id: null,
-            src: null,
-            alt: null,
-            target: null,
-            href: null,
-            innerText: null,
-            children: null
-        },
-        config
-    );
-
-    return populateElement(elementDetails);
-}
-
-// Populate DOM element with all non NULL values
-function populateElement(elementDetails) {
-    let element = document.createElement(elementDetails.type);
-    for (const [key, value] of Object.entries(elementDetails)) {
-        if (value) {
-            element[key] = value;
-        }
-    }
-    return element
 }
