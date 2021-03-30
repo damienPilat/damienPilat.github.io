@@ -25,8 +25,19 @@ function populateDevice() {
 function createImageElement (deviceID, deviceType, container) {
     sectionDetails[deviceID]['device'][deviceType].forEach(elData => {
         // Create Link and Image element
-        let deviceLink = createDeviceLink(deviceID, deviceType, elData);
-        let deviceImage = createDeviceImage(deviceID, deviceType, elData);
+        let deviceLink = customElement({
+            type: 'a',
+            className: deviceType + '-link',
+            target: '_blank',
+            href: sectionDetails[deviceID].website + '#' + elData
+        });
+        let deviceImage = customElement({
+            type: 'img',
+            className: deviceType,
+            id: deviceID + '-' + deviceType + '-' + elData,
+            src: mediaPaths[deviceType] + deviceID + '-' + deviceType + '-' + elData + '.png',
+            alt: makeAlt(deviceID, elData, deviceType)
+        });
 
         // Append elements
         deviceLink.appendChild(deviceImage);
@@ -34,25 +45,6 @@ function createImageElement (deviceID, deviceType, container) {
     });
 }
 
-
-// Return Device Link element with className/target/href
-function createDeviceLink(deviceID, deviceType, elData) {
-    let deviceLink = document.createElement('a');
-    deviceLink.className = deviceType + '-link';
-    deviceLink.target = "_blank";
-    deviceLink.href = sectionDetails[deviceID].website + '#' + elData;
-    return deviceLink;
-}
-
-// Return Device Image element with className/id/src/dynamic Alt
-function createDeviceImage(deviceID, deviceType, elData) {
-    let deviceImage = document.createElement('img');
-    deviceImage.className = deviceType;
-    deviceImage.id = deviceID + '-' + deviceType + '-' + elData;
-    deviceImage.src = mediaPaths[deviceType] + deviceID + '-' + deviceType + '-' + elData + '.png';
-    deviceImage.alt = makeAlt(deviceID, elData, deviceType);
-    return deviceImage;
-}
 
 // Create Alternative Text for Images
 // Retrieve current section container,
