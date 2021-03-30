@@ -22,6 +22,11 @@
 @primary_color: #CFEEFB;
 @secondary_color: #F29F96;
 @tertiary_color: #C4C4C4;
+// LighterShade
+@bg_color_light: #FFF3F3;
+@primary_color_light: #E0F6FF;
+@secondary_color_light: #FAC1BB;
+@tertiary_color_light: #EEEDED;
 // Dark Colors
 @bg_dark_color: #3a3a3a;
 @primary_dark_color: #4d7180;
@@ -236,8 +241,27 @@ div#wp-tech {
 
 // GENERAL
 // Technology Logos
+div.tech-logo-container {
+    border-radius: 6px;
+    box-sizing: content-box;
+    margin: 0 calc(@small_padding/2);
+    width: 50px;
+}
+div.md-tech-logo-item {
+    background-color: @bg_color_light;
+}
+div.de-tech-logo-item {
+    background-color: @primary_color_light;
+}
+div.dne-tech-logo-item {
+    background-color: @secondary_color_light;
+}
+div.wp-tech-logo-item {
+    background-color: @bg_color_light;
+}
+
 img.tech-logo {
-    padding: 0 calc(@small_padding/2);
+    //padding: 0 calc(@small_padding/2);
 }
 
 // Helper Classes
