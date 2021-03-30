@@ -264,7 +264,7 @@ let sectionDetails = {
         structure: {
             0: {
                 type: 'div',
-                className: 'sections tertiaryColor_light',
+                className: 'sections bgColor_light',
                 id: 'wp-container',
                 content: null,
                 children: {
