@@ -27,9 +27,10 @@ function populateTech() {
     });
 } // END: populateTech
 
+
+// For each element in 'Tech' section of dict, append to container custom element
 function createTechLogo(techID, container) {
     sectionDetails[techID]['tech'].forEach(entry => {
-
         container.appendChild(customElement_Global({
             type: 'img',
             className: 'tech-logo',
@@ -41,6 +42,7 @@ function createTechLogo(techID, container) {
 }
 
 
+// Function to create a custom element with any possible value used in project
 function customElement_Global(config) {
     let elementDetails = Object.assign({
             type: null,
