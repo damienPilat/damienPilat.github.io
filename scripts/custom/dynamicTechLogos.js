@@ -31,13 +31,19 @@ function populateTech() {
 // For each element in 'Tech' section of dict, append to container custom element
 function createTechLogo(techID, container) {
     sectionDetails[techID]['tech'].forEach(entry => {
-        container.appendChild(customElement_Global({
+        let techContainer = customElement_Global({
+            type: 'div',
+            className: 'tech-logo-container ' + techID + '-tech-logo-item'
+        });
+        let techIcon = customElement_Global({
             type: 'img',
             className: 'tech-logo',
             id: entry + '-logo',
             src: techPaths[entry],
             alt: entry + ' Logo'
-        }));
+        });
+        techContainer.appendChild(techIcon);
+        container.appendChild(techContainer);
     });
 }
 
