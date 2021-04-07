@@ -5,27 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Damien Pilat's Portfolio</title>
 
+<!--  @todo: Create Favicon  -->
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="scripts/libraries/bootstrap-5.0.0-beta3-dist/css/bootstrap.css">
 
+    <!--  Tooltipster CSS  -->
+    <link rel="stylesheet" href="scripts/libraries/tooltipster/tooltipster.main.css">
+
     <!--  Custom CSS  -->
-    <link rel="stylesheet/less" type="text/css" href="styling/index.less">
+    <link rel="stylesheet/less" type="text/css" href="styling/construction.less">
+    <link rel="stylesheet/less" type="text/css" href="styling/darkMode.less">
+
     <!--  LESS  -->
     <script src="scripts/libraries/less.js"></script>
+
     <!--  JQuery  -->
     <script src="scripts/libraries/jquery-3.6.0.min.js"></script>
 
+    <!--  Tooltpister JS  -->
+    <script src="scripts/libraries/tooltipster/tooltipster.bundle.js"></script>
+
     <!--  Custom Scripts  -->
-    <!--  Populate Tech Logos  -->
     <script src="scripts/data/sectionDetails.js"></script>
     <script src="scripts/custom/dynamicTechLogos.js"></script>
     <script src="scripts/custom/dynamicDevice.js"></script>
     <script src="scripts/custom/dynamicSections.js"></script>
-
+    <script src="scripts/custom/darkmodeSwitch.js"></script>
+    <script src="scripts/custom/endScripts.js"></script>
+    <script src="scripts/custom/helperFunctions.js"></script>
 
 </head>
 <body>
-<div id="nav-bar" class="flex">
+<div id="nav-bar" class="flex bgColor_light">
     <h1>Damien Pilat</h1>
 
     <div id="nav-bar-link-container">
@@ -36,14 +48,18 @@
             <img class="nav-bar-logo-vector" src="media/linkLogo/github-logo.svg" alt="Github Logo w/ Link">
         </div>
     </div>
-</div>
-<hr />
 
-<!--  @todo: Add links to websites from device images  -->
+    <label class="switch">
+        <input id="modeSwitch" type="checkbox">
+        <span class="slider round"></span>
+    </label>
+</div>
+
 <!--  @todo: Add links or hover to Tech icons  -->
+<!--  @todo: Allow all sections to be accessible from menu for mobile -->
 <div id="content"></div>
 
-<div id="footer" class="flex">
+<div id="footer" class="flex primaryColor_light">
 <!--  @todo: activate language settings when completed  -->
 <!--    <div id="language-setting"><p><a id="lang-en" href="#">EN</a><span id="lang-dash">/</span><a id="lang-fr" href="#">FR</a></p></div>-->
 
@@ -69,13 +85,7 @@
 <footer>
     <!--  Scripts for when page loads  -->
     <script>
-        // Create sections
-        populateSections();
-        // Populate devices
-        populateDevice();
-        // Populate tech for each section
-        populateTech();
-
+        initiateEndScripts();
     </script>
 
     <!-- Bootstrap: JavaScript Bundle with Popper -->
