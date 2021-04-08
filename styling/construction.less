@@ -17,21 +17,30 @@
 @fontColor_bright: rgba(173, 173, 173, 0.96);
 @fontColor_medium: rgba(119, 119, 119, 0.96);
 @fontColor_dark: rgba(52, 52, 52, 0.96);
-// Colors
+
+// COLORS
+// Base
 @bg_color: #F7F8F6;
 @primary_color: #CFEEFB;
 @secondary_color: #F29F96;
 @tertiary_color: #C4C4C4;
-// LighterShade
-@bg_color_light: #FFF3F3;
-@primary_color_light: #E0F6FF;
-@secondary_color_light: #FAC1BB;
-@tertiary_color_light: #EEEDED;
-// Dark Colors
-@bg_dark_color: #3a3a3a;
-@primary_dark_color: #4d7180;
-@secondary_dark_color: #99615c;
-@tertiary_dark_color: #808080;
+// Dark Base
+@bg_color_dark: #3a3a3a;
+@primary_color_dark: #4d7180;
+@secondary_color_dark: #99615c;
+@tertiary_color_dark: #808080;
+
+// Pale
+@bg_color_pale: #FFF3F3;
+@primary_color_pale: #E0F6FF;
+@secondary_color_pale: #FAC1BB;
+@tertiary_color_pale: #EEEDED;
+// Dark Pale
+@bg_color_pale_dark: #b4a9a9;
+@primary_color_pale_dark: #96abb4;
+@secondary_color_pale_dark: #b38a86;
+@tertiary_color_pale_dark: #b3b3b3;
+
 
 // -- v1 Elements
 // Link Elements
@@ -65,7 +74,7 @@
     color: @fontColor_dark;
 }
 .bgColor_dark {
-    background-color:  @bg_dark_color;
+    background-color:  @bg_color_dark;
     color: @fontColor_light;
 }
 .primaryColor_light {
@@ -73,7 +82,7 @@
     color: @fontColor_dark;
 }
 .primaryColor_dark {
-    background-color: @primary_dark_color;
+    background-color: @primary_color_dark;
     color: @fontColor_light;
 }
 .secondaryColor_light {
@@ -81,7 +90,7 @@
     color: @fontColor_dark;
 }
 .secondaryColor_dark {
-    background-color: @secondary_dark_color;
+    background-color: @secondary_color_dark;
     color: @fontColor_light;
 }
 .tertiaryColor_light {
@@ -89,7 +98,7 @@
     color: @fontColor_dark;
 }
 .tertiaryColor_dark {
-    background-color: @tertiary_dark_color;
+    background-color: @tertiary_color_dark;
     color: @fontColor_light;
 }
 
@@ -247,17 +256,31 @@ div.tech-logo-container {
     margin: 0 calc(@small_padding/2);
     width: 50px;
 }
-div.md-tech-logo-item {
-    background-color: @bg_color_light;
+
+
+.mdColorPale_light {
+    background-color: @bg_color_pale;
 }
-div.de-tech-logo-item {
-    background-color: @primary_color_light;
+.mdColorPale_dark {
+    background-color: @bg_color_pale_dark;
 }
-div.dne-tech-logo-item {
-    background-color: @secondary_color_light;
+.deColorPale_light {
+    background-color: @primary_color_pale;
 }
-div.wp-tech-logo-item {
-    background-color: @bg_color_light;
+.deColorPale_dark {
+    background-color: @primary_color_pale_dark;
+}
+.dneColorPale_light {
+    background-color: @secondary_color_pale;
+}
+.dneColorPale_dark {
+    background-color: @secondary_color_pale_dark;
+}
+.wpColorPale_light {
+    background-color: @tertiary_color_pale;
+}
+.wpColorPale_dark {
+    background-color: @tertiary_color_pale_dark;
 }
 
 img.tech-logo {
