@@ -1,7 +1,7 @@
 // Toggle Light/Dark Mode on Switch click
 function modeSwitch() {
     document.getElementById('modeSwitch').addEventListener('change', function () {
-        this.checked ? changeColorMode('light') : changeColorMode('dark');
+        changeColorMode(this.checked ? 'light' : 'dark');
     });
 }
 
