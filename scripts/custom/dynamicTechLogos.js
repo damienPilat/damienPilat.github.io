@@ -31,9 +31,11 @@ function populateTech() {
 // For each element in 'Tech' section of dict, append to container custom element
 function createTechLogo(techID, container) {
     sectionDetails[techID]['tech'].forEach(entry => {
+// DEUBG -> looking for 'md' or 'de', etc.
+        console.log('techID:', techID);
         let techContainer = customElement({
             type: 'div',
-            className: 'tech-logo-container ' + techID + '-tech-logo-item'
+            className: 'tech-logo-container ' + techID + 'ColorPale_light'
         });
         let techIcon = customElement({
             type: 'img',
