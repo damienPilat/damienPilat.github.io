@@ -30,21 +30,34 @@ function populateTech() {
 
 // For each element in 'Tech' section of dict, append to container custom element
 function createTechLogo(techID, container) {
-    sectionDetails[techID]['tech'].forEach(entry => {
-// DEUBG -> looking for 'md' or 'de', etc.
-        console.log('techID:', techID);
-        let techContainer = customElement({
-            type: 'div',
-            className: 'tech-logo-container ' + techID + 'ColorPale_light'
-        });
-        let techIcon = customElement({
-            type: 'img',
-            className: 'tech-logo',
-            id: entry + '-logo',
-            src: techPaths[entry],
-            alt: entry + ' Logo'
-        });
-        techContainer.appendChild(techIcon);
-        container.appendChild(techContainer);
+    sectionDetails[techID]['tech'].forEach(techType => {
+        container.appendChild(createTechLogoElements(techType, techID));
     });
+}
+
+
+// Create a container & append tech Icon and Title to it
+// Returns container with all elements
+function createTechLogoElements(techType, techID) {
+    let techContainer = customElement({
+        type: 'div',
+        className: 'tech-logo-container'
+    });
+    let techIcon = customElement({
+        type: 'img',
+        className: 'tech-logo ' + techID + 'ColorPale_light',
+        id: techType + '-logo',
+        src: techPaths[techType],
+        alt: techType + ' Logo'
+    });
+    let techTitle = customElement({
+        type: 'p',
+        className: 'tech-logo-title ' + techID + 'ColorPale_light',
+        id: techType + '-title',
+        innerHTML: techType
+    });
+    techContainer.appendChild(techIcon);
+    techContainer.appendChild(techTitle);
+
+    return techContainer
 }
