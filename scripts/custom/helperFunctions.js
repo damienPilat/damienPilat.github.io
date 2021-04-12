@@ -12,6 +12,7 @@ function customElement(config) {
             target: null,
             href: null,
             innerText: null,
+            innerHTML: null,
             children: null
         },
         config
