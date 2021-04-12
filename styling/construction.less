@@ -9,6 +9,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300&display=swap');
 @font: 'Josefin Sans', sans-serif;
 // Font Size
+@fontSize_small: 12px;
 @fontSize_normal: 22px;
 @fontSize_medium: 28px;
 @fontSize_large: 34px;
@@ -45,33 +46,24 @@
 @secondary_color_pale_dark: #b38a86;
 @tertiary_color_pale_dark: #b3b3b3;
 
-
-// -- v1 Elements
-// Link Elements
-@link_size: 40px;
-@link_font_size: 20px;
-@link_color: #919191;
-@link_margin: 10px;
-// Line Elements
-@line_width: 65vw;
-@line_color: #aeaeae;
-
-// Padding
+// PADDING
 @small_padding: 10px;
 @medium_padding: 20px;
-@index: 40px;
+@large_padding: 40px;
 @extraLarge_padding: 80px;
 
+// Social Media Links
+@media_logo_size: 32px;
+@media_logo_color: gray;
 
-// STYLING
-// RESET for page
-* {
-    // Layout
-    margin: 0;
-    padding: 0;
+// Tech Icon Details
+@tech_logo_size: 50px;
+@tech_logo_transition: 0.5s;
+@tech_logo_detailing_small: 2px;
+@tech_logo_detailing_medium: 4px;
+@tech_logo_detailing_large: 6px;
 
-}
-
+// DARKMODE - CLASSES
 // Light / Dark Mode
 .bgColor_light {
     background-color: @bg_color;
@@ -182,8 +174,8 @@ div#nav-bar-link-container > div:nth-child(1) {
 // Link element container
 div.link-elements {
     // Dimension
-    height: @logo_size + @small_padding;
-    width: @logo_size + @small_padding;
+    height: @media_logo_size + @small_padding;
+    width: @media_logo_size + @small_padding;
     // Layout
     margin: @small_padding;
 }
@@ -194,13 +186,13 @@ div.nav-bar-link-elements {
 // Links svg logos
 img.nav-bar-logo-vector {
     background-color: @tertiary_color;
-    border-radius: calc(@logo_size / 2);
+    border-radius: calc(@media_logo_size / 2);
 }
 
 
 // CONTENTS
 div.sections {
-    padding: @index @index;
+    padding: @large_padding @large_padding;
 }
 
 // Movie Dashboard
@@ -234,7 +226,7 @@ img#de-phone-checkout {
 div#de-tech {
     align-items: flex-end;
     height: 100%;
-    padding-bottom: @index;
+    padding-bottom: @large_padding;
 }
 
 
@@ -282,22 +274,26 @@ div#wp-tech {
 // Technology Logos
 div.tech-logo-container {
     margin: 0 calc(@small_padding/2);
-    width: 50px;
+    width: @tech_logo_size;
 }
 img.tech-logo {
-    border-radius: 6px;
+    border-radius: @tech_logo_detailing_large;
     position: relative;
-    top: 20px;
-    transition: 0.5s;
+    top: @medium_padding;
+    transition: @tech_logo_transition;
 }
 img.tech-logo:hover {
-    transform: translate(0, -20px);
+    transform: translate(0, -@medium_padding);
 }
 p.tech-logo-title {
+    // Layout
     margin: 0;
-    font-size: 12px;
-    overflow: hidden;
+    border-radius: @tech_logo_detailing_small;
+    // Styling
+    font-size: @fontSize_small;
     text-align: center;
+    // Other
+    overflow: hidden;
 }
 
 
@@ -323,7 +319,7 @@ img.phone {
 // FOOTER
 div#footer {
     flex-direction: column;
-    padding-top: @index;
+    padding-top: @large_padding;
 }
 
 // Language Setting options
@@ -381,7 +377,7 @@ div#footer-meta {
         padding-top: @small_padding;
     }
     div#de-tech {
-        padding: @index 0 0 0;
+        padding: @large_padding 0 0 0;
     }
 
     // Dining Experience
