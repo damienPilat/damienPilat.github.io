@@ -1,10 +1,15 @@
-// Logo
-@logo_size: 32px;
-@logo_color: gray;
-// Font
+// STYLING
+// RESET for page
+* {
+    margin: 0;
+    padding: 0;
+}
+
+// FONTS
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300&display=swap');
 @font: 'Josefin Sans', sans-serif;
 // Font Size
+@fontSize_small: 12px;
 @fontSize_normal: 22px;
 @fontSize_medium: 28px;
 @fontSize_large: 34px;
@@ -17,55 +22,56 @@
 @fontColor_bright: rgba(173, 173, 173, 0.96);
 @fontColor_medium: rgba(119, 119, 119, 0.96);
 @fontColor_dark: rgba(52, 52, 52, 0.96);
-// Colors
+
+// COLORS
+// Base
 @bg_color: #F7F8F6;
 @primary_color: #CFEEFB;
 @secondary_color: #F29F96;
 @tertiary_color: #C4C4C4;
-// LighterShade
-@bg_color_light: #FFF3F3;
-@primary_color_light: #E0F6FF;
-@secondary_color_light: #FAC1BB;
-@tertiary_color_light: #EEEDED;
-// Dark Colors
-@bg_dark_color: #3a3a3a;
-@primary_dark_color: #4d7180;
-@secondary_dark_color: #99615c;
-@tertiary_dark_color: #808080;
+// Dark Base
+@bg_color_dark: #3a3a3a;
+@primary_color_dark: #4d7180;
+@secondary_color_dark: #99615c;
+@tertiary_color_dark: #808080;
 
-// -- v1 Elements
-// Link Elements
-@link_size: 40px;
-@link_font_size: 20px;
-@link_color: #919191;
-@link_margin: 10px;
-// Line Elements
-@line_width: 65vw;
-@line_color: #aeaeae;
+// Pale
+@bg_color_pale: #FFF3F3;
+@primary_color_pale: #E0F6FF;
+@secondary_color_pale: #FAC1BB;
+@tertiary_color_pale: #EEEDED;
+// Dark Pale -- @todo: update dark mode colors
+@bg_color_pale_dark: #b4a9a9;
+@primary_color_pale_dark: #96abb4;
+@secondary_color_pale_dark: #b38a86;
+@tertiary_color_pale_dark: #b3b3b3;
 
-// Padding
+// PADDING
 @small_padding: 10px;
 @medium_padding: 20px;
-@index: 40px;
+@large_padding: 40px;
 @extraLarge_padding: 80px;
 
+// Social Media Links
+@media_logo_size: 32px;
+@media_logo_color: gray;
 
-// STYLING
-// RESET for page
-* {
-    // Layout
-    margin: 0;
-    padding: 0;
+// Tech Icon Details
+@tech_logo_size: 50px;
+@tech_logo_transition: 0.5s;
+@tech_logo_detailing_small: 2px;
+@tech_logo_detailing_medium: 4px;
+@tech_logo_detailing_large: 6px;
+@tech_logo_transform: -24px;
 
-}
-
+// DARKMODE - CLASSES
 // Light / Dark Mode
 .bgColor_light {
     background-color: @bg_color;
     color: @fontColor_dark;
 }
 .bgColor_dark {
-    background-color:  @bg_dark_color;
+    background-color:  @bg_color_dark;
     color: @fontColor_light;
 }
 .primaryColor_light {
@@ -73,7 +79,7 @@
     color: @fontColor_dark;
 }
 .primaryColor_dark {
-    background-color: @primary_dark_color;
+    background-color: @primary_color_dark;
     color: @fontColor_light;
 }
 .secondaryColor_light {
@@ -81,7 +87,7 @@
     color: @fontColor_dark;
 }
 .secondaryColor_dark {
-    background-color: @secondary_dark_color;
+    background-color: @secondary_color_dark;
     color: @fontColor_light;
 }
 .tertiaryColor_light {
@@ -89,9 +95,35 @@
     color: @fontColor_dark;
 }
 .tertiaryColor_dark {
-    background-color: @tertiary_dark_color;
+    background-color: @tertiary_color_dark;
     color: @fontColor_light;
 }
+// Section Pale Light/Dark Colors
+.mdColorPale_light {
+    background-color: @bg_color_pale;
+}
+.mdColorPale_dark {
+    background-color: @bg_color_pale_dark;
+}
+.deColorPale_light {
+    background-color: @primary_color_pale;
+}
+.deColorPale_dark {
+    background-color: @primary_color_pale_dark;
+}
+.dneColorPale_light {
+    background-color: @secondary_color_pale;
+}
+.dneColorPale_dark {
+    background-color: @secondary_color_pale_dark;
+}
+.wpColorPale_light {
+    background-color: @tertiary_color_pale;
+}
+.wpColorPale_dark {
+    background-color: @tertiary_color_pale_dark;
+}
+
 
 // HTML content
 html, body {
@@ -143,8 +175,8 @@ div#nav-bar-link-container > div:nth-child(1) {
 // Link element container
 div.link-elements {
     // Dimension
-    height: @logo_size + @small_padding;
-    width: @logo_size + @small_padding;
+    height: @media_logo_size + @small_padding;
+    width: @media_logo_size + @small_padding;
     // Layout
     margin: @small_padding;
 }
@@ -155,13 +187,13 @@ div.nav-bar-link-elements {
 // Links svg logos
 img.nav-bar-logo-vector {
     background-color: @tertiary_color;
-    border-radius: calc(@logo_size / 2);
+    border-radius: calc(@media_logo_size / 2);
 }
 
 
 // CONTENTS
 div.sections {
-    padding: @index @index;
+    padding: @large_padding @large_padding;
 }
 
 // Movie Dashboard
@@ -195,7 +227,7 @@ img#de-phone-checkout {
 div#de-tech {
     align-items: flex-end;
     height: 100%;
-    padding-bottom: @index;
+    padding-bottom: @large_padding;
 }
 
 
@@ -242,27 +274,30 @@ div#wp-tech {
 // GENERAL
 // Technology Logos
 div.tech-logo-container {
-    border-radius: 6px;
-    box-sizing: content-box;
     margin: 0 calc(@small_padding/2);
-    width: 50px;
+    width: @tech_logo_size;
 }
-div.md-tech-logo-item {
-    background-color: @bg_color_light;
+img.tech-logo {
+    border-radius: @tech_logo_detailing_large;
+    position: relative;
+    top: @medium_padding;
+    transition: @tech_logo_transition;
 }
-div.de-tech-logo-item {
-    background-color: @primary_color_light;
+img.tech-logo:hover {
+    transform: translate(0, @tech_logo_transform);
+    box-shadow: 0 6px 5px -1px rgb(225, 225, 225);
+    -webkit-box-shadow: 0 6px 5px -1px rgb(225, 225, 225);
+    -moz-box-shadow: 0 6px 5px -1px rgb(225, 225, 225);
 }
-div.dne-tech-logo-item {
-    background-color: @secondary_color_light;
-}
-div.wp-tech-logo-item {
-    background-color: @bg_color_light;
+p.tech-logo-title {
+    margin: 0;
+    border-radius: @tech_logo_detailing_small;
+    font-size: @fontSize_small;
+    text-align: center;
+    overflow: hidden;
 }
 
-img.tech-logo {
-    //padding: 0 calc(@small_padding/2);
-}
+
 
 // Helper Classes
 // HELPER CLASSES
@@ -285,7 +320,7 @@ img.phone {
 // FOOTER
 div#footer {
     flex-direction: column;
-    padding-top: @index;
+    padding-top: @large_padding;
 }
 
 // Language Setting options
@@ -343,7 +378,7 @@ div#footer-meta {
         padding-top: @small_padding;
     }
     div#de-tech {
-        padding: @index 0 0 0;
+        padding: @large_padding 0 0 0;
     }
 
     // Dining Experience
