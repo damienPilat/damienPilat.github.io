@@ -277,21 +277,23 @@ div#wp-tech {
 // GENERAL
 // Technology Logos
 div.tech-logo-container {
-    border-radius: 6px;
-    box-sizing: content-box;
     margin: 0 calc(@small_padding/2);
     width: 50px;
 }
-
-
-.mdColorPale_light {
-    background-color: @bg_color_pale;
+img.tech-logo {
+    border-radius: 6px;
+    position: relative;
+    top: 20px;
+    transition: 0.5s;
 }
-.mdColorPale_dark {
-    background-color: @bg_color_pale_dark;
+img.tech-logo:hover {
+    transform: translate(0, -20px);
 }
-.deColorPale_light {
-    background-color: @primary_color_pale;
+p.tech-logo-title {
+    margin: 0;
+    font-size: 12px;
+    overflow: hidden;
+    text-align: center;
 }
 .deColorPale_dark {
     background-color: @primary_color_pale_dark;
