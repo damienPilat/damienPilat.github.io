@@ -7,7 +7,7 @@ function modeSwitch() {
 
 // Get DOM element by mode (light/dark), retrieve className, and appropriately update for all elements
 function changeColorMode(mode) {
-    let domElements = document.querySelectorAll("div[class$='_" + mode + "']");
+    let domElements = document.querySelectorAll("[class$='_" + mode + "']");
     Array.from(domElements).forEach(element => {
         element.classList.replace(getModeClassName(element), getModeClassName(element).split('_')[0] + '_' + getOppositeColor(mode));
     });
