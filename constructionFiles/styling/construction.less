@@ -336,12 +336,19 @@ div#footer {
 div#language-setting {
     letter-spacing: .2em;
 }
-a#lang-en {
+button.lang-btn {
+    background-color: inherit;
+    cursor: pointer;
+    color: @fontColor_bright;
+    border: none;
+}
+button.lang-btn-selected {
     font-weight: @weight_large;
     color: @fontColor_dark;
 }
-a#lang-fr {
-    color: @fontColor_bright;
+button#lang-en {
+}
+button#lang-fr {
 }
 span#lang-dash {
     color: @fontColor_dark;
