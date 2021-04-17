@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Damien Pilat's Portfolio</title>
 
-<!--  @todo: Create Favicon  -->
+    <!--  @todo: Create Favicon  -->
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="scripts/libraries/bootstrap-5.0.0-beta3-dist/css/bootstrap.css">
@@ -31,10 +31,11 @@
     <script src="scripts/custom/con_dynamicTechLogos.js"></script>
     <script src="scripts/custom/con_dynamicDevice.js"></script>
     <script src="scripts/custom/con_dynamicSections.js"></script>
-    <script src="scripts/custom/con_darkmodeSwitch.js"></script>
+    <script src="scripts/custom/con_darkModeSwitch.js"></script>
+    <script src="scripts/custom/con_languageSwitch.js"></script>
+
     <script src="scripts/custom/con_endScripts.js"></script>
     <script src="scripts/custom/con_helperFunctions.js"></script>
-
 </head>
 <body>
 <div id="nav-bar" class="flex bgColor_light">
@@ -42,10 +43,12 @@
 
     <div id="nav-bar-link-container">
         <div class="link-elements nav-bar-link-elements flex socialLink_light">
-            <img class="nav-bar-logo-vector socialLinkLogo_light" src="media/linkLogo/linkedIn-logo.svg" alt="LinkedIn Logo w/ link">
+            <img class="nav-bar-logo-vector socialLinkLogo_light" src="media/linkLogo/linkedIn-logo.svg"
+                 alt="LinkedIn Logo w/ link">
         </div>
         <div class="link-elements nav-bar-link-elements flex socialLink_light">
-            <img class="nav-bar-logo-vector socialLinkLogo_light" src="media/linkLogo/github-logo.svg" alt="Github Logo w/ Link">
+            <img class="nav-bar-logo-vector socialLinkLogo_light" src="media/linkLogo/github-logo.svg"
+                 alt="Github Logo w/ Link">
         </div>
     </div>
 
@@ -60,8 +63,12 @@
 <div id="content"></div>
 
 <div id="footer" class="flex primaryColor_light">
-<!--  @todo: activate language settings when completed  -->
-<!--    <div id="language-setting"><p><a id="lang-en" href="#">EN</a><span id="lang-dash">/</span><a id="lang-fr" href="#">FR</a></p></div>-->
+    <!--  @todo: activate language settings when completed  -->
+    <div id="language-setting">
+        <button id="lang-en" class="lang-btn lang-btn-selected">EN</button>
+        <span id="lang-dash">/</span>
+        <button id="lang-fr" class="lang-btn" >FR</button>
+    </div>
 
     <div id="footer-page-links">
         <a href="#">Home</a>
