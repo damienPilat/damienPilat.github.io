@@ -32,7 +32,10 @@ let con_sectionDetails = {
                                 type: 'p',
                                 className: 'desc-text',
                                 id: null,
-                                innerText: {en: "Interactive dashboard of the all-time highest grossing movies, automatically updated through API calls, and made responsive for all devices. Built in pure HTML/CSS, made interactive with JavaScript, and created custom artwork with Adobe XD.", fr: 'A venir'},
+                                innerText: {
+                                    en: "Interactive dashboard of the all-time highest grossing movies, automatically updated through API calls, and made responsive for all devices. Built in pure HTML/CSS, made interactive with JavaScript, and created custom artwork with Adobe XD.",
+                                    fr: 'Tableau de bord interactif des films les plus rentables de tous les temps, mis à jour automatiquement par des appels API, et rendu réactif pour tous les appareils. Construit en pur HTML/CSS, rendu interactif avec JavaScript, et creations des illustrations personnalisées avec Adobe XD.'
+                                },
                                 children: null
                             }
                         },
@@ -101,14 +104,17 @@ let con_sectionDetails = {
                                         type: 'h2',
                                         className: 'sectionTitle',
                                         id: null,
-                                        innerText: {en: 'Member space & E-commerce - Diligent Eye', fr: 'A venir'},
+                                        innerText: {en: 'Member space & E-commerce - Diligent Eye', fr: 'Espace membre & E-commerce - Diligent Eye'},
                                         children: null
                                     },
                                     1: {
                                         type: 'p',
                                         className: 'desc-text',
                                         id: null,
-                                        innerText: {en: 'Design and Implementation of Diligent Eye’s Member space, including product management and e-commerce integration. Built on WordPress platform, with custom JavaScript.', fr: 'A venir'},
+                                        innerText: {
+                                            en: 'Design and Implementation of Diligent Eye’s Member space, including product management and e-commerce integration. Built on WordPress platform, with custom JavaScript.',
+                                            fr: 'Conception et mise en œuvre de l’espace des membres de Diligent Eye, y compris la gestion des produits et l’intégration du commerce électronique. Construit sur la plate-forme WordPress, créé en JavaScript.'
+                                        },
                                         children: null
                                     }
                                 }
@@ -210,7 +216,7 @@ let con_sectionDetails = {
                                 type: 'h2',
                                 className: 'sectionTitle col-sm-6',
                                 id: null,
-                                innerText: {en: 'Dining Experience - Mobile App', fr: 'A venir'},
+                                innerText: {en: 'Dining Experience - Mobile App', fr: 'Expérience restauration - Application mobile'},
                                 children: null
                             },
                             1: {
@@ -223,7 +229,10 @@ let con_sectionDetails = {
                                         type: 'p',
                                         className: 'desc-text col-sm-6',
                                         id: null,
-                                        innerText: {en: 'Re-imagined covid and post-pandemic dining experience through an in-depth User Experience Research strategy, resulting into an interactive prototype crafted in Figma.', fr: 'A venir'},
+                                        innerText: {
+                                            en: 'Re-imagined covid and post-pandemic dining experience through an in-depth User Experience Research strategy, resulting into an interactive prototype crafted in Figma.',
+                                            fr: 'Nous avons repensé l’expérience de repas dans un context post-pandémie grâce à une stratégie de recherche approfondie sur l’expérience utilisateur (UX Research), ce qui a donné lieu à un prototype interactif conçu dans Figma.'
+                                        },
                                         children: null
                                     },
                                     1: {
@@ -286,7 +295,10 @@ let con_sectionDetails = {
                                 type: 'p',
                                 className: 'desc-text col-sm-10',
                                 id: null,
-                                innerText: {en: "Undertook several standalone and joint WordPress projects exploring its feasibility as a quick launch platform. Supercharged with python knowledge to carry out deep analysis, making use of the twitter API.", fr: "A Venir"},
+                                innerText: {
+                                    en: "Undertook several standalone and joint WordPress projects exploring its feasibility as a quick launch platform. Supercharged with python knowledge to carry out deep analysis, making use of the Twitter API.",
+                                    fr: "A entrepris plusieurs projets WordPress indépendants et communs explorant sa faisabilité comme une plate-forme de lancement rapide. Suralimenté avec des connaissances en python pour effectuer une analyse approfondie, en utilisant l’API de Twitter."
+                                },
                                 children: null
                             }
                         }
