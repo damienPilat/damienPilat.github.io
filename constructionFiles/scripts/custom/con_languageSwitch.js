@@ -1,5 +1,8 @@
 // Switch languages of website
 function changeLanguage(e) {
-    let lang = e.target.id.split("-")[1];
-
+    currentLanguage = e.target.id.split("-")[1];
+    document.getElementById('content').innerHTML = null;
+    populateSections();
+    populateDevice();
+    populateTech();
 }
