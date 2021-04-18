@@ -30,7 +30,7 @@ function populateElement(elementDetails) {
             if (key === 'children') {
                 createChildren(elementDetails.children, element);
             } else if (key === 'innerText') {
-                element.innerText = elementDetails.innerText.en;
+                element.innerText = elementDetails.innerText[currentLanguage];
             } else {
                 element[key] = value;
             }
