@@ -336,19 +336,30 @@ div#footer {
 div#language-setting {
     letter-spacing: .2em;
 }
-button.lang-btn {
+.lang-btn {
     background-color: inherit;
     cursor: pointer;
-    color: @fontColor_bright;
     border: none;
+    color: @fontColor_bright;
 }
-button.lang-btn-selected {
+
+button.lang-btn-selected_light {
     font-weight: @weight_large;
     color: @fontColor_dark;
 }
-span#lang-dash {
+button.lang-btn-selected_dark {
+    font-weight: @weight_large;
+    color: @fontColor_light;
+}
+
+
+span.lang-dash_light {
     color: @fontColor_dark;
 }
+span.lang-dash_dark {
+    color: @fontColor_light;
+}
+
 // Footer Page Links
 div#footer-page-links > a {
     padding: 0 @medium_padding;
