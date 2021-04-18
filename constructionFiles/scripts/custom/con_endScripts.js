@@ -7,9 +7,6 @@ function initiateEndScripts() {
     populateTech();
     // Enable pallet mode (light/dark)
     modeSwitch();
-    // Allow change content language
-// @todo:  Error -> languageSwitch not defined
-    languageSwitch();
 
     // Test: Tooltip library
     addTooltip();
