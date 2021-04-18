@@ -23,14 +23,14 @@ function customElement(config) {
 
 // Populate DOM element with all non NULL values + Two SPECIAL cases
 // @todo: remove if statements
-function populateElement(elementDetails) {
+function populateElement(elementDetails, lang='en') {
     let element = document.createElement(elementDetails.type);
     for (const [key, value] of Object.entries(elementDetails)) {
         if (value) {
             if (key === 'children') {
                 createChildren(elementDetails.children, element);
             } else if (key === 'innerText') {
-                element.innerText = elementDetails.innerText.en;
+                element.innerText = elementDetails.innerText[lang];
             } else {
                 element[key] = value;
             }
