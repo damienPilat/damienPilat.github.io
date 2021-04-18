@@ -17,13 +17,10 @@ function changeLanguage_2(e) {
     // Get sections Names
     let sectionNames = Object.keys(con_sectionDetails);
 
-    // Loop through section names
+    // Loop through section names,
+    // Get section Desc containers, replace w/ sectionDetails path (will retrieve new language setting)
     sectionNames.forEach(sectionId => {
-        // Get text container & empty
         let sectionDescContainer = document.getElementById(sectionId + '-desc-container');
-        sectionDescContainer.innerHTML = null;
-
-        sectionDescContainer.appendChild(customElement(con_sectionDetails[sectionId].structure["0"].children["0"]));
-
+        sectionDescContainer.replaceWith(customElement(con_sectionDetails[sectionId].structure["0"].children["0"]));
     });
 }
