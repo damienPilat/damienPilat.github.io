@@ -4,6 +4,13 @@ function changeLanguage(e) {
     // Update current language
     currentLanguage = e.target.id.split("-")[1];
 
+    updateSectionTextContent();
+    toggleClassNamesIfPresent('lang-btn', ['lang-btn-selected_light', 'lang-btn-selected_dark'], true);
+
+}
+
+// Update text content for each section
+function updateSectionTextContent() {
     // Get sections Names
     let sectionNames = Object.keys(con_sectionDetails);
 
