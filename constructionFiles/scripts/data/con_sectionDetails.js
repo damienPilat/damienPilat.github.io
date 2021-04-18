@@ -1,4 +1,5 @@
 // Section Details
+let currentLanguage = 'en';
 let con_sectionDetails = {
     "md": {
         device: {

@@ -13,17 +13,22 @@ function customElement(config) {
             href: null,
             innerText: null,
             innerHTML: null,
-            children: null
+            children: null,
+            language: 'en'
         },
         config
     );
 
-    return populateElement(elementDetails);
+
+    console.log("elementDetails_lang:", elementDetails.language);
+
+
+    return populateElement(elementDetails, elementDetails.language);
 }
 
 // Populate DOM element with all non NULL values + Two SPECIAL cases
 // @todo: remove if statements
-function populateElement(elementDetails, lang='en') {
+function populateElement(elementDetails) {
     let element = document.createElement(elementDetails.type);
     for (const [key, value] of Object.entries(elementDetails)) {
         if (value) {
