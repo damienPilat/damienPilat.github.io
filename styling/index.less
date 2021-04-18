@@ -180,16 +180,25 @@ div.link-elements {
     // Layout
     margin: @small_padding;
 }
+// Link element (make circle)
 div.nav-bar-link-elements {
     border-radius: calc(@small_padding * 2);
-    background-color: @tertiary_color;
 }
-// Links svg logos
+// Links svg logos (round corners to match circle)
 img.nav-bar-logo-vector {
-    background-color: @tertiary_color;
     border-radius: calc(@media_logo_size / 2);
 }
-
+// Light/Dark mode
+.socialLink_light {
+    background-color: @tertiary_color;
+}
+.socialLink_dark {
+    background-color: @tertiary_color_dark;
+}
+.socialLinkLogo_light {}
+.socialLinkLogo_dark {
+    filter: brightness(.75);
+}
 
 // CONTENTS
 div.sections {
@@ -327,12 +336,15 @@ div#footer {
 div#language-setting {
     letter-spacing: .2em;
 }
-a#lang-en {
+button.lang-btn {
+    background-color: inherit;
+    cursor: pointer;
+    color: @fontColor_bright;
+    border: none;
+}
+button.lang-btn-selected {
     font-weight: @weight_large;
     color: @fontColor_dark;
-}
-a#lang-fr {
-    color: @fontColor_bright;
 }
 span#lang-dash {
     color: @fontColor_dark;

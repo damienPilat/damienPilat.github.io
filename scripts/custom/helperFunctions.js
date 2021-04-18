@@ -13,17 +13,12 @@ function customElement(config) {
             href: null,
             innerText: null,
             innerHTML: null,
-            children: null,
-            language: 'en'
+            children: null
         },
         config
     );
 
-
-    console.log("elementDetails_lang:", elementDetails.language);
-
-
-    return populateElement(elementDetails, elementDetails.language);
+    return populateElement(elementDetails);
 }
 
 // Populate DOM element with all non NULL values + Two SPECIAL cases
@@ -35,7 +30,7 @@ function populateElement(elementDetails) {
             if (key === 'children') {
                 createChildren(elementDetails.children, element);
             } else if (key === 'innerText') {
-                element.innerText = elementDetails.innerText[lang];
+                element.innerText = elementDetails.innerText[currentLanguage];
             } else {
                 element[key] = value;
             }

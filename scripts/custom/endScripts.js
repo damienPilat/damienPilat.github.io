@@ -8,6 +8,7 @@ function initiateEndScripts() {
     // Enable pallet mode (light/dark)
     modeSwitch();
 
+    // Test: Tooltip library
     addTooltip();
 }
 
