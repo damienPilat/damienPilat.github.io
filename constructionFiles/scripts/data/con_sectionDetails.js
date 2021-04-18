@@ -18,20 +18,20 @@ let con_sectionDetails = {
                     0: {
                         type: 'div',
                         className: 'desc col-sm-3',
-                        id: null,
+                        id: 'md-desc-container',
                         innerText: null,
                         children: {
                             0: {
                                 type: 'h2',
                                 className: 'sectionTitle',
-                                id: null,
+                                id: 'md-desc-title',
                                 innerText: {en: 'Movie Dashboard', fr: 'Tableau de Bord - Film'},
                                 children: null
                             },
                             1: {
                                 type: 'p',
                                 className: 'desc-text',
-                                id: null,
+                                id: 'md-desc-text',
                                 innerText: {
                                     en: "Interactive dashboard of the all-time highest grossing movies, automatically updated through API calls, and made responsive for all devices. Built in pure HTML/CSS, made interactive with JavaScript, and created custom artwork with Adobe XD.",
                                     fr: 'Tableau de bord interactif des films les plus rentables de tous les temps, mis à jour automatiquement par des appels API, et rendu réactif pour tous les appareils. Construit en pur HTML/CSS, rendu interactif avec JavaScript, et creations des illustrations personnalisées avec Adobe XD.'
@@ -97,20 +97,20 @@ let con_sectionDetails = {
                             0: {
                                 type: 'div',
                                 className: 'desc col-sm-6',
-                                id: null,
+                                id: 'de-desc-container',
                                 innerText: null,
                                 children: {
                                     0: {
                                         type: 'h2',
                                         className: 'sectionTitle',
-                                        id: null,
+                                        id: 'de-desc-title',
                                         innerText: {en: 'Member space & E-commerce - Diligent Eye', fr: 'Espace membre & E-commerce - Diligent Eye'},
                                         children: null
                                     },
                                     1: {
                                         type: 'p',
                                         className: 'desc-text',
-                                        id: null,
+                                        id: 'de-desc-text',
                                         innerText: {
                                             en: 'Design and Implementation of Diligent Eye’s Member space, including product management and e-commerce integration. Built on WordPress platform, with custom JavaScript.',
                                             fr: 'Conception et mise en œuvre de l’espace des membres de Diligent Eye, y compris la gestion des produits et l’intégration du commerce électronique. Construit sur la plate-forme WordPress, créé en JavaScript.'
@@ -209,13 +209,13 @@ let con_sectionDetails = {
                     0: {
                         type: 'div',
                         className: 'desc col-sm-12',
-                        id: null,
+                        id: 'dne-desc-container',
                         innerText: null,
                         children: {
                             0: {
                                 type: 'h2',
                                 className: 'sectionTitle col-sm-6',
-                                id: null,
+                                id: 'dne-desc-title',
                                 innerText: {en: 'Dining Experience - Mobile App', fr: 'Expérience restauration - Application mobile'},
                                 children: null
                             },
@@ -228,7 +228,7 @@ let con_sectionDetails = {
                                     0: {
                                         type: 'p',
                                         className: 'desc-text col-sm-6',
-                                        id: null,
+                                        id: 'dne-desc-text',
                                         innerText: {
                                             en: 'Re-imagined covid and post-pandemic dining experience through an in-depth User Experience Research strategy, resulting into an interactive prototype crafted in Figma.',
                                             fr: 'Nous avons repensé l’expérience de repas dans un context post-pandémie grâce à une stratégie de recherche approfondie sur l’expérience utilisateur (UX Research), ce qui a donné lieu à un prototype interactif conçu dans Figma.'
@@ -281,20 +281,20 @@ let con_sectionDetails = {
                     0: {
                         type: 'div',
                         className: 'desc col-12',
-                        id: null,
+                        id: 'wp-desc-container',
                         innerText: null,
                         children: {
                             0: {
                                 type: 'h2',
                                 className: 'sectionTitle',
-                                id: null,
+                                id: 'wp-desc-title',
                                 innerText: {en: 'WordPress', fr: 'WordPress'},
                                 children: null
                             },
                             1: {
                                 type: 'p',
                                 className: 'desc-text col-sm-10',
-                                id: null,
+                                id: 'wp-desc-text',
                                 innerText: {
                                     en: "Undertook several standalone and joint WordPress projects exploring its feasibility as a quick launch platform. Supercharged with python knowledge to carry out deep analysis, making use of the Twitter API.",
                                     fr: "A entrepris plusieurs projets WordPress indépendants et communs explorant sa faisabilité comme une plate-forme de lancement rapide. Suralimenté avec des connaissances en python pour effectuer une analyse approfondie, en utilisant l’API de Twitter."
