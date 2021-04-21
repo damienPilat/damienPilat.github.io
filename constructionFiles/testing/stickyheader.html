@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sticky Header</title>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        div#navbar-sticky-onScroll {
+            /* Layout */
+            position: fixed;
+            z-index: 10;
+            /* Dimension */
+            width: 100vw;
+            height: 100px;
+            /* Style */
+            background-color: #ffd03e;
+            overflow: hidden;
+            /* Extra */
+            transition: all 1s;
+        }
+
+        #navbar a {
+            padding: 14px;
+        }
+
+        .content {
+            background-color: lightskyblue;
+            height: 2000px;
+            padding: 16px;
+        }
+
+        .hidden {
+            opacity: 0;
+        }
+
+        .visible {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+<div id="navbar-sticky-onScroll" class="hidden">
+    <a href="">Home</a>
+    <a href="">News</a>
+    <a href="">About</a>
+</div>
+
+<div class="content"></div>
+
+<script>
+    let navbar = document.getElementById('navbar-sticky-onScroll');
+
+    const scrollFunc = () => {
+        let yPosition = window.scrollY;
+        if (yPosition >= 400) {
+            classNameAddRemove(navbar, 'visible', 'hidden');
+        } else {
+            classNameAddRemove(navbar, 'hidden', 'visible');
+        }
+    };
+
+    function classNameAddRemove(element, addClassName, removeClassName) {
+        element.classList.add(addClassName);
+        element.classList.remove(removeClassName);
+    }
+
+    window.onscroll = function () {
+        scrollFunc()
+    };
+
+    navbar.setAttribute('onClick', () => {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    })
+
+</script>
+
+</body>
+</html>
