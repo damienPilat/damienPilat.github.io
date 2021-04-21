@@ -188,16 +188,25 @@ div.nav-bar-link-elements {
 img.nav-bar-logo-vector {
     border-radius: calc(@media_logo_size / 2);
 }
-// Light/Dark mode
+// Social Links Light/Dark mode
 .socialLink_light {
     background-color: @tertiary_color;
 }
 .socialLink_dark {
     background-color: @tertiary_color_dark;
 }
-.socialLinkLogo_light {}
 .socialLinkLogo_dark {
     filter: brightness(.75);
+}
+// Sticky navbar
+.nav-bar-sticky {
+    // Sticky behaviour
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    // Styling
+    border-bottom: .5px solid @tertiary_color;
 }
 
 // CONTENTS
