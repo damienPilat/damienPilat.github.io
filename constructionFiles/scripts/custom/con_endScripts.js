@@ -10,6 +10,8 @@ function initiateEndScripts() {
 
     // Test: Tooltip library
     addTooltip();
+
+    collapsibleNavBar();
 }
 
 function addTooltip() {
