@@ -28,6 +28,7 @@
 
     <!--  Custom Scripts  -->
     <script src="scripts/data/con_sectionDetails.js"></script>
+    <script src="scripts/custom/con_collapsibleNavBar.js"></script>
     <script src="scripts/custom/con_dynamicTechLogos.js"></script>
     <script src="scripts/custom/con_dynamicDevice.js"></script>
     <script src="scripts/custom/con_dynamicSections.js"></script>
@@ -37,35 +38,78 @@
     <script src="scripts/custom/con_endScripts.js"></script>
     <script src="scripts/custom/con_helperFunctions.js"></script>
 
-    <noscript>This website relies on JavaScript to deliver its content and unfortunately cannot work without it.</noscript>
+    <noscript>This website relies on JavaScript to deliver its content and unfortunately cannot work without it.
+    </noscript>
 </head>
 <body>
 <!--  @todo: Mobile App optimisation  -->
-<div id="nav-bar" class="nav-bar-sticky flex bgColor_light">
-    <h1>Damien Pilat</h1>
+<div id="nav-bar" class="flex bgColor_light">
+    <!--  Logo  -->
+    <h1 style="flex-grow: 1; margin-bottom: 0;">Damien Pilat</h1>
 
-    <div id="nav-bar-link-container">
+    <!--  Social Link Elements  -->
+    <div id="nav-bar-link-container" style="flex-grow: 1;">
         <div class="link-elements nav-bar-link-elements flex socialLink_light">
-            <img class="nav-bar-logo-vector socialLinkLogo_light" src="media/linkLogo/linkedIn-logo.svg"
+            <img class="nav-bar-logo-vector socialLinkLogo_light" src="../media/linkLogo/linkedIn-logo.svg"
                  alt="LinkedIn Logo w/ link">
         </div>
         <div class="link-elements nav-bar-link-elements flex socialLink_light">
-            <img class="nav-bar-logo-vector socialLinkLogo_light" src="media/linkLogo/github-logo.svg"
+            <img class="nav-bar-logo-vector socialLinkLogo_light" src="../media/linkLogo/github-logo.svg"
                  alt="Github Logo w/ Link">
         </div>
     </div>
 
-    <div id="language-setting">
-        <button id="lang-en" class="lang-btn lang-btn-selected_light" onclick="changeLanguage(event)">EN</button>
-        <span class="lang-dash_light">/</span>
-        <button id="lang-fr" class="lang-btn" onclick="changeLanguage(event)">FR</button>
+    <!--  Collapsible content (for mobile)  -->
+    <div id="collapse-content-container" class="flex-v">
+        <!--  Collapse Button  -->
+        <button id="btn-collapse">
+            <img src="../media/icons/menu-icon-v1.svg" alt="">
+        </button>
+
+        <!--  Collapse Content  -->
+        <div id="collapse-content">
+
+            <!--  DropDown Menu List-->
+            <div id="mobile-menu">
+                <!--  Mobile: Linebreak - TOP  -->
+                <hr class="hr-mobile-menu">
+
+                <!--  Menu Dropdown list  -->
+                <ul id="mobile-menu-primary-elements" class="mobile-list">
+                    <li><a href="#">Home</a>
+                        <ul class="mobile-list" id="mobile-menu-secondary-elements">
+                            <li><a href="#">Movie Dashboard</a></li>
+                            <li><a href="#">Diligent Eye</a></li>
+                            <li><a href="#">Mobile App</a></li>
+                            <li><a href="#">WordPress</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+
+                <!--  Mobile: Linebreak - Bottom  -->
+                <hr class="hr-mobile-menu">
+            </div>
+        </div>
     </div>
 
-    <label class="switch">
-        <input id="modeSwitch" type="checkbox">
-        <span class="slider round"></span>
-    </label>
+    <!--  Menu Options : lang/darkMode switch  -->
+    <div id="menuOptions" class="flex" style="flex-grow: 2;">
+        <div id="language-setting">
+            <button id="lang-en" class="lang-btn lang-btn-selected_light" onclick="changeLanguage(event)">EN</button>
+            <span class="lang-dash_light">/</span>
+            <button id="lang-fr" class="lang-btn" onclick="changeLanguage(event)">FR</button>
+        </div>
+
+        <label class="switch">
+            <input id="modeSwitch" type="checkbox">
+            <span class="slider round"></span>
+        </label>
+    </div>
+
 </div>
+    <hr class="hr-mobile-menu">
 
 <!--  @todo: Tech hover v2  -->
 <!--  @todo: Allow all sections to be accessible from menu for mobile -->
