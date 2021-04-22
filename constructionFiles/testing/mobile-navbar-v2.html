@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile Nav Bar</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../scripts/libraries/bootstrap-5.0.0-beta3-dist/css/bootstrap.css">
+
+    <!--  Custom CSS  -->
+    <link rel="stylesheet/less" type="text/css" href="../styling/construction.less">
+    <link rel="stylesheet/less" type="text/css" href="../styling/con_darkModeSwitch.less">
+
+    <!--  LESS  -->
+    <script src="../scripts/libraries/less.js"></script>
+
+    <script src="../scripts/custom/con_languageSwitch.js"></script>
+    <script src="../scripts/custom/con_endScripts.js"></script>
+    <script src="../scripts/custom/con_helperFunctions.js"></script>
+
+
+    <noscript>This website relies on JavaScript to deliver its content and unfortunately cannot work without.</noscript>
+
+    <style>
+        /* Container */
+        div#collapse-content-container {
+            display: none;
+        }
+
+        /* COLLAPSE: btn */
+        button#btn-collapse {
+            /* RESET Default Button style */
+            border: none;
+            background-color: unset;
+            /* Custom margin for this button */
+            margin: 20px 0;
+        }
+
+        /* COLLAPSE: content */
+        div#collapse-content {
+            width: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+
+        /* Features: hr bar*/
+        hr.hr-mobile-menu {
+            width: 100vw;
+            background-color: rgba(119, 119, 119, 0.96); /* @fontColor_medium */
+        }
+
+        /* COLLAPSE: list,list-items */
+        ul.mobile-list {
+            list-style: none;
+        }
+
+        ul#mobile-menu-primary-elements {
+            margin: 20px auto;
+            width: 250px;
+        }
+
+        ul#mobile-menu-primary-elements > li > a {
+            color: rgba(119, 119, 119, 0.96); /* @fontColor_medium */
+        }
+
+        ul#mobile-menu-secondary-elements > li > a {
+            color: rgba(173, 173, 173, 0.96); /* @fontColor_bright */
+        }
+
+        /* Menu Options (lang&darkMode -switch)*/
+        div#menuOptions {
+            justify-content: space-around;
+        }
+
+        @media screen and (max-width: 800px) {
+            div#nav-bar {
+                flex-direction: column;
+            }
+
+            div#collapse-content-container {
+                display: flex;
+            }
+
+            div#collapse-content {
+                width: 70vw;
+            }
+
+            div#menuOptions {
+                width: 70vw;
+                min-width: 150px;
+                justify-content: space-around;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+<div id="nav-bar" class="flex bgColor_light">
+    <!--  Logo  -->
+    <h1 style="flex-grow: 1; margin-bottom: 0;">Damien Pilat</h1>
+
+    <!--  Social Link Elements  -->
+    <div id="nav-bar-link-container" style="flex-grow: 1;">
+        <div class="link-elements nav-bar-link-elements flex socialLink_light">
+            <img class="nav-bar-logo-vector socialLinkLogo_light" src="../media/linkLogo/linkedIn-logo.svg"
+                 alt="LinkedIn Logo w/ link">
+        </div>
+        <div class="link-elements nav-bar-link-elements flex socialLink_light">
+            <img class="nav-bar-logo-vector socialLinkLogo_light" src="../media/linkLogo/github-logo.svg"
+                 alt="Github Logo w/ Link">
+        </div>
+    </div>
+
+    <!--  Collapsible content (for mobile)  -->
+    <div id="collapse-content-container" class="flex-v">
+        <!--  Collapse Button  -->
+        <button id="btn-collapse">
+            <img src="../media/icons/menu-icon-v1.svg" alt="">
+        </button>
+
+        <!--  Collapse Content  -->
+        <div id="collapse-content">
+
+            <!--  DropDown Menu List-->
+            <div id="mobile-menu">
+                <!--  Mobile: Linebreak - TOP  -->
+                <hr class="hr-mobile-menu">
+
+                <!--  Menu Dropdown list  -->
+                <ul id="mobile-menu-primary-elements" class="mobile-list">
+                    <li><a href="#">Home</a></li>
+                    <ul class="mobile-list" id="mobile-menu-secondary-elements">
+                        <li><a href="#">Movie Dashboard</a></li>
+                        <li><a href="#">Diligent Eye</a></li>
+                        <li><a href="#">Mobile App</a></li>
+                        <li><a href="#">WordPress</a></li>
+                    </ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+
+                <!--  Mobile: Linebreak - Bottom  -->
+                <hr class="hr-mobile-menu">
+            </div>
+        </div>
+    </div>
+
+    <div id="menuOptions" class="flex" style="flex-grow: 2;">
+        <div id="language-setting">
+            <button id="lang-en" class="lang-btn lang-btn-selected_light" onclick="changeLanguage(event)">EN</button>
+            <span class="lang-dash_light">/</span>
+            <button id="lang-fr" class="lang-btn" onclick="changeLanguage(event)">FR</button>
+        </div>
+
+        <label class="switch">
+            <input id="modeSwitch" type="checkbox">
+            <span class="slider round"></span>
+        </label>
+    </div>
+</div>
+
+<script>
+
+    function menuCollapseAction() {
+        let collapseMenuBtn = document.getElementById('btn-collapse');
+        let collapseContent = document.getElementById('collapse-content');
+        collapseMenuBtn.addEventListener('click', () => {
+            if (collapseContent.style.maxHeight) {
+                collapseContent.style.maxHeight = null;
+            } else {
+                collapseContent.style.maxHeight = collapseContent.scrollHeight + 'px';
+            }
+        });
+    }
+
+    function displaceMenuOptions(mediaQuery) {
+        let menuOptions = document.getElementById('menuOptions');
+        let collapseContent = document.getElementById('collapse-content');
+        let navbar = document.getElementById('nav-bar');
+
+        if (mediaQuery.matches) {
+            // Screen small, add element as child
+            collapseContent.appendChild(menuOptions);
+        } else if (isChild(collapseContent, menuOptions) && !isChild(navbar, menuOptions)) {
+               navbar.append(menuOptions);
+        }
+    }
+
+    // Checks if a DOM element is a child of a parent
+    function isChild(parent, child) {
+        return parent === child.parentElement;
+    }
+
+    menuCollapseAction();
+    let mediaQuery = window.matchMedia('screen and (max-width: 800px)');
+    displaceMenuOptions(mediaQuery);
+    mediaQuery.addListener(displaceMenuOptions)
+</script>
+
+</body>
+</html>
