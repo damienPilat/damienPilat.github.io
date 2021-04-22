@@ -148,7 +148,9 @@ a {
 }
 a:hover, a:focus {
     cursor: pointer;
-    text-decoration: underline solid @fontSize_medium;
+    text-decoration: underline solid;
+    -webkit-text-decoration-style: solid;
+    text-underline-offset: 1px;
 }
 a:visited {
 
