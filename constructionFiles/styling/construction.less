@@ -211,6 +211,78 @@ img.nav-bar-logo-vector {
     border-bottom: .5px solid @tertiary_color;
 }
 
+/* NavBar Mobile - Collapsible Container */
+div#collapse-content-container {
+    display: none;
+}
+
+/* COLLAPSE: btn */
+button#btn-collapse {
+    /* RESET Default Button style */
+    border: none;
+    background-color: unset;
+    /* Custom margin for this button */
+    margin: 20px 0;
+}
+
+/* COLLAPSE: content */
+div#collapse-content {
+    width: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+/* Features: hr bar*/
+hr.hr-mobile-menu {
+    width: 100vw;
+    background-color: rgba(119, 119, 119, 0.96); /* @fontColor_medium */
+}
+
+/* COLLAPSE: list,list-items */
+ul.mobile-list {
+    list-style: none;
+}
+
+ul#mobile-menu-primary-elements {
+    margin: 20px auto;
+    width: 250px;
+}
+
+ul#mobile-menu-primary-elements > li > a {
+    color: rgba(119, 119, 119, 0.96); /* @fontColor_medium */
+}
+
+ul#mobile-menu-secondary-elements > li > a {
+    color: rgba(173, 173, 173, 0.96); /* @fontColor_bright */
+}
+
+/* Menu Options (lang&darkMode -switch)*/
+div#menuOptions {
+    justify-content: space-around;
+}
+
+// Navbar Media query
+@media screen and (max-width: 800px) {
+    div#nav-bar {
+        flex-direction: column;
+    }
+
+    div#collapse-content-container {
+        display: flex;
+    }
+
+    div#collapse-content {
+        width: 70vw;
+    }
+
+    div#menuOptions {
+        width: 70vw;
+        min-width: 150px;
+        justify-content: space-around;
+    }
+}
+
 // CONTENTS
 div.sections {
     padding: @large_padding @large_padding;
