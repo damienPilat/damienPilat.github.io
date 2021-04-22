@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile Nav Bar</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../scripts/libraries/bootstrap-5.0.0-beta3-dist/css/bootstrap.css">
+
+    <!--  Custom CSS  -->
+    <link rel="stylesheet/less" type="text/css" href="../styling/construction.less">
+    <link rel="stylesheet/less" type="text/css" href="../styling/con_darkModeSwitch.less">
+
+    <!--  LESS  -->
+    <script src="../scripts/libraries/less.js"></script>
+
+    <script src="../scripts/custom/con_languageSwitch.js"></script>
+    <script src="../scripts/custom/con_endScripts.js"></script>
+    <script src="../scripts/custom/con_helperFunctions.js"></script>
+
+
+    <noscript>This website relies on JavaScript to deliver its content and unfortunately cannot work without.</noscript>
+
+    <style>
+        div#short-menu-container {
+            display: none;
+            flex-direction: column;
+        }
+
+        div#mobile-menu {
+            height: 0;
+            opacity: 0;
+            transition: all .5s;
+        }
+
+        #nav-bar-link-container {
+            margin-bottom: 10px;
+        }
+
+        .mobile-list {
+            list-style: none;
+        }
+
+        #mobile-menu-primary-elements {
+            margin: 20px auto;
+            width: 250px;
+        }
+
+        #mobile-menu-primary-elements > li > a {
+            color: rgba(119, 119, 119, 0.96); /* @fontColor_medium */
+        }
+
+        #mobile-menu-secondary-elements > li > a {
+            color: rgba(173, 173, 173, 0.96); /* @fontColor_bright */
+        }
+
+        hr.hr-mobile-menu {
+            height: 1px;
+            display: none;
+            width: 100vw;
+            background-color: rgba(119, 119, 119, 0.96); /* @fontColor_medium */
+        }
+
+        #menuOptions {
+            margin: 20px 0 13px 0;
+        }
+
+        button#menuIcon {
+            border: none;
+            background-color: unset;
+        }
+
+        @media only screen and (max-width: 800px) {
+            div#short-menu-container {
+                display: flex;
+            }
+
+            #nav-bar {
+                flex-direction: column;
+                padding-bottom: 0 !important;
+            }
+
+            #menuOptions {
+                width: 70vw;
+                min-width: 150px;
+                justify-content: space-around;
+                display: none;
+            }
+
+            hr.hr-mobile-menu {
+                display: block;
+            }
+        }
+    </style>
+
+</head>
+<body>
+<!--  Full Nav Bar-->
+<div id="nav-bar" class="nav-bar-sticky flex bgColor_light">
+    <h1>Damien Pilat</h1>
+
+    <!--  Social Link Elements  -->
+    <div id="nav-bar-link-container">
+        <div class="link-elements nav-bar-link-elements flex socialLink_light">
+            <img class="nav-bar-logo-vector socialLinkLogo_light" src="../media/linkLogo/linkedIn-logo.svg"
+                 alt="LinkedIn Logo w/ link">
+        </div>
+        <div class="link-elements nav-bar-link-elements flex socialLink_light">
+            <img class="nav-bar-logo-vector socialLinkLogo_light" src="../media/linkLogo/github-logo.svg"
+                 alt="Github Logo w/ Link">
+        </div>
+    </div>
+
+    <div id="short-menu-container" class="flex">
+        <!-- Menu Icon Button -->
+        <button id="menuIcon"><img src="../media/icons/menu-icon-v1.svg" alt=""></button>
+
+
+        <!--  Mobile: Dropdown list  -->
+        <div id="mobile-menu">
+            <!--  Mobile: Linebreak - TOP  -->
+            <hr class="hr-mobile-menu">
+
+            <!--  Menu Dropdown list  -->
+            <ul id="mobile-menu-primary-elements" class="mobile-list">
+                <li><a href="#">Home</a></li>
+                <ul class="mobile-list" id="mobile-menu-secondary-elements">
+                    <li><a href="#">Movie Dashboard</a></li>
+                    <li><a href="#">Diligent Eye</a></li>
+                    <li><a href="#">Mobile App</a></li>
+                    <li><a href="#">WordPress</a></li>
+                </ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+            <!--  Mobile: Linebreak - Bottom  -->
+            <hr class="hr-mobile-menu">
+        </div>
+    </div>
+
+
+    <div id="menuOptions" class="flex">
+        <div id="language-setting">
+            <button id="lang-en" class="lang-btn lang-btn-selected_light" onclick="changeLanguage(event)">EN</button>
+            <span class="lang-dash_light">/</span>
+            <button id="lang-fr" class="lang-btn" onclick="changeLanguage(event)">FR</button>
+        </div>
+
+        <label class="switch">
+            <input id="modeSwitch" type="checkbox">
+            <span class="slider round"></span>
+        </label>
+    </div>
+</div>
+
+
+<script>
+    let menuButton = document.getElementById('menuIcon');
+    let mobileMenu = document.getElementById('mobile-menu');
+    let menuOptions = document.getElementById('menuOptions');
+    console.log("menuOptions:", menuOptions);
+
+    menuButton.addEventListener('click', () => {
+        let mobileMenuHeight = mobileMenu.style.height;
+        console.log("mobileMenuDisplay:", mobileMenuHeight);
+
+        if (mobileMenuHeight === '0px') {
+            mobileMenu.style.height = "auto";
+            mobileMenu.style.opacity = '1';
+            menuOptions.style.display = 'flex';
+        } else {
+            mobileMenu.style.height = "0";
+            mobileMenu.style.opacity = '0';
+            menuOptions.style.display = 'none';
+        }
+    });
+
+</script>
+</body>
+</html>
