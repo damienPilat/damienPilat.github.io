@@ -28,6 +28,7 @@
 
     <!--  Custom Scripts  -->
     <script src="scripts/data/sectionDetails.js"></script>
+    <script src="scripts/custom/collapsibleNavBar.js"></script>
     <script src="scripts/custom/dynamicTechLogos.js"></script>
     <script src="scripts/custom/dynamicDevice.js"></script>
     <script src="scripts/custom/dynamicSections.js"></script>
@@ -36,12 +37,19 @@
 
     <script src="scripts/custom/endScripts.js"></script>
     <script src="scripts/custom/helperFunctions.js"></script>
+
+    <noscript>This website relies on JavaScript to deliver its content and unfortunately cannot work without it.
+    </noscript>
+
 </head>
 <body>
-<div id="nav-bar" class="flex bgColor_light">
-    <h1>Damien Pilat</h1>
 
-    <div id="nav-bar-link-container">
+<div id="nav-bar" class="flex bgColor_light">
+    <!--  Logo  -->
+    <h1 style="flex-grow: 1; margin-bottom: 0;">Damien Pilat</h1>
+
+    <!--  Social Link Elements  -->
+    <div id="nav-bar-link-container" style="flex-grow: 1;">
         <div class="link-elements nav-bar-link-elements flex socialLink_light">
             <img class="nav-bar-logo-vector socialLinkLogo_light" src="media/linkLogo/linkedIn-logo.svg"
                  alt="LinkedIn Logo w/ link">
@@ -52,17 +60,57 @@
         </div>
     </div>
 
-    <div id="language-setting">
-        <button id="lang-en" class="lang-btn lang-btn-selected_light" onclick="changeLanguage(event)">EN</button>
-        <span class="lang-dash_light">/</span>
-        <button id="lang-fr" class="lang-btn" onclick="changeLanguage(event)">FR</button>
+    <!--  Collapsible content (for mobile)  -->
+    <div id="collapse-content-container" class="flex-v">
+        <!--  Collapse Button  -->
+        <button id="btn-collapse">
+            <img src="media/icons/menu-icon-v1.svg" alt="">
+        </button>
+
+        <!--  Collapse Content  -->
+        <div id="collapse-content">
+
+            <!--  DropDown Menu List-->
+            <div id="mobile-menu">
+                <!--  Mobile: Linebreak - TOP  -->
+                <hr class="hr-mobile-menu">
+
+                <!--  Menu Dropdown list  -->
+                <ul id="mobile-menu-primary-elements" class="mobile-list">
+                    <li><a href="#">Home</a>
+                        <ul class="mobile-list" id="mobile-menu-secondary-elements">
+                            <li><a href="#md-container">Movie Dashboard</a></li>
+                            <li><a href="#de-container">Diligent Eye</a></li>
+                            <li><a href="#dne-container">Mobile App</a></li>
+                            <li><a href="#wp-container">WordPress</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+
+                <!--  Mobile: Linebreak - Bottom  -->
+                <hr class="hr-mobile-menu">
+            </div>
+        </div>
     </div>
 
-    <label class="switch">
-        <input id="modeSwitch" type="checkbox">
-        <span class="slider round"></span>
-    </label>
+    <!--  Menu Options : lang/darkMode switch  -->
+    <div id="menuOptions" class="flex" style="flex-grow: 2;">
+        <div id="language-setting">
+            <button id="lang-en" class="lang-btn lang-btn-selected_light" onclick="changeLanguage(event)">EN</button>
+            <span class="lang-dash_light">/</span>
+            <button id="lang-fr" class="lang-btn" onclick="changeLanguage(event)">FR</button>
+        </div>
+
+        <label class="switch">
+            <input id="modeSwitch" type="checkbox">
+            <span class="slider round"></span>
+        </label>
+    </div>
+
 </div>
+<hr class="hr-mobile-menu">
 
 <!--  @todo: Tech hover v2  -->
 <!--  @todo: Allow all sections to be accessible from menu for mobile -->
@@ -70,13 +118,15 @@
 
 <div id="footer" class="flex primaryColor_light">
 
-<!--  @todo: complete pages  -->
-<!--    <div id="footer-page-links">-->
-<!--        <a href="#">Home</a>-->
-<!--        <a href="#">About</a>-->
-<!--        <a href="#">Contact</a>-->
-<!--    </div>-->
+    <!--  @todo: create Pages  -->
+    <!--  @todo: darkMode link colors  -->
+    <div id="footer-page-links">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
 
+    <!--  @todo: DarkMode for Link icons  -->
     <div id="footer-link-container">
         <div class="footer-link-elements flex">
             <img class="footer-logo-vector" src="media/linkLogo/linkedIn-logo-v2.svg" alt="LinkedIn Logo w/ link">
