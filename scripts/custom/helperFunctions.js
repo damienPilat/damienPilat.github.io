@@ -98,3 +98,8 @@ function assignModeIndex(modeCheck, elements, darkModeClassName) {
     }
     return 0;
 }
+
+// Checks if a DOM element is a child of a parent
+function isChild(parent, child) {
+    return parent === child.parentElement;
+}
