@@ -2,11 +2,12 @@
 
 // DOM ELEMENTS
 // Function to create a custom element with any possible value used in project
-function customElement(config) {
+const customElement = (config) => {
     let elementDetails = Object.assign({
-            type: null,
+            domType: null,
             className: null,
             id: null,
+            type: null,
             src: null,
             alt: null,
             target: null,
@@ -23,8 +24,8 @@ function customElement(config) {
 
 // Populate DOM element with all non NULL values + Two SPECIAL cases
 // @todo: remove if statements
-function populateElement(elementDetails) {
-    let element = document.createElement(elementDetails.type);
+const populateElement = (elementDetails) => {
+    let element = document.createElement(elementDetails.domType);
     for (const [key, value] of Object.entries(elementDetails)) {
         if (value) {
             if (key === 'children') {
@@ -40,20 +41,20 @@ function populateElement(elementDetails) {
 }
 
 // Recursively create all children of an element
-function createChildren(children, container) {
+const createChildren = (children, container) => {
     for (let childrenID in children) {
         container.append(customElement(children[childrenID]));
     }
 }
 
 // Toggle one className of all DOM elements w/ one given classname
-function toggleClassName(elementClassName, togglingClassName) {
+const toggleClassName = (elementClassName, togglingClassName) => {
     let elements = document.getElementsByClassName(elementClassName);
     Array.from(elements).forEach(element => element.classList.toggle(togglingClassName));
 }
 
 // Toggle mult classNames of all DOM elements w/ one given className
-function toggleClassNames(elementClassName, arrayTogglingClassNames) {
+const toggleClassNames = (elementClassName, arrayTogglingClassNames) => {
     let elements = document.getElementsByClassName(elementClassName);
     Array.from(elements).forEach(element => {
         arrayTogglingClassNames.forEach(togglingClassName => element.classList.toggle(togglingClassName));
@@ -63,7 +64,7 @@ function toggleClassNames(elementClassName, arrayTogglingClassNames) {
 // Toggles className w/ support for light/darkmode check
 // Normal path: Loops through elements -> loops through toggling classNames & toggles
 // Extra path: if modeCheck true -> assigns mode value (0:light/1:dark) & toggles accordingly
-function toggleClassNamesIfPresent(elementClassName, arrayTogglingClassNames, modeCheck = false) {
+const toggleClassNamesIfPresent = (elementClassName, arrayTogglingClassNames, modeCheck = false) => {
     let domElements = document.getElementsByClassName(elementClassName);
 
     let modeIndex = assignModeIndex(modeCheck, domElements, arrayTogglingClassNames[1]);
@@ -84,7 +85,7 @@ function toggleClassNamesIfPresent(elementClassName, arrayTogglingClassNames, mo
 // Loop check: if darkMode classname appears in any element passed
 // Check return: dark mode (1)
 // Early exit: if modeCheck null
-function assignModeIndex(modeCheck, elements, darkModeClassName) {
+const assignModeIndex = (modeCheck, elements, darkModeClassName) => {
     if (!modeCheck) {
         return undefined
     }
@@ -100,6 +101,21 @@ function assignModeIndex(modeCheck, elements, darkModeClassName) {
 }
 
 // Checks if a DOM element is a child of a parent
-function isChild(parent, child) {
+const isChild = (parent, child) => {
     return parent === child.parentElement;
+}
+
+// EVENT LISTENERS
+// Add Event listener Interface by dom ID
+const addEventListenerWithId = (domID, type, func) => {
+    let domElement = document.getElementById(domID);
+    domElement.addEventListener(type, func);
+}
+
+// Add Event listener Interface by dom className
+const addEventListenerWithClassName = (domClassName, type, func) => {
+    let domElements = document.getElementById(domClassName);
+    for (let dom of domElements) {
+        dom.addEventListener(type, func);
+    }
 }

@@ -26,13 +26,13 @@ function createImageElement (deviceID, deviceType, container) {
     con_sectionDetails[deviceID]['device'][deviceType].forEach(elData => {
         // Create Link and Image element
         let deviceLink = customElement({
-            type: 'a',
+            domType: 'a',
             className: deviceType + '-link',
             target: '_blank',
             href: con_sectionDetails[deviceID].website + '#' + elData
         });
         let deviceImage = customElement({
-            type: 'img',
+            domType: 'img',
             className: deviceType,
             id: deviceID + '-' + deviceType + '-' + elData,
             src: mediaPaths[deviceType] + deviceID + '-' + deviceType + '-' + elData + '.png',

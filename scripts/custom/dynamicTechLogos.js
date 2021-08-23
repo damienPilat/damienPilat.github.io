@@ -40,18 +40,18 @@ function createTechLogo(techID, container) {
 // Returns container with all elements
 function createTechLogoElements(techType, techID) {
     let techContainer = customElement({
-        type: 'div',
+        domType: 'div',
         className: 'tech-logo-container'
     });
     let techIcon = customElement({
-        type: 'img',
+        domType: 'img',
         className: 'tech-logo ' + techID + 'ColorPale_light',
         id: techType + '-logo',
         src: techPaths[techType],
         alt: techType + ' Logo'
     });
     let techTitle = customElement({
-        type: 'p',
+        domType: 'p',
         className: 'tech-logo-title ' + techID + 'ColorPale_light',
         id: techType + '-title',
         innerHTML: techType
