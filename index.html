@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="scripts/libraries/tooltipster/tooltipster.main.css">
 
     <!--  Custom CSS  -->
-    <link rel="stylesheet/less" type="text/css" href="styling/index.less">
-    <link rel="stylesheet/less" type="text/css" href="styling/darkModeSwitch.less">
+    <link rel="stylesheet/less" type="text/css" href="styling/construction.less">
+    <link rel="stylesheet/less" type="text/css" href="styling/con_darkModeSwitch.less">
 
     <!--  LESS  -->
     <script src="scripts/libraries/less.js"></script>
@@ -27,20 +27,19 @@
     <script src="scripts/libraries/tooltipster/tooltipster.bundle.js"></script>
 
     <!--  Custom Scripts  -->
-    <script src="scripts/data/sectionDetails.js"></script>
-    <script src="scripts/custom/collapsibleNavBar.js"></script>
-    <script src="scripts/custom/dynamicTechLogos.js"></script>
-    <script src="scripts/custom/dynamicDevice.js"></script>
-    <script src="scripts/custom/dynamicSections.js"></script>
-    <script src="scripts/custom/darkModeSwitch.js"></script>
-    <script src="scripts/custom/languageSwitch.js"></script>
+    <script src="scripts/data/con_sectionDetails.js"></script>
+    <script src="scripts/custom/con_collapsibleNavBar.js"></script>
+    <script src="scripts/custom/con_dynamicTechLogos.js"></script>
+    <script src="scripts/custom/con_dynamicDevice.js"></script>
+    <script src="scripts/custom/con_dynamicSections.js"></script>
+    <script src="scripts/custom/con_darkModeSwitch.js"></script>
+    <script src="scripts/custom/con_languageSwitch.js"></script>
 
-    <script src="scripts/custom/endScripts.js"></script>
-    <script src="scripts/custom/helperFunctions.js"></script>
+    <script src="scripts/custom/con_endScripts.js"></script>
+    <script src="scripts/custom/con_helperFunctions.js"></script>
 
     <noscript>This website relies on JavaScript to deliver its content and unfortunately cannot work without it.
     </noscript>
-
 </head>
 <body>
 
@@ -51,12 +50,16 @@
     <!--  Social Link Elements  -->
     <div id="nav-bar-link-container" style="flex-grow: 1;">
         <div class="link-elements nav-bar-link-elements flex socialLink_light">
-            <img class="nav-bar-logo-vector socialLinkLogo_light" src="media/linkLogo/linkedIn-logo.svg"
-                 alt="LinkedIn Logo w/ link">
+            <a href="https://www.linkedin.com/in/damien-pilat/" target="_blank">
+                <img class="nav-bar-logo-vector socialLinkLogo_light" src="../media/linkLogo/linkedIn-logo.svg"
+                     alt="LinkedIn Logo w/ link">
+            </a>
         </div>
         <div class="link-elements nav-bar-link-elements flex socialLink_light">
-            <img class="nav-bar-logo-vector socialLinkLogo_light" src="media/linkLogo/github-logo.svg"
-                 alt="Github Logo w/ Link">
+            <a href="https://www.github.com/damienPilat/" target="_blank">
+                <img class="nav-bar-logo-vector socialLinkLogo_light" src="../media/linkLogo/github-logo.svg"
+                     alt="Github Logo w/ Link">
+            </a>
         </div>
     </div>
 
@@ -64,7 +67,7 @@
     <div id="collapse-content-container" class="flex-v">
         <!--  Collapse Button  -->
         <button id="btn-collapse">
-            <img src="media/icons/menu-icon-v1.svg" alt="">
+            <img src="../media/icons/menu-icon-v1.svg" alt="">
         </button>
 
         <!--  Collapse Content  -->
@@ -85,8 +88,8 @@
                             <li><a href="#wp-container">WordPress</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <!--                    <li><a href="#">About</a></li>-->
+                    <!--                    <li><a href="#">Contact</a></li>-->
                 </ul>
 
                 <!--  Mobile: Linebreak - Bottom  -->
@@ -112,19 +115,27 @@
 </div>
 <hr class="hr-mobile-menu">
 
+<!--  @todo: go back to top from sections (mobile only?) -->
 <!--  @todo: Tech hover v2  -->
-<!--  @todo: Allow all sections to be accessible from menu for mobile -->
+<!--  @todo: Mobile - slideshow for DNE mockups  -->
 <div id="content"></div>
 
 <div id="footer" class="flex primaryColor_light">
+    <!--  @todo: Add back to top btn  -->
+    <div id="to-top-container">
+        <button id="to-top">
+            <img src="media/icons/arrow-up.svg" alt="" />
+        </button>
+    </div>
+
 
     <!--  @todo: create Pages  -->
     <!--  @todo: darkMode link colors  -->
-<!--    <div id="footer-page-links">-->
-<!--        <a href="#">Home</a>-->
-<!--        <a href="#">About</a>-->
-<!--        <a href="#">Contact</a>-->
-<!--    </div>-->
+    <!--    <div id="footer-page-links">-->
+    <!--        <a href="#">Home</a>-->
+    <!--        <a href="#">About</a>-->
+    <!--        <a href="#">Contact</a>-->
+    <!--    </div>-->
 
     <!--  @todo: DarkMode for Link icons  -->
     <div id="footer-link-container">
