@@ -1,0 +1,564 @@
+// STYLING
+// RESET for page
+* {
+    margin: 0;
+    padding: 0;
+}
+
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300&display=swap');
+@font: 'Josefin Sans', sans-serif;
+// Font Size
+@fontSize_small: 12px;
+@fontSize_normal: 22px;
+@fontSize_medium: 28px;
+@fontSize_large: 34px;
+// Font Weight
+@weight_small: 100;
+@weight_medium: 200;
+@weight_large: 300;
+// Font Color
+@fontColor_light: #eeeeee;
+@fontColor_bright: rgba(173, 173, 173, 0.96);
+@fontColor_medium: rgba(119, 119, 119, 0.96);
+@fontColor_dark: rgba(52, 52, 52, 0.96);
+
+// COLORS
+// Base
+@bg_color: #F7F8F6;
+@primary_color: #CFEEFB;
+@secondary_color: #F29F96;
+@tertiary_color: #C4C4C4;
+// Dark Base
+@bg_color_dark: #3a3a3a;
+@primary_color_dark: #4d7180;
+@secondary_color_dark: #99615c;
+@tertiary_color_dark: #808080;
+
+// Pale
+@bg_color_pale: #FFF3F3;
+@primary_color_pale: #E0F6FF;
+@secondary_color_pale: #FAC1BB;
+@tertiary_color_pale: #EEEDED;
+// Dark Pale -- @todo: update dark mode colors
+@bg_color_pale_dark: #b4a9a9;
+@primary_color_pale_dark: #96abb4;
+@secondary_color_pale_dark: #b38a86;
+@tertiary_color_pale_dark: #b3b3b3;
+
+// PADDING
+@small_padding: 10px;
+@medium_padding: 20px;
+@large_padding: 40px;
+@extraLarge_padding: 80px;
+
+// Social Media Links
+@media_logo_size: 32px;
+@media_logo_color: gray;
+
+// Tech Icon Details
+@tech_logo_size: 50px;
+@tech_logo_transition: 0.5s;
+@tech_logo_detailing_small: 2px;
+@tech_logo_detailing_medium: 4px;
+@tech_logo_detailing_large: 6px;
+@tech_logo_transform: -24px;
+
+// DARKMODE - CLASSES
+// Light / Dark Mode
+.bgColor_light {
+    background-color: @bg_color;
+    color: @fontColor_dark;
+}
+
+.bgColor_dark {
+    background-color: @bg_color_dark;
+    color: @fontColor_light;
+}
+
+.primaryColor_light {
+    background-color: @primary_color;
+    color: @fontColor_dark;
+}
+
+.primaryColor_dark {
+    background-color: @primary_color_dark;
+    color: @fontColor_light;
+}
+
+.secondaryColor_light {
+    background-color: @secondary_color;
+    color: @fontColor_dark;
+}
+
+.secondaryColor_dark {
+    background-color: @secondary_color_dark;
+    color: @fontColor_light;
+}
+
+.tertiaryColor_light {
+    background-color: @tertiary_color;
+    color: @fontColor_dark;
+}
+
+.tertiaryColor_dark {
+    background-color: @tertiary_color_dark;
+    color: @fontColor_light;
+}
+
+// Section Pale Light/Dark Colors
+.mdColorPale_light {
+    background-color: @bg_color_pale;
+}
+
+.mdColorPale_dark {
+    background-color: @bg_color_pale_dark;
+}
+
+.deColorPale_light {
+    background-color: @primary_color_pale;
+}
+
+.deColorPale_dark {
+    background-color: @primary_color_pale_dark;
+}
+
+.dneColorPale_light {
+    background-color: @secondary_color_pale;
+}
+
+.dneColorPale_dark {
+    background-color: @secondary_color_pale_dark;
+}
+
+.wpColorPale_light {
+    background-color: @tertiary_color_pale;
+}
+
+.wpColorPale_dark {
+    background-color: @tertiary_color_pale_dark;
+}
+
+
+// HTML content
+.resetFont {
+    font-family: @font;
+    font-size: @fontSize_normal;
+    font-weight: @weight_small;
+}
+
+html, body {
+    .resetFont();
+}
+
+h1 {
+    font-weight: @weight_large;
+}
+
+h2 {
+    font-weight: @weight_medium;
+    margin-bottom: @medium_padding;
+}
+
+p {
+    font-weight: @weight_small;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    cursor: pointer;
+    text-decoration: underline solid;
+    -webkit-text-decoration-style: solid;
+    text-underline-offset: 1px;
+}
+
+a:visited {
+
+}
+
+a:active {
+
+}
+
+hr {
+    background-color: @bg_color;
+    margin: 0;
+    color: @fontColor_medium;
+}
+
+
+// NAV BAR
+div#nav-bar {
+    justify-content: space-between;
+    padding: @small_padding @medium_padding;
+}
+
+// Social Links
+div#nav-bar-link-container > div:nth-child(1) {
+    float: left;
+}
+
+// Link element container
+div.link-elements {
+    // Dimension
+    height: @media_logo_size + @small_padding;
+    width: @media_logo_size + @small_padding;
+    // Layout
+    margin: @small_padding;
+}
+
+// Link element (make circle)
+div.nav-bar-link-elements {
+    border-radius: calc(@small_padding * 2);
+}
+
+// Links svg logos (round corners to match circle)
+img.nav-bar-logo-vector {
+    border-radius: calc(@media_logo_size / 2);
+}
+
+// Social Links Light/Dark mode
+.socialLink_light {
+    background-color: @tertiary_color;
+}
+
+.socialLink_dark {
+    background-color: @tertiary_color_dark;
+}
+
+.socialLinkLogo_dark {
+    filter: brightness(.75);
+}
+
+// Sticky navbar
+.nav-bar-sticky {
+    // Sticky behaviour
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    // Styling
+    border-bottom: .5px solid @tertiary_color;
+}
+
+/* NavBar Mobile - Collapsible Container */
+div#collapse-content-container {
+    display: none;
+}
+
+/* COLLAPSE: btn */
+button#btn-collapse {
+    /* RESET Default Button style */
+    border: none;
+    background-color: unset;
+    /* Custom margin for this button */
+    margin: 20px 0;
+}
+
+/* COLLAPSE: content */
+div#collapse-content {
+    width: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+/* Features: hr bar*/
+hr.hr-mobile-menu {
+    width: 100vw;
+    background-color: rgba(119, 119, 119, 0.96); /* @fontColor_medium */
+}
+
+/* COLLAPSE: list,list-items */
+ul.mobile-list {
+    list-style: none;
+}
+
+ul#mobile-menu-primary-elements {
+    margin: 20px auto;
+    width: 250px;
+}
+
+ul#mobile-menu-primary-elements > li > a {
+    color: rgba(119, 119, 119, 0.96); /* @fontColor_medium */
+}
+
+ul#mobile-menu-secondary-elements > li > a {
+    color: rgba(173, 173, 173, 0.96); /* @fontColor_bright */
+}
+
+/* Menu Options (lang&darkMode -switch)*/
+div#menuOptions {
+    justify-content: space-around;
+}
+
+// CONTENTS
+div.sections {
+    padding: @large_padding @large_padding;
+    overflow: hidden;
+}
+
+// Movie Dashboard
+div#md-tablet-container {
+    img#md-tablet-homepage {
+        width: 100%;
+    }
+}
+
+div#md-phone-container {
+    padding: 0 55px; // CHANGE TO RESPONSIVE UNIT
+    img#md-phone-watchProviders {
+        display: block;
+        margin-left: auto;
+    }
+
+    img#md-phone-awards {
+        position: relative;
+        top: -140px; // CHANGE TO RESPONSIVE UNIT
+    }
+}
+
+// Diligent Eye
+// Devices
+img#de-desktop-homepage {
+    float: right;
+    padding-right: @extraLarge_padding;
+}
+
+img#de-phone-checkout {
+    padding-top: @extraLarge_padding;
+}
+
+// Tech
+div#de-tech {
+    align-items: flex-end;
+    height: 100%;
+    padding-bottom: @large_padding;
+}
+
+
+// Dining Experience
+// Devices
+div#dne-phone-container {
+    min-height: 26em;
+    flex-wrap: wrap;
+}
+
+// Images padding
+div#dne-phone-container img {
+    padding: 0 @medium_padding;
+}
+
+div#dne-phone-container img:nth-child(2) {
+    position: relative;
+    bottom: -@extraLarge_padding;
+}
+
+div#dne-phone-container img:nth-child(3) {
+    position: relative;
+    top: -@medium_padding;
+}
+
+div#dne-phone-container img:nth-child(4) {
+    position: relative;
+    bottom: calc(-@extraLarge_padding * 2);
+}
+
+div#dne-phone-container img:last-child {
+    position: relative;
+    top: calc(-@extraLarge_padding * 1.25);
+}
+
+// Word Press Content
+// Devices
+div#wp-tablet-container {
+    justify-content: space-around;
+    padding: 0 20vw;
+    flex-wrap: wrap;
+}
+
+div#wp-tech {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+
+// GENERAL
+// Technology Logos
+div.tech-logo-container {
+    margin: 0 calc(@small_padding / 2);
+    width: @tech_logo_size;
+}
+
+img.tech-logo {
+    border-radius: @tech_logo_detailing_large;
+    position: relative;
+    top: @medium_padding;
+    transition: @tech_logo_transition;
+}
+
+img.tech-logo:hover {
+    transform: translate(0, @tech_logo_transform);
+    box-shadow: 0 6px 5px -1px rgb(225, 225, 225);
+    -webkit-box-shadow: 0 6px 5px -1px rgb(225, 225, 225);
+    -moz-box-shadow: 0 6px 5px -1px rgb(225, 225, 225);
+}
+
+p.tech-logo-title {
+    margin: 0;
+    border-radius: @tech_logo_detailing_small;
+    font-size: @fontSize_small;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+// Helper Classes
+// HELPER CLASSES
+// Full flex
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-v {
+    .flex();
+    flex-direction: column;
+}
+
+// Media elements
+img.phone {
+    border-radius: 20px;
+}
+
+.maxWidth > img {
+    max-width: 100%;
+}
+
+
+// FOOTER
+div#footer {
+    flex-direction: column;
+    padding-top: @large_padding;
+}
+
+div#to-top-container {
+    width: 150px;
+}
+button#to-top {
+    width: 150px;
+}
+
+// Language Setting options
+div#language-setting {
+    letter-spacing: .2em;
+}
+
+.lang-btn {
+    background-color: inherit;
+    cursor: pointer;
+    border: none;
+    color: @fontColor_bright;
+}
+
+button.lang-btn-selected_light {
+    font-weight: @weight_large;
+    color: @fontColor_dark;
+}
+
+button.lang-btn-selected_dark {
+    font-weight: @weight_large;
+    color: @fontColor_light;
+}
+
+
+span.lang-dash_light {
+    color: @fontColor_dark;
+}
+
+span.lang-dash_dark {
+    color: @fontColor_light;
+}
+
+// Footer Page Links
+div#footer-page-links > a {
+    padding: 0 @medium_padding;
+    width: 70px;
+}
+
+// Footer socialLinks
+div#footer-link-container > div {
+    float: left;
+    padding: @medium_padding @small_padding;
+}
+
+// Footer meta (personal credits, copyright, etc.)
+div#footer-meta {
+    text-align: center;
+}
+
+
+// Mobile Optimisation
+@media only screen and (max-width: 800px) {
+    // Navbar Media query
+    div#nav-bar {
+        flex-direction: column;
+    }
+
+    div#collapse-content-container {
+        display: flex;
+    }
+
+    div#collapse-content {
+        width: 70vw;
+    }
+
+    div#menuOptions {
+        width: 70vw;
+        min-width: 150px;
+        justify-content: space-around;
+    }
+
+
+    // Movie Dashboard
+    // Media - phone
+    div#md-phone-container {
+        padding-top: @medium_padding;
+    }
+
+    // Media - desktop
+    img#de-desktop-homepage {
+        padding-top: @medium_padding;
+        padding-right: 0;
+        float: none;
+    }
+
+    // Diligent Eye
+    // Media - phone
+    div#de-phone-container {
+        .flex();
+    }
+
+    img#de-phone-checkout {
+        padding-top: @small_padding;
+    }
+
+    div#de-tech {
+        padding: @large_padding 0 0 0;
+    }
+
+    // Dining Experience
+    div#dne-phone-container > img {
+        position: initial !important;
+    }
+
+    // Word Press
+    div#wp-tech {
+        justify-content: center;
+        flex-direction: initial;
+    }
+}
