@@ -484,8 +484,9 @@ div#toTopFloating-container {
     right: 20px;
     z-index: 10;
     /* Style */
-    background: @primary_color_dark;
-    opacity: 0.7;
+    border: 3px solid @primary_color_dark;
+    background: #fff;
+    opacity: 0.8;
     border-radius: 40%;
     cursor: pointer;
     /* Dimensionns */
@@ -496,12 +497,15 @@ div#toTopFloating-container {
 }
 
 img#toTop-icon {
-
-}
-
-img#toTop-icon {
     height: 36px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+
+
 span#toTop-text {
     font-size: @fontSize_normal;
 }

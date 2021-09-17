@@ -17,45 +17,45 @@ const appendToElement = (elId, elementDetails) => {
 // ACTIVATE ALL BTNS IN DOM
 const activateBtns = () => {
     // BACK TO TOP FIXED BTN
-    activateToTopFixedBtn();
+    //activateToTopFixedBtn();
 
     // BACK TO TOP FLOATING BTN
-    // activateToTopFloatingBtn();
+    activateToTopFloatingBtn();
 }
 
 
 // Code to create Fixed Back to top Btn
-const activateToTopFixedBtn = () => {
-    // Append btn details to btn container
-    appendToElement(
-        'toTop-container',
-        {
-            domType: 'button',
-            id: 'toTop-btn-container',
-            children: {
-                0: {
-                    domType: 'img',
-                    id: 'toTop-icon',
-                    src: '../media/icons/arrow-up.svg'
-                },
-                1: {
-                    domType: 'span',
-                    id: 'toTop-text',
-                    innerHTML: 'Back to Top'
-                }
-            }
-        }
-    );
-
-    // Function to move screen back to top of page
-    const backToTop = () => {
-        document.body.scrollTop = 0; // Safari
-        document.documentElement.scrollTop = 0 // Chrome, Firefox, IE, Opera
-    }
-
-    // Add event to static 'back to top' btn
-    addEventToBtn('toTop-btn-container', 'click', backToTop)
-}
+// const activateToTopFixedBtn = () => {
+//     // Append btn details to btn container
+//     appendToElement(
+//         'toTop-container',
+//         {
+//             domType: 'button',
+//             id: 'toTop-btn-container',
+//             children: {
+//                 0: {
+//                     domType: 'img',
+//                     id: 'toTop-icon',
+//                     src: '../media/icons/arrow-up.svg'
+//                 },
+//                 1: {
+//                     domType: 'span',
+//                     id: 'toTop-text',
+//                     innerHTML: 'Back to Top'
+//                 }
+//             }
+//         }
+//     );
+//
+//     // Function to move screen back to top of page
+//     const backToTop = () => {
+//         document.body.scrollTop = 0; // Safari
+//         document.documentElement.scrollTop = 0 // Chrome, Firefox, IE, Opera
+//     }
+//
+//     // Add event to static 'back to top' btn
+//     addEventToBtn('toTop-btn-container', 'click', backToTop)
+// }
 
 
 
