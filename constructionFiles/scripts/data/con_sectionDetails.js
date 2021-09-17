@@ -10,26 +10,26 @@ let con_sectionDetails = {
         tech: ["JavaScript", "HTML", "CSS", "AdobeXD"],
         structure: {
             0: {
-                type: 'div',
+                domType: 'div',
                 className: 'sections row flex bgColor_light',
                 id: 'md-container',
                 innerText: null,
                 children: {
                     0: {
-                        type: 'div',
+                        domType: 'div',
                         className: 'desc col-sm-3',
                         id: 'md-desc-container',
                         innerText: null,
                         children: {
                             0: {
-                                type: 'h2',
+                                domType: 'h2',
                                 className: 'sectionTitle',
                                 id: 'md-desc-title',
                                 innerText: {en: 'Movie Dashboard', fr: 'Tableau de Bord - Film'},
                                 children: null
                             },
                             1: {
-                                type: 'p',
+                                domType: 'p',
                                 className: 'desc-text',
                                 id: 'md-desc-text',
                                 innerText: {
@@ -41,27 +41,27 @@ let con_sectionDetails = {
                         },
                     },
                     1: {
-                        type: 'div',
+                        domType: 'div',
                         className: 'device tablet col-sm-6',
                         id: 'md-tablet-container',
                         innerText: null,
                         children: null
                     },
                     2: {
-                        type: 'div',
+                        domType: 'div',
                         className: 'col-sm-3',
                         id: 'media-tech',
                         innerText: null,
                         children: {
                             0: {
-                                type: 'div',
+                                domType: 'div',
                                 className: 'device',
                                 id: 'md-phone-container',
                                 innerText: null,
                                 children: null
                             },
                             1: {
-                                type: 'div',
+                                domType: 'div',
                                 className: 'tech flex',
                                 id: 'md-tech',
                                 innerText: null,
@@ -83,32 +83,32 @@ let con_sectionDetails = {
         tech: ["JavaScript", "WordPress", "Shopify"],
         structure: {
             0: {
-                type: 'div',
+                domType: 'div',
                 className: 'sections row primaryColor_light',
                 id: 'de-container',
                 innerText: null,
                 children: {
                     0: {
-                        type: 'div',
+                        domType: 'div',
                         className: 'row',
                         id: null,
                         innerText: null,
                         children: {
                             0: {
-                                type: 'div',
+                                domType: 'div',
                                 className: 'desc col-sm-6',
                                 id: 'de-desc-container',
                                 innerText: null,
                                 children: {
                                     0: {
-                                        type: 'h2',
+                                        domType: 'h2',
                                         className: 'sectionTitle',
                                         id: 'de-desc-title',
                                         innerText: {en: 'Member space & E-commerce - Diligent Eye', fr: 'Espace membre & E-commerce - Diligent Eye'},
                                         children: null
                                     },
                                     1: {
-                                        type: 'p',
+                                        domType: 'p',
                                         className: 'desc-text',
                                         id: 'de-desc-text',
                                         innerText: {
@@ -120,13 +120,13 @@ let con_sectionDetails = {
                                 }
                             },
                             1: {
-                                type: 'div',
+                                domType: 'div',
                                 className: 'col-sm-6',
                                 id: null,
                                 innerText: null,
                                 children: {
                                     0: {
-                                        type: 'div',
+                                        domType: 'div',
                                         className: 'device maxWidth',
                                         id: 'de-laptop-container',
                                         innerText: null,
@@ -137,19 +137,19 @@ let con_sectionDetails = {
                         },
                     },
                     1: {
-                        type: 'div',
+                        domType: 'div',
                         className: 'row',
                         id: null,
                         innerText: null,
                         children: {
                             0: {
-                                type: 'div',
+                                domType: 'div',
                                 className: 'col-sm-8',
                                 id: null,
                                 innerText: null,
                                 children: {
                                     0: {
-                                        type: 'div',
+                                        domType: 'div',
                                         className: 'device maxWidth',
                                         id: 'de-desktop-container',
                                         innerText: null,
@@ -158,13 +158,13 @@ let con_sectionDetails = {
                                 }
                             },
                             1: {
-                                type: 'div',
+                                domType: 'div',
                                 className: 'col-sm-2',
                                 id: null,
                                 innerText: null,
                                 children: {
                                     0: {
-                                        type: 'div',
+                                        domType: 'div',
                                         className: 'device',
                                         id: 'de-phone-container',
                                         innerText: null,
@@ -173,13 +173,13 @@ let con_sectionDetails = {
                                 }
                             },
                             2: {
-                                type: 'div',
+                                domType: 'div',
                                 className: 'col-sm-2',
                                 id: null,
                                 innerText: null,
                                 children: {
                                     0: {
-                                        type: 'div',
+                                        domType: 'div',
                                         className: 'tech flex',
                                         id: 'de-tech',
                                         innerText: null,
@@ -201,32 +201,32 @@ let con_sectionDetails = {
         tech: ["Figma"],
         structure: {
             0: {
-                type: 'div',
+                domType: 'div',
                 className: 'sections row secondaryColor_light',
                 id: 'dne-container',
                 innerText: null,
                 children: {
                     0: {
-                        type: 'div',
+                        domType: 'div',
                         className: 'desc col-sm-12',
                         id: 'dne-desc-container',
                         innerText: null,
                         children: {
                             0: {
-                                type: 'h2',
+                                domType: 'h2',
                                 className: 'sectionTitle col-sm-6',
                                 id: 'dne-desc-title',
                                 innerText: {en: 'Dining Experience - Mobile App', fr: 'Expérience restauration - Application mobile'},
                                 children: null
                             },
                             1: {
-                                type: 'div',
+                                domType: 'div',
                                 className: 'row',
                                 id: null,
                                 innerText: null,
                                 children: {
                                     0: {
-                                        type: 'p',
+                                        domType: 'p',
                                         className: 'desc-text col-sm-6',
                                         id: 'dne-desc-text',
                                         innerText: {
@@ -236,7 +236,7 @@ let con_sectionDetails = {
                                         children: null
                                     },
                                     1: {
-                                        type: 'div',
+                                        domType: 'div',
                                         className: 'tech col-6',
                                         id: 'dne-tech',
                                         innerText: null,
@@ -247,13 +247,13 @@ let con_sectionDetails = {
                         }
                     },
                     1: {
-                        type: 'div',
+                        domType: 'div',
                         className: 'row',
                         id: null,
                         innerText: null,
                         children: {
                             0: {
-                                type: 'div',
+                                domType: 'div',
                                 className: 'device flex',
                                 id: 'dne-phone-container',
                                 innerText: null,
@@ -273,26 +273,26 @@ let con_sectionDetails = {
         tech: ["WordPress", "Python"],
         structure: {
             0: {
-                type: 'div',
+                domType: 'div',
                 className: 'sections bgColor_light',
                 id: 'wp-container',
                 innerText: null,
                 children: {
                     0: {
-                        type: 'div',
+                        domType: 'div',
                         className: 'desc col-12',
                         id: 'wp-desc-container',
                         innerText: null,
                         children: {
                             0: {
-                                type: 'h2',
+                                domType: 'h2',
                                 className: 'sectionTitle',
                                 id: 'wp-desc-title',
                                 innerText: {en: 'WordPress', fr: 'WordPress'},
                                 children: null
                             },
                             1: {
-                                type: 'p',
+                                domType: 'p',
                                 className: 'desc-text col-sm-10',
                                 id: 'wp-desc-text',
                                 innerText: {
@@ -304,14 +304,14 @@ let con_sectionDetails = {
                         }
                     },
                     1: {
-                        type: 'div',
+                        domType: 'div',
                         className: 'device tablet flex',
                         id: 'wp-tablet-container',
                         innerText: null,
                         children: null
                     },
                     2: {
-                        type: 'div',
+                        domType: 'div',
                         className: 'tech',
                         id: 'wp-tech',
                         innerText: null,
