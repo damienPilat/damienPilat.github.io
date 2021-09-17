@@ -3,6 +3,8 @@
 * {
     margin: 0;
     padding: 0;
+    border: none;
+    background: none;
 }
 
 // FONTS
@@ -446,12 +448,41 @@ div#footer {
     padding-top: @large_padding;
 }
 
-div#to-top-container {
-    width: 150px;
+
+// TO TOP Element
+button#toTop-btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+    isolation: isolate;
+
+    overflow: hidden;
+
+    border-radius: @small_padding;
+    padding: calc(@small_padding / 2) @small_padding;
 }
-button#to-top {
-    width: 150px;
+button#toTop-btn-container::after {
+    content: '';
+    //width: 100%;
+    //height: 100%;
+    position: absolute;
+    z-index: -1;
+    inset:0;
+    background-color: @primary_color_dark;
+    opacity: 0.5;
+    //top: 0;
+    //left: 0;
 }
+
+img#toTop-icon {
+    height: 36px;
+}
+span#toTop-text {
+    font-size: @fontSize_normal;
+}
+
 
 // Language Setting options
 div#language-setting {
