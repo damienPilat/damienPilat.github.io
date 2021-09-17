@@ -34,6 +34,7 @@
     <script src="scripts/custom/dynamicSections.js"></script>
     <script src="scripts/custom/darkModeSwitch.js"></script>
     <script src="scripts/custom/languageSwitch.js"></script>
+    <script src="scripts/custom/activateBtns.js"></script>
 
     <script src="scripts/custom/endScripts.js"></script>
     <script src="scripts/custom/helperFunctions.js"></script>
@@ -51,13 +52,13 @@
     <div id="nav-bar-link-container" style="flex-grow: 1;">
         <div class="link-elements nav-bar-link-elements flex socialLink_light">
             <a href="https://www.linkedin.com/in/damien-pilat/" target="_blank">
-                <img class="nav-bar-logo-vector socialLinkLogo_light" src="/media/linkLogo/linkedIn-logo.svg"
+                <img class="nav-bar-logo-vector socialLinkLogo_light" src="media/linkLogo/linkedIn-logo.svg"
                      alt="LinkedIn Logo w/ link">
             </a>
         </div>
         <div class="link-elements nav-bar-link-elements flex socialLink_light">
             <a href="https://www.github.com/damienPilat/" target="_blank">
-                <img class="nav-bar-logo-vector socialLinkLogo_light" src="/media/linkLogo/github-logo.svg"
+                <img class="nav-bar-logo-vector socialLinkLogo_light" src="media/linkLogo/github-logo.svg"
                      alt="Github Logo w/ Link">
             </a>
         </div>
@@ -67,7 +68,7 @@
     <div id="collapse-content-container" class="flex-v">
         <!--  Collapse Button  -->
         <button id="btn-collapse">
-            <img src="../media/icons/menu-icon-v1.svg" alt="">
+            <img src="media/icons/menu-icon-v1.svg" alt="">
         </button>
 
         <!--  Collapse Content  -->
@@ -115,18 +116,12 @@
 </div>
 <hr class="hr-mobile-menu">
 
-<!--  @todo: go back to top from sections (mobile only?) -->
 <!--  @todo: Tech hover v2  -->
 <!--  @todo: Mobile - slideshow for DNE mockups  -->
 <div id="content"></div>
 
 <div id="footer" class="flex primaryColor_light">
-    <!--  @todo: Add back to top btn  -->
-<!--    <div id="to-top-container">-->
-<!--        <button id="to-top">-->
-<!--            <img src="media/icons/arrow-up.svg" alt="" />-->
-<!--        </button>-->
-<!--    </div>-->
+    <div id="toTopFloating-container"></div>
 
 
     <!--  @todo: create Pages  -->

@@ -3,6 +3,8 @@
 * {
     margin: 0;
     padding: 0;
+    border: none;
+    background: none;
 }
 
 // FONTS
@@ -446,12 +448,68 @@ div#footer {
     padding-top: @large_padding;
 }
 
-div#to-top-container {
-    width: 150px;
+
+// TO TOP Element FIXED
+//button#toTop-btn-container {
+//    display: flex;
+//    flex-direction: column;
+//    align-items: center;
+//
+//    position: relative;
+//    isolation: isolate;
+//
+//    overflow: hidden;
+//
+//    border-radius: @small_padding;
+//    padding: calc(@small_padding / 2) @small_padding;
+//}
+//button#toTop-btn-container::after {
+//    content: '';
+//    //width: 100%;
+//    //height: 100%;
+//    position: absolute;
+//    z-index: -1;
+//    inset:0;
+//    background-color: @primary_color_dark;
+//    opacity: 0.5;
+//    //top: 0;
+//    //left: 0;
+//}
+
+// TO TOP Element FLOATING
+div#toTopFloating-container {
+    /* Layout */
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    z-index: 10;
+    /* Style */
+    border: 3px solid @primary_color_dark;
+    background: #fff;
+    opacity: 0.8;
+    border-radius: 40%;
+    cursor: pointer;
+    /* Dimensionns */
+    width: 50px;
+    height: 50px;
+    /* Visibility */
+    display: none;
 }
-button#to-top {
-    width: 150px;
+
+img#toTop-icon {
+    height: 36px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+
+
+span#toTop-text {
+    font-size: @fontSize_normal;
+}
+
 
 // Language Setting options
 div#language-setting {
