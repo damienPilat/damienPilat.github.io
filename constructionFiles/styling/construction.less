@@ -615,10 +615,18 @@ div#footer-meta {
 
     // Dining Experience
     div#dne-phone-container {
-
+        min-height: 0;
+        overflow: auto;
+        display: block;
+        white-space: nowrap;
+        flex-wrap: nowrap;
     }
-    div#dne-phone-container > img {
-        position: initial !important;
+
+    a.phone-link {
+        display: inline-block;
+        padding: 0 @small_padding !important;
+        position: static !important;
+        margin-top: @large_padding;
     }
 
     // Word Press
