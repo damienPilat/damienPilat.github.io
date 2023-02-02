@@ -71,74 +71,90 @@
 .bgColor_light {
     background-color: @bg_color;
     color: @fontColor_dark;
+    transition: ease-in-out .7s;
 }
 
 .bgColor_dark {
     background-color: @bg_color_dark;
     color: @fontColor_light;
+    transition: ease-in-out .7s;
 }
 
 .primaryColor_light {
     background-color: @primary_color;
     color: @fontColor_dark;
+    transition: ease-in-out .7s;
 }
 
 .primaryColor_dark {
     background-color: @primary_color_dark;
     color: @fontColor_light;
+    transition: ease-in-out .7s;
 }
 
 .secondaryColor_light {
     background-color: @secondary_color;
     color: @fontColor_dark;
+    transition: ease-in-out .7s;
 }
 
 .secondaryColor_dark {
     background-color: @secondary_color_dark;
     color: @fontColor_light;
+    transition: ease-in-out .7s;
 }
 
 .tertiaryColor_light {
     background-color: @tertiary_color;
     color: @fontColor_dark;
+    transition: ease-in-out .7s;
 }
 
 .tertiaryColor_dark {
     background-color: @tertiary_color_dark;
     color: @fontColor_light;
+    transition: ease-in-out .7s;
 }
 
 // Section Pale Light/Dark Colors
 .mdColorPale_light {
     background-color: @bg_color_pale;
+    transition: ease-in-out .7s;
 }
 
 .mdColorPale_dark {
     background-color: @bg_color_pale_dark;
+    transition: ease-in-out .7s;
 }
 
 .deColorPale_light {
     background-color: @primary_color_pale;
+    transition: ease-in-out .7s;
 }
 
 .deColorPale_dark {
     background-color: @primary_color_pale_dark;
+    transition: ease-in-out .7s;
 }
 
 .dneColorPale_light {
     background-color: @secondary_color_pale;
+    transition: ease-in-out .7s;
 }
 
 .dneColorPale_dark {
     background-color: @secondary_color_pale_dark;
+    transition: ease-in-out .7s;
 }
 
 .wpColorPale_light {
     background-color: @tertiary_color_pale;
+    transition: ease-in-out .7s;
 }
 
 .wpColorPale_dark {
     background-color: @tertiary_color_pale_dark;
+    transition: ease-in-out .7s;
 }
 
 
@@ -225,14 +241,17 @@ img.nav-bar-logo-vector {
 // Social Links Light/Dark mode
 .socialLink_light {
     background-color: @tertiary_color;
+    transition: ease-in-out .7s;
 }
 
 .socialLink_dark {
     background-color: @tertiary_color_dark;
+    transition: ease-in-out .7s;
 }
 
 .socialLinkLogo_dark {
     filter: brightness(.75);
+    transition: ease-in-out .7s;
 }
 
 // Sticky navbar
@@ -526,20 +545,24 @@ div#language-setting {
 button.lang-btn-selected_light {
     font-weight: @weight_large;
     color: @fontColor_dark;
+    transition: ease-in-out .7s;
 }
 
 button.lang-btn-selected_dark {
     font-weight: @weight_large;
     color: @fontColor_light;
+    transition: ease-in-out .7s;
 }
 
 
 span.lang-dash_light {
     color: @fontColor_dark;
+    transition: ease-in-out .7s;
 }
 
 span.lang-dash_dark {
     color: @fontColor_light;
+    transition: ease-in-out .7s;
 }
 
 // Footer Page Links
@@ -585,7 +608,9 @@ div#footer-meta {
     // Movie Dashboard
     // Media - phone
     div#md-phone-container {
-        padding-top: @medium_padding;
+        max-width: 100vw;
+        display: flex;
+        padding-top: 7rem;
     }
 
     // Media - desktop
