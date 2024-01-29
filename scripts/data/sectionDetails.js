@@ -24,7 +24,7 @@ let sectionDetails = {
                                 domType: 'h2',
                                 className: 'sectionTitle',
                                 id: 'td-desc-title',
-                                innerText: {en: 'tdsearch - UX R&D', fr: '2Dsearch - project complet UX'},
+                                innerText: {en: '2Dsearch - UX R&D', fr: '2Dsearch - project complet UX'},
                                 children: null
                             },
                             1: {
