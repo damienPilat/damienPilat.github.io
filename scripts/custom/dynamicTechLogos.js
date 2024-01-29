@@ -9,7 +9,7 @@ let techPaths = {
     "Figma": "media/tech/figma-logo.svg",
     "Python": "media/tech/python-logo.svg",
     "VueJS": "media/tech/vuejs-logo.svg",
-    "VueJS": "media/tech/mongo-logo.svg"
+    "Mongo": "media/tech/mongo-logo.svg"
 };
 
 function populateTech() {

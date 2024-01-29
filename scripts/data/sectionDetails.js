@@ -42,13 +42,6 @@ let sectionDetails = {
                                             fr: 'R&D UX complète avec tests utilisateurs itératifs et prototypage avant mise en œuvre dans VueJS. Refactorisation majeure de la base de code pour permettre une plus grande modularité et une maintenance plus facile.'
                                         },
                                         children: null
-                                    },
-                                    1: {
-                                        domType: 'div',
-                                        className: 'tech col-6',
-                                        id: 'td-tech',
-                                        innerText: null,
-                                        children: null
                                     }
                                 }
                             }
@@ -64,6 +57,13 @@ let sectionDetails = {
                                 domType: 'div',
                                 className: 'device maxWidth',
                                 id: 'td-desktop-container',
+                                innerText: null,
+                                children: null
+                            },
+                            1: {
+                                domType: 'div',
+                                className: 'tech col-6',
+                                id: 'td-tech',
                                 innerText: null,
                                 children: null
                             }
