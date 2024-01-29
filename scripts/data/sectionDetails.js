@@ -42,7 +42,7 @@ let sectionDetails = {
                     1: {
                         domType: 'div',
                         className: 'device desktop col-sm-6',
-                        id: '2d-tablet-container',
+                        id: '2d-desktop-container',
                         innerText: null,
                         children: null
                     },
