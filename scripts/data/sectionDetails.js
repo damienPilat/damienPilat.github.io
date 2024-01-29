@@ -11,26 +11,26 @@ let sectionDetails = {
             0: {
                 domType: 'div',
                 className: 'sections row flex bgColor_light',
-                id: '2d-container',
+                id: 'td-container',
                 innerText: null,
                 children: {
                     0: {
                         domType: 'div',
                         className: 'desc col-sm-3',
-                        id: '2d-desc-container',
+                        id: 'td-desc-container',
                         innerText: null,
                         children: {
                             0: {
                                 domType: 'h2',
                                 className: 'sectionTitle',
-                                id: '2d-desc-title',
-                                innerText: {en: '2Dsearch - UX R&D', fr: '2Dsearch - project complet UX'},
+                                id: 'td-desc-title',
+                                innerText: {en: 'tdsearch - UX R&D', fr: '2Dsearch - project complet UX'},
                                 children: null
                             },
                             1: {
                                 domType: 'p',
                                 className: 'desc-text',
-                                id: '2d-desc-text',
+                                id: 'td-desc-text',
                                 innerText: {
                                     en: "Comprehensive UX R&D with iterative user testing and prototyping before implementation in VueJS. Major codebase refactoring to allow for greater modularity and easier maintenance.",
                                     fr: 'R&D UX complète avec tests utilisateurs itératifs et prototypage avant mise en œuvre dans VueJS. Refactorisation majeure de la base de code pour permettre une plus grande modularité et une maintenance plus facile.'
@@ -41,10 +41,10 @@ let sectionDetails = {
                     },
                     1: {
                         domType: 'div',
-                        className: 'device desktop col-sm-6',
-                        id: '2d-desktop-container',
-                        innerText: null,
-                        children: null
+                            className: 'device maxWidth',
+                            id: 'td-desktop-container',
+                            innerText: null,
+                            children: null
                     },
                 }
             }
