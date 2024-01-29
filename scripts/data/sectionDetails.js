@@ -41,7 +41,7 @@ let sectionDetails = {
                     },
                     1: {
                         domType: 'div',
-                            className: 'device maxWidth',
+                            className: 'device desktop maxWidth',
                             id: 'td-desktop-container',
                             innerText: null,
                             children: null
