@@ -1,7 +1,7 @@
 // Section Details
 let currentLanguage = 'en';
 let sectionDetails = {
-    "2d": {
+    "td": {
         device: {
             "desktop": ["homepage"]
         },
