@@ -7,7 +7,9 @@ let techPaths = {
     "WordPress": "media/tech/wordpress-logo.svg",
     "Shopify": "media/tech/shopify-logo.svg",
     "Figma": "media/tech/figma-logo.svg",
-    "Python": "media/tech/python-logo.svg"
+    "Python": "media/tech/python-logo.svg",
+    "VueJS": "media/tech/vuejs-logo.svg",
+    "VueJS": "media/tech/mongo-logo.svg"
 };
 
 function populateTech() {
