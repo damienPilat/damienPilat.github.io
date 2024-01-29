@@ -10,7 +10,7 @@ let sectionDetails = {
         structure: {
             0: {
                 domType: 'div',
-                className: 'sections row flex bgColor_light',
+                className: 'sections row flex primaryColor_light',
                 id: 'td-container',
                 innerText: null,
                 children: {
@@ -28,14 +28,29 @@ let sectionDetails = {
                                 children: null
                             },
                             1: {
-                                domType: 'p',
-                                className: 'desc-text',
-                                id: 'td-desc-text',
-                                innerText: {
-                                    en: "Comprehensive UX R&D with iterative user testing and prototyping before implementation in VueJS. Major codebase refactoring to allow for greater modularity and easier maintenance.",
-                                    fr: 'R&D UX complète avec tests utilisateurs itératifs et prototypage avant mise en œuvre dans VueJS. Refactorisation majeure de la base de code pour permettre une plus grande modularité et une maintenance plus facile.'
-                                },
-                                children: null
+                                domType: 'div',
+                                className: 'row',
+                                id: null,
+                                innerText: null,
+                                children: {
+                                    0: {
+                                        domType: 'p',
+                                        className: 'desc-text',
+                                        id: 'td-desc-text',
+                                        innerText: {
+                                            en: "Comprehensive UX R&D with iterative user testing and prototyping before implementation in VueJS. Major codebase refactoring to allow for greater modularity and easier maintenance.",
+                                            fr: 'R&D UX complète avec tests utilisateurs itératifs et prototypage avant mise en œuvre dans VueJS. Refactorisation majeure de la base de code pour permettre une plus grande modularité et une maintenance plus facile.'
+                                        },
+                                        children: null
+                                    },
+                                    1: {
+                                        domType: 'div',
+                                        className: 'tech col-6',
+                                        id: 'td-tech',
+                                        innerText: null,
+                                        children: null
+                                    }
+                                }
                             }
                         },
                     },
