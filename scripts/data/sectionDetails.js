@@ -62,7 +62,7 @@ let sectionDetails = {
                             },
                             1: {
                                 domType: 'div',
-                                className: 'tech col-6',
+                                className: 'tech',
                                 id: 'td-tech',
                                 innerText: null,
                                 children: null
