@@ -41,10 +41,19 @@ let sectionDetails = {
                     },
                     1: {
                         domType: 'div',
-                            className: 'device desktop maxWidth',
-                            id: 'td-desktop-container',
-                            innerText: null,
-                            children: null
+                        className: 'col-sm-8',
+                        id: null,
+                        innerText: null,
+                        children: {
+                            0: {
+                                domType: 'div',
+                                className: 'device maxWidth',
+                                id: 'td-desktop-container',
+                                innerText: null,
+                                children: null
+                            }
+                        }
+
                     },
                 }
             }
