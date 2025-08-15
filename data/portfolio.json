@@ -1,0 +1,179 @@
+{
+  "name": "Damien Pilat",
+  "headerTaglineOne": "Hey 👋",
+  "headerTaglineTwo": "I'm Damien - a UX Engineer",
+  "headerTaglineThree": "passionate about creating intuitive, accessible products.",
+  "headerTaglineFour": "",
+  "showBlog": false,
+  "showService": false,
+  "showResume": true,
+  "darkMode": true,
+  "socials": [
+    {
+      "id": "1",
+      "title": "Github",
+      "link": "https://github.com/damienPilat"
+    },
+    {
+      "id": "2",
+      "title": "LinkedIn",
+      "link": "https://www.linkedin.com/in/damien-pilat/"
+    },
+    { "id": "5", "title": "Email", "link": "mailto:pilatdamien@gmail.com" }
+  ],
+  "projects": [
+    {
+      "id": "1",
+      "title": "2Dsearch - UX R&D",
+      "description": "UX, Design, Development",
+      "tools": "Figma, VueJS, MongoDB",
+      "imageSrc": "/work/2Dsearch.png",
+      "url": "https://app.2dsearch.com/#homepage"
+    },
+    {
+      "id": "2",
+      "title": "Movie Dashboard",
+      "description": "UX, Web Development",
+      "tools": "AdobeXD, JS, RestAPI",
+      "imageSrc": "/work/movieDashboard.png",
+      "url": "http://doc.gold.ac.uk/~dpila001/idv/cw3-interactivedatavis/version6/index.html#homepage"
+    },
+    {
+      "id": "3",
+      "title": "Member space & E-commerce platform",
+      "description": "Design, Development",
+      "tools": "Figma, WordPress, Shopify",
+      "imageSrc": "/work/eCommence.png",
+      "url": "https://diligenteye.com/#reportPurchase"
+    },
+    {
+      "id": "4",
+      "title": "Dinig Experience Mobile App",
+      "description": "UX & Design",
+      "tools": "Figma",
+      "imageSrc": "/work/diningExperience.png",
+      "url": "http://doc.gold.ac.uk/~dpila001/UXE/UXE_redefiningDiningExperience.html#menu"
+    }
+  ],
+  "services": [
+    {
+      "id": "1",
+      "title": "Art Direction",
+      "description": "We help with the creation and development of online advertising ideas, with particular focus on their visual appearance."
+    },
+    {
+      "id": "2",
+      "title": "Branding",
+      "description": "We design key brand elements such as the logo, color scheme, typography, and other design components that makes your brand stand out from competitors."
+    },
+    {
+      "id": "3",
+      "title": "Web Design",
+      "description": "We build and optimize your online presence.  Website is the digital entry point into your business and a powerful revenue channel."
+    },
+    {
+      "id": "4",
+      "title": "3D Design",
+      "description": "We combine creative design and technical skills to build striking 3D visualisations that bring your project to life."
+    }
+  ],
+  "aboutpara": "UX-focused Frontend Engineer with experience leading design direction from Figma prototypes to production-ready code. Skilled in creating intuitive, accessible interfaces and enhancing scalable design systems across AI-powered and data-rich products.",
+  "resume": {
+    "tagline": "👋  I'm a software engineer, product designer, and maker.",
+    "description": "I have delivered world-class user experiences to millions of people. Well-versed with React, Javascript, and most of the Web frameworks.",
+    "experiences": [
+      {
+        "id": "1",
+        "dates": "May 2024 - Present",
+        "type": "Full Time",
+        "position": "Frontend Engineer at Tipalti",
+        "bullets": [
+          "Led multiple initiatives building Figma prototypes, iterative development, and automated feature testing,",
+          "Contributed to Design System: adding better localisation support, resolving bugs, increasing accessibility,",
+          "Improved design consistency and delivery by introducing visual regression testing using Storybook & Chromatic,",
+          "Mentored new joiners and grads to aid in passing probation and upskilling in frontend."
+        ]
+      },
+      {
+        "id": "2",
+        "dates": "October 2022 - December 2024",
+        "type": "Full Time",
+        "position": "UX Engineer at 2DSearch (stratup)",
+        "bullets": [
+          "Produced new chat-based AI workflow: from Figma wireframe, A/B testing, mid-fidelity prototype, implementa- tion, and user testing,",
+          "Conducted end-to-end UX Expert Evaluation, implemented 19 Vue.js enhancements and overseeing concurrent research projects,",
+          "Brought an iterative design and usability testing approach, from low to high fidelity prototypes,",
+          "Managed Mongo database security during cloud disruptions: reducing user impact, managing C-level expectations,",
+          "Integrated major patents databases through: implementing proximity, field specifiers, and boolean operator logic."
+        ]
+      },
+      {
+        "id": "3",
+        "dates": "July 2022 - September 2022",
+        "type": "Full Time",
+        "position": "UX Engineer at Financial Conduct Authority (internship)",
+        "bullets": [
+          "Adoption of metric-based insights and front-end development expertise to improve user experience and enhance features for a webscraping and vector graphing tool,",
+          "Added user requested features using VueJS and antdesign UI library."
+        ]
+      },
+      {
+        "id": "4",
+        "dates": "January 2022 - June 2023",
+        "type": "Full Time",
+        "position": "Software Engineer at CloudPay",
+        "bullets": [
+          "Implemented UX best practices to enhance design continuity, accessibility, and modularity as a fullstack developer,",
+          "Regular live demonstrations to over 30 stakeholders bi-monthly, showcasing progress and receiving feedback,",
+          "Fullstack development for a multinational payroll SaaS solution supporting 2400 entities across 130+ countries."
+        ]
+      },
+      {
+        "id": "5",
+        "dates": "April 2021 - October 2021",
+        "type": "Full Time",
+        "position": "Frontend Developr at Adadot (stratup)",
+        "bullets": [
+          "Developed Feedback functionality using ReactJS, styled-components, and MaterialUI in an agile environment,",
+          "Ensured scalability through use of react-i18next, managed expectations for delivery in 7 days,",
+          "6 month User Experience Research & Design Project, creating 3 comprehensive and increasingly higher fidelity prototypes in Figma from results of 12+ participant study."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "universityName": "University College London",
+        "degree": "MSc Information Security",
+        "grade": "1st Class Honours",
+        "location": "London, UK"
+      },
+      {
+        "universityName": "Goldsmiths, University of London",
+        "degree": "MSc User Experience Engineering",
+        "grade": "1st Class Honours with Distinction",
+        "location": "London, UK"
+      },
+      {
+        "universityName": "Columbia University in the City of New York",
+        "degree": "Summer Program: Machine Learning & Social Psychology",
+        "location": "New York City, USA"
+      },
+      {
+        "universityName": "Queen Mary, University of London",
+        "degree": "BSc Computer Science",
+        "grade": "Upper Second-Class Division",
+        "location": "London, UK"
+      }
+    ],
+    "skills": [
+      {
+        "sectionTitle": "Development",
+        "tools": ["Javascript", "TypeScript", "React", "HTML5", "VueJS", "Python", "Git", "Jest", "Playwright"]
+      },
+      {
+        "sectionTitle": "UX & Design",
+        "tools": ["Figma", "AdobeXD", "WCAG", "Storybook", "Chromatic", "SASS/LESS", "Styled components"]
+      }
+    ]
+  }
+}
